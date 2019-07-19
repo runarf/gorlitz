@@ -8,7 +8,8 @@ import momentDurationFormatSetup from "moment-duration-format";
 import { Container, makeStyles } from "@material-ui/core";
 
 import Calendar from "./Calendar";
-import SideBar from "./SideBar";
+import SideBarLeft from "./SideBarLeft";
+import SideBarRight from "./SideBarRight";
 
 momentDurationFormatSetup(moment);
 const useStyles = makeStyles(themes => ({
@@ -238,11 +239,10 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <SideBar
+        <SideBarLeft
           style={classes.drawer}
           originStations={originStations}
           handleChange={handleChange}
-          selectedEvent={selectedEvent}
           setDepartureTime={setDepartureTime}
           setReturnDepartureTime={setReturnDepartureTime}
           setMaxTravelTime={setMaxTravelTime}
@@ -250,6 +250,10 @@ function App() {
         <Calendar
           events={events}
           onSelectEvent={onSelectEvent}
+        />
+        <SideBarRight
+          style={classes.drawer}
+          selectedEvent={selectedEvent}
         />
       </Container>
     </div>
