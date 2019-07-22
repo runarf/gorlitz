@@ -6,9 +6,12 @@ const SideBarLeft = ({
   style,
   originStations,
   handleChange,
+  departureTime,
   setDepartureTime,
+  returnDepartureTime,
   setReturnDepartureTime,
-  setMaxTravelTime
+  setMaxTravelTime,
+  setMaxPrice
 }) => {
   return (
     <Drawer
@@ -22,20 +25,21 @@ const SideBarLeft = ({
       />
       Departure Time: <br />
       <Slider
+        value={departureTime}
         defaultValue={0}
         valueLabelDisplay="auto"
         marks
         min={0}
-        max={24}
+        max={48}
         onChange={(event, value) => setDepartureTime(value)}
       />
       Return Departure Time: <br />
       <Slider
-        defaultValue={0}
+        value={returnDepartureTime}
         valueLabelDisplay="auto"
         marks
         min={0}
-        max={24}
+        max={48}
         onChange={(event, value) =>
           setReturnDepartureTime(value)
         }
@@ -48,6 +52,14 @@ const SideBarLeft = ({
         min={0}
         max={24}
         onChange={(event, value) => setMaxTravelTime(value)}
+      />
+      <Slider
+        defaultValue={50}
+        valueLabelDisplay="auto"
+        min={0}
+        max={100}
+        marks
+        onChange={(event, value) => setMaxPrice(value)}
       />
     </Drawer>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+import moment from "moment-timezone";
 import {
   Calendar,
   momentLocalizer
@@ -16,6 +16,7 @@ const MyCalendar = ({ events, onSelectEvent }) => (
     defaultView="month"
     style={{ height: "100vh" }}
     onSelectEvent={onSelectEvent}
+    culture="es"
   />
 );
 
