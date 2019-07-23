@@ -10,7 +10,7 @@ const App = () => {
   const [roundTrips, setRoundTrips] = useState([]);
   return (
     <div className="App" style={{ width: "100%" }}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Route
           path="/"
           exact
