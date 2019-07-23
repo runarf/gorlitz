@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 //import ChoosePage from "../ChoosePage";
 import { Formik, Form, Field } from "formik";
+import { withRouter } from "react-router-dom";
 import {
   Box,
   Button,
@@ -21,10 +22,13 @@ const FormikCheckbox = ({ field, form, disabled }) => {
   return <Checkbox disabled={isDisabled} {...field} />;
 };
 
-const FrontPage = () => {
-  const [roundTrips, setRoundTrips] = useState();
+const FrontPage = ({
+  history,
+  roundTrips,
+  setRoundTrips
+}) => {
   return (
-    <div className="App" style={{ width: "100%" }}>
+    <>
       <Box
         display="flex"
         justifyContent="center"
@@ -35,20 +39,28 @@ const FrontPage = () => {
             Object.entries(values).forEach(
               ([key, value]) => {
                 axios
-                  .get(`http://localhost:4000/${key}`)
-                  .then(rt => setRoundTrips(rt))
+                  .get(`https://flixi.herokuapp.com/${key}`)
+                  .then(rt => {
+                    debugger;
+                    const latestRoundTrips = [
+                      ...roundTrips,
+                      ...rt.data
+                    ];
+                    setRoundTrips(latestRoundTrips);
+                  })
                   .catch(err => console.log(err));
               }
             );
             console.log(JSON.stringify(values, null, 2));
+            history.push("/calendar");
           }}
         >
           {({ isSubmitting }) => (
             <Form>
               <Box display="flex" flexWrap="wrap">
                 {Object.entries(regionsByCountry).map(
-                  ([country, regions]) => (
-                    <Box>
+                  ([country, regions], countryIndex) => (
+                    <Box key={countryIndex}>
                       <ExpansionPanel>
                         <ExpansionPanelSummary
                           expandIcon={<ExpandMore />}
@@ -100,9 +112,8 @@ const FrontPage = () => {
           )}
         </Formik>
       </Box>
-      {JSON.stringify(roundTrips)}
-    </div>
+    </>
   );
 };
 
-export default FrontPage;
+export default withRouter(FrontPage);

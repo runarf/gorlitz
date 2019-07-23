@@ -98,7 +98,7 @@ const getJourneysWithDepartureBefore = (
 
 const applyFilters = ({
   selectedStations,
-  journeys,
+  roundTrips,
   departureTime,
   returnArrivalTime,
   maxTravelTime,
@@ -106,7 +106,7 @@ const applyFilters = ({
 }) => {
   const checkedJourneys = getCheckedJourneys(
     selectedStations,
-    journeys
+    roundTrips
   );
   const journeysWithMaxPrice = checkedJourneys.filter(
     journey => maxPrice > journey.roundTripPrice

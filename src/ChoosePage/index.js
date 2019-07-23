@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import journeys from "./roundTripPrices";
+//import journeys from "./roundTripPrices";
 import applyFilters from "./filters";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
@@ -23,7 +23,7 @@ const useStyles = makeStyles(themes => ({
   }
 }));
 
-const getOriginStations = () => {
+const getOriginStations = journeys => {
   const originStations = journeys.reduce(
     (stations, journey) => {
       const station = journey.there.origin;
@@ -38,7 +38,7 @@ const getOriginStations = () => {
   return originStations;
 };
 
-function ChoosePage() {
+const ChoosePage = ({ roundTrips }) => {
   const classes = useStyles();
   const [originStations, setOriginStations] = useState([]);
   const [events, setEvents] = useState([]);
@@ -48,9 +48,9 @@ function ChoosePage() {
   );
 
   useEffect(() => {
-    const originStations = getOriginStations();
+    const originStations = getOriginStations(roundTrips);
     setOriginStations(originStations);
-  }, []);
+  }, [roundTrips]);
 
   const [selectedStations, setSelectedStations] = useState(
     {}
@@ -70,7 +70,7 @@ function ChoosePage() {
   useEffect(() => {
     const journeysWithDepartureBefore = applyFilters({
       selectedStations,
-      journeys,
+      roundTrips,
       departureTime,
       returnArrivalTime,
       maxTravelTime,
@@ -84,6 +84,7 @@ function ChoosePage() {
 
     setEvents(events);
   }, [
+    roundTrips,
     selectedStations,
     departureTime,
     returnArrivalTime,
@@ -169,6 +170,6 @@ function ChoosePage() {
       />
     </Container>
   );
-}
+};
 
 export default ChoosePage;
