@@ -4,14 +4,19 @@ import {
   FormControlLabel
 } from "@material-ui/core";
 
-const CheckBoxes = ({ originStations, handleChange }) => {
+const CheckBoxes = ({
+  stations,
+  handleChangeSelectedStations
+}) => {
   return (
-    originStations.length > 0 &&
-    originStations.map((station, index) => (
+    stations.length > 0 &&
+    stations.map((station, index) => (
       <FormControlLabel
         key={index}
         control={
-          <Checkbox onChange={handleChange(station)} />
+          <Checkbox
+            onChange={handleChangeSelectedStations(station)}
+          />
         }
         label={station}
       />

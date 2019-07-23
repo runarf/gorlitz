@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import FrontPage from "./FrontPage";
-import ChoosePage from "./ChoosePage";
+import FrontPage from "./StartPage/";
+import CalendarPage from "./CalendarPage/";
+import RoundTrips from "./roundTripPrices";
 
 const App = () => {
   const [roundTrips, setRoundTrips] = useState([]);
+
+  useEffect(() => {
+    setRoundTrips(RoundTrips);
+  }, []);
+
   return (
     <div className="App" style={{ width: "100%" }}>
       <Router basename={process.env.PUBLIC_URL}>
@@ -25,7 +31,7 @@ const App = () => {
         <Route
           path="/calendar"
           render={props => (
-            <ChoosePage
+            <CalendarPage
               {...props}
               roundTrips={roundTrips}
             />

@@ -1,5 +1,39 @@
 import moment from "moment";
 
+const getCheckedDestinations = (
+  selectedDestinations,
+  journeys
+) => {
+  const checkedDestinations = Object.entries(
+    selectedDestinations
+  )
+    .filter(([key, value]) => {
+      return value;
+    })
+    .map(([key, value]) => key);
+
+  const checkedJourneys = journeys.reduce(
+    (checkedJourneys, journey) => {
+      const destinationStation = journey.there.destination;
+      const returnDestinationStation = journey.back.origin;
+
+      if (
+        checkedDestinations.includes(destinationStation) &&
+        checkedDestinations.includes(
+          returnDestinationStation
+        )
+      ) {
+        return [...checkedJourneys, journey];
+      } else {
+        return checkedJourneys;
+      }
+    },
+    []
+  );
+
+  return checkedJourneys;
+};
+
 const getCheckedJourneys = (selectedStations, journeys) => {
   const checkedStations = Object.entries(selectedStations)
     .filter(([key, value]) => {
@@ -98,6 +132,7 @@ const getJourneysWithDepartureBefore = (
 
 const applyFilters = ({
   selectedStations,
+  selectedDestinations,
   roundTrips,
   departureTime,
   returnArrivalTime,
@@ -108,7 +143,13 @@ const applyFilters = ({
     selectedStations,
     roundTrips
   );
-  const journeysWithMaxPrice = checkedJourneys.filter(
+
+  const checkedDestinations = getCheckedDestinations(
+    selectedDestinations,
+    checkedJourneys
+  );
+
+  const journeysWithMaxPrice = checkedDestinations.filter(
     journey => maxPrice > journey.roundTripPrice
   );
 

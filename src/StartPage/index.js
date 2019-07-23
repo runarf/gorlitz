@@ -38,17 +38,21 @@ const FrontPage = ({
           onSubmit={(values, { setSubmitting }) => {
             Object.entries(values).forEach(
               ([key, value]) => {
-                axios
-                  .get(`https://flixi.herokuapp.com/${key}`)
-                  .then(rt => {
-                    debugger;
-                    const latestRoundTrips = [
-                      ...roundTrips,
-                      ...rt.data
-                    ];
-                    setRoundTrips(latestRoundTrips);
-                  })
-                  .catch(err => console.log(err));
+                if (value) {
+                  axios
+                    .get(
+                      `https://flixi.herokuapp.com/${key}`
+                    )
+                    .then(rt => {
+                      debugger;
+                      const latestRoundTrips = [
+                        ...roundTrips,
+                        ...rt.data
+                      ];
+                      setRoundTrips(latestRoundTrips);
+                    })
+                    .catch(err => console.log(err));
+                }
               }
             );
             console.log(JSON.stringify(values, null, 2));

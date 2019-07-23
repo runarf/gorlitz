@@ -4,8 +4,10 @@ import CheckBoxes from "./Checkboxes";
 
 const SideBarLeft = ({
   style,
+  destinations,
+  handleChangeSelectedDestinations,
   originStations,
-  handleChange,
+  handleChangeSelectedStations,
   departureTime,
   setDepartureTime,
   returnDepartureTime,
@@ -19,9 +21,19 @@ const SideBarLeft = ({
       anchor="left"
       className={style}
     >
+      Destinations
       <CheckBoxes
-        originStations={originStations}
-        handleChange={handleChange}
+        stations={destinations}
+        handleChangeSelectedStations={
+          handleChangeSelectedDestinations
+        }
+      />
+      Origins
+      <CheckBoxes
+        stations={originStations}
+        handleChangeSelectedStations={
+          handleChangeSelectedStations
+        }
       />
       Departure Time: <br />
       <Slider
@@ -53,6 +65,7 @@ const SideBarLeft = ({
         max={24}
         onChange={(event, value) => setMaxTravelTime(value)}
       />
+      Maximum prize:
       <Slider
         defaultValue={50}
         valueLabelDisplay="auto"

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import journeys from "./roundTripPrices";
 import applyFilters from "./filters";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
@@ -12,8 +11,8 @@ import {
 } from "@material-ui/core";
 
 import Calendar from "./Calendar";
-import SideBarLeft from "./SideBarLeft";
-import SideBarRight from "./SideBarRight";
+import SideBarLeft from "./SideBarLeft/";
+import SideBarRight from "./SideBarRight/";
 
 momentDurationFormatSetup(moment);
 const useStyles = makeStyles(themes => ({
@@ -22,6 +21,21 @@ const useStyles = makeStyles(themes => ({
     flexShrink: 0
   }
 }));
+
+const getDestinations = roundTrips => {
+  const destinations = roundTrips.reduce(
+    (stations, roundTrip) => {
+      const station = roundTrip.there.destination;
+      if (stations.includes(station)) {
+        return stations;
+      } else {
+        return [...stations, station];
+      }
+    },
+    []
+  );
+  return destinations;
+};
 
 const getOriginStations = journeys => {
   const originStations = journeys.reduce(
@@ -38,28 +52,35 @@ const getOriginStations = journeys => {
   return originStations;
 };
 
-const ChoosePage = ({ roundTrips }) => {
+const CalendarPage = ({ roundTrips }) => {
   const classes = useStyles();
   const [originStations, setOriginStations] = useState([]);
+  const [destinations, setDestinations] = useState([]);
   const [events, setEvents] = useState([]);
   const [maxTravelTime, setMaxTravelTime] = useState(24);
   const [displaydJourneys, setDisplaydJourneys] = useState(
     []
   );
-
-  useEffect(() => {
-    const originStations = getOriginStations(roundTrips);
-    setOriginStations(originStations);
-  }, [roundTrips]);
-
   const [selectedStations, setSelectedStations] = useState(
     {}
   );
-
+  const [
+    selectedDestinations,
+    setSelectedDestinations
+  ] = useState({});
   const [departureTime, setDepartureTime] = useState([
     0,
     48
   ]);
+
+  useEffect(() => {
+    const originStations = getOriginStations(roundTrips);
+    setOriginStations(originStations);
+
+    const destinations = getDestinations(roundTrips);
+    setDestinations(destinations);
+  }, [roundTrips]);
+
   const [
     returnArrivalTime,
     setReturnArrivalTime
@@ -70,6 +91,7 @@ const ChoosePage = ({ roundTrips }) => {
   useEffect(() => {
     const journeysWithDepartureBefore = applyFilters({
       selectedStations,
+      selectedDestinations,
       roundTrips,
       departureTime,
       returnArrivalTime,
@@ -85,6 +107,7 @@ const ChoosePage = ({ roundTrips }) => {
     setEvents(events);
   }, [
     roundTrips,
+    selectedDestinations,
     selectedStations,
     departureTime,
     returnArrivalTime,
@@ -92,9 +115,16 @@ const ChoosePage = ({ roundTrips }) => {
     maxPrice
   ]);
 
-  const handleChange = name => event => {
+  const handleChangeSelectedStations = name => event => {
     setSelectedStations({
       ...selectedStations,
+      [name]: event.target.checked
+    });
+  };
+
+  const handleChangeSelectedDestinations = name => event => {
+    setSelectedDestinations({
+      ...selectedDestinations,
       [name]: event.target.checked
     });
   };
@@ -150,7 +180,13 @@ const ChoosePage = ({ roundTrips }) => {
       <SideBarLeft
         style={classes.drawer}
         originStations={originStations}
-        handleChange={handleChange}
+        destinations={destinations}
+        handleChangeSelectedDestinations={
+          handleChangeSelectedDestinations
+        }
+        handleChangeSelectedStations={
+          handleChangeSelectedStations
+        }
         departureTime={departureTime}
         setDepartureTime={setDepartureTime}
         returnDepartureTime={returnArrivalTime}
@@ -172,4 +208,4 @@ const ChoosePage = ({ roundTrips }) => {
   );
 };
 
-export default ChoosePage;
+export default CalendarPage;
