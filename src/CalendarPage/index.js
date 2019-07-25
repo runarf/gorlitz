@@ -9,7 +9,6 @@ import { Box, Container, makeStyles } from "@material-ui/core";
 import Calendar from "./Calendar";
 import SideBarLeft from "./SideBarLeft/";
 import SideBarRight from "./SideBarRight/";
-import { Formik, Form } from "formik";
 
 momentDurationFormatSetup(moment);
 
@@ -73,17 +72,21 @@ const getMaxAndMinRoundTripPrice = roundTrips => {
 
 const CalendarPage = ({ roundTrips }) => {
   const classes = useStyles();
+
   const [originStations, setOriginStations] = useState([]);
   const [destinations, setDestinations] = useState([]);
-  const [events, setEvents] = useState([]);
-  const [maxTravelTime, setMaxTravelTime] = useState(24);
-  const [displaydJourneys, setDisplaydJourneys] = useState([]);
+
   const [selectedStations, setSelectedStations] = useState({});
   const [selectedDestinations, setSelectedDestinations] = useState({});
+
+  const [events, setEvents] = useState([]);
+  const [displaydJourneys, setDisplaydJourneys] = useState([]);
+
   const [departureTime, setDepartureTime] = useState([0, 48]);
   const [returnArrivalTime, setReturnArrivalTime] = useState([0, 48]);
-  const [maxPrice, setMaxPrice] = useState(50);
+  const [maxTravelTime, setMaxTravelTime] = useState(24);
 
+  const [maxPrice, setMaxPrice] = useState(50);
   const [maxAndMinRoundTripPrice, setMaxAndMinRoundTripPrice] = useState(0);
 
   useEffect(() => {
@@ -184,25 +187,20 @@ const CalendarPage = ({ roundTrips }) => {
 
   return (
     <Container>
-      {({ values }) => (
-        <Form>
-          <SideBarLeft
-            values={values}
-            style={classes.drawer}
-            originStations={originStations}
-            destinations={destinations}
-            handleChangeSelectedDestinations={handleChangeSelectedDestinations}
-            handleChangeSelectedStations={handleChangeSelectedStations}
-            departureTime={departureTime}
-            setDepartureTime={setDepartureTime}
-            returnDepartureTime={returnArrivalTime}
-            setReturnDepartureTime={setReturnArrivalTime}
-            setMaxTravelTime={setMaxTravelTime}
-            setMaxPrice={setMaxPrice}
-            maxAndMinRoundTripPrice={maxAndMinRoundTripPrice}
-          />
-        </Form>
-      )}
+      <SideBarLeft
+        style={classes.drawer}
+        originStations={originStations}
+        destinations={destinations}
+        handleChangeSelectedDestinations={handleChangeSelectedDestinations}
+        handleChangeSelectedStations={handleChangeSelectedStations}
+        departureTime={departureTime}
+        setDepartureTime={setDepartureTime}
+        returnDepartureTime={returnArrivalTime}
+        setReturnDepartureTime={setReturnArrivalTime}
+        setMaxTravelTime={setMaxTravelTime}
+        setMaxPrice={setMaxPrice}
+        maxAndMinRoundTripPrice={maxAndMinRoundTripPrice}
+      />
       <Box>
         <Calendar events={events} onSelectEvent={onSelectEvent} />
       </Box>
@@ -211,17 +209,4 @@ const CalendarPage = ({ roundTrips }) => {
   );
 };
 
-const CalendarPageWithFormik = props => {
-  const initialValues = {
-    maxPrice: 50
-  };
-  return (
-    <Formik initialValues={initialValues}>
-      <CalendarPage {...props} />
-    </Formik>
-  );
-};
-
-export default CalendarPageWithFormik;
-
-export { CalendarPage };
+export default CalendarPage;

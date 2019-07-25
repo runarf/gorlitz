@@ -1,28 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Drawer, Slider } from "@material-ui/core";
 import CheckBoxes from "./Checkboxes";
-import { useField } from "formik";
-
-const FormikSlider = ({ name, ...props }) => {
-  const [field, meta] = useField(name);
-
-  useEffect(() => {}, [field]);
-  delete field.onBlur;
-  return (
-    <Slider
-      {...field}
-      {...props}
-      onChange={(event, value) => {
-        event.target.id = field.name;
-        event.target.value = value;
-        field.onChange(event, value);
-      }}
-    />
-  );
-};
 
 const SideBarLeft = ({
-  values,
   style,
   destinations,
   handleChangeSelectedDestinations,
@@ -77,14 +57,13 @@ const SideBarLeft = ({
         onChange={(event, value) => setMaxTravelTime(value)}
       />
       Maximum prize:
-      {JSON.stringify(values)}
-      <FormikSlider
-        name="maxPrice"
-        defaultValue={24}
+      <Slider
+        defaultValue={50}
         valueLabelDisplay="auto"
+        min={maxAndMinRoundTripPrice.min}
+        max={maxAndMinRoundTripPrice.max}
         marks
-        min={0}
-        max={24}
+        onChange={(event, value) => setMaxPrice(value)}
       />
     </Drawer>
   );
