@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import applyFilters from "./filters";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
@@ -47,23 +47,23 @@ const getMaxAndMinRoundTripPrice = roundTrips => {
   const mostExpensiveRoundTripPrice = roundTrips.reduce(
     (maxAndMinRoundTripPrice, roundTrip) => {
       const price = roundTrip.price;
-      if (maxAndMinRoundTripPrice.min === 0) {
-        maxAndMinRoundTripPrice.min = price;
+      if (maxAndMinRoundTripPrice.lowest === 0) {
+        maxAndMinRoundTripPrice.lowest = price;
       }
-      if (price > maxAndMinRoundTripPrice.max) {
+      if (price > maxAndMinRoundTripPrice.highest) {
         return {
           ...maxAndMinRoundTripPrice,
-          max: price
+          highest: price
         };
-      } else if (maxAndMinRoundTripPrice.min > price) {
-        return { ...maxAndMinRoundTripPrice, min: price };
+      } else if (maxAndMinRoundTripPrice.lowest > price) {
+        return { ...maxAndMinRoundTripPrice, lowest: price };
       } else {
         return maxAndMinRoundTripPrice;
       }
     },
     {
-      min: 0,
-      max: 0
+      lowest: 0,
+      highest: 0
     }
   );
 
@@ -73,71 +73,128 @@ const getMaxAndMinRoundTripPrice = roundTrips => {
 const CalendarPage = ({ roundTrips }) => {
   const classes = useStyles();
 
-  const [originStations, setOriginStations] = useState([]);
-  const [destinations, setDestinations] = useState([]);
-
-  const [selectedStations, setSelectedStations] = useState({});
-  const [selectedDestinations, setSelectedDestinations] = useState({});
+  const [stations, stationsDispatcher] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "SET_SELECTED_ORIGIN_STATIONS":
+          return {
+            ...state,
+            selectedOriginStations: {
+              ...state.selectedOriginStations,
+              ...action.value
+            }
+          };
+        case "SET_SELECTED_DESTINATIONS_STATIONS":
+          return {
+            ...state,
+            selectedDestinationsStations: {
+              ...state.selectedDestinationsStations,
+              ...action.value
+            }
+          };
+        default:
+          return state;
+      }
+    },
+    {
+      selectedOriginStations: {},
+      selectedDestinationsStations: {}
+    }
+  );
 
   const [events, setEvents] = useState([]);
   const [displaydJourneys, setDisplaydJourneys] = useState([]);
 
-  const [departureTime, setDepartureTime] = useState([0, 48]);
-  const [returnArrivalTime, setReturnArrivalTime] = useState([0, 48]);
-  const [maxTravelTime, setMaxTravelTime] = useState(24);
+  const [times, timesDispatcher] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "SET_MAX_TRAVEL_TIME":
+          return { ...state, maxTravelTime: action.value };
+        case "SET_BACK_ARRIVAL_TIME":
+          return { ...state, backArrivalTime: action.value };
+        case "SET_THERE_DEPARTURE_TIME":
+          return { ...state, thereDepartureTime: action.value };
+        default:
+          return state;
+      }
+    },
+    {
+      minAndMaxTravelTime: {
+        min: 0,
+        max: 100
+      },
+      maxTravelTime: 24,
+      backArrivalTime: [0, 48],
+      thereDepartureTime: [0, 48]
+    }
+  );
 
-  const [maxPrice, setMaxPrice] = useState(50);
-  const [maxAndMinRoundTripPrice, setMaxAndMinRoundTripPrice] = useState(0);
+  const [prices, pricesDispatcher] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "SET_MAX_PRICE":
+          return { ...state, maxPrice: action.value };
+        case "SET_LOWEST_AND_HIGHEST_ROUND_TRIP_PRICE":
+          return { ...state, lowestAndHighestRoundTripPrice: action.value };
+        default:
+          return state;
+      }
+    },
+    {
+      maxPrice: 50,
+      lowestAndHighestRoundTripPrice: {
+        lowest: 0,
+        highest: 0
+      }
+    }
+  );
 
   useEffect(() => {
     const originStations = getOriginStations(roundTrips);
-    setOriginStations(originStations);
+    stationsDispatcher({
+      type: "SET_SELECTED_ORIGIN_STATIONS",
+      value: originStations.reduce((stations, station) => {
+        if (stations[station] === undefined) {
+          stations[station] = true;
+        }
+        return stations;
+      }, {})
+    });
 
     const destinations = getDestinationStations(roundTrips);
-    setDestinations(destinations);
+    stationsDispatcher({
+      type: "SET_SELECTED_DESTINATIONS_STATIONS",
+      value: destinations.reduce((stations, station) => {
+        if (stations[station] === undefined) {
+          stations[station] = true;
+        }
+        return stations;
+      }, {})
+    });
 
     const maxAndMinRoundTripPrice = getMaxAndMinRoundTripPrice(roundTrips);
-    setMaxAndMinRoundTripPrice(maxAndMinRoundTripPrice);
+
+    pricesDispatcher({
+      type: "SET_LOWEST_AND_HIGHEST_ROUND_TRIP_PRICE",
+      value: maxAndMinRoundTripPrice
+    });
   }, [roundTrips]);
+
+  useEffect(() => {}, [stations.originStations, stations.destinationsStations]);
 
   useEffect(() => {
     const journeysMatchingFilter = applyFilters({
-      selectedStations,
-      selectedDestinations,
+      stations,
       roundTrips,
-      departureTime,
-      returnArrivalTime,
-      maxTravelTime,
-      maxPrice
+      times,
+      maxPrice: prices.maxPrice
     });
 
     setDisplaydJourneys(journeysMatchingFilter);
     const events = convertJourneyToEvent(journeysMatchingFilter);
 
     setEvents(events);
-  }, [
-    roundTrips,
-    selectedDestinations,
-    selectedStations,
-    departureTime,
-    returnArrivalTime,
-    maxTravelTime,
-    maxPrice
-  ]);
-
-  const handleChangeSelectedStations = name => event => {
-    setSelectedStations({
-      ...selectedStations,
-      [name]: event.target.checked
-    });
-  };
-
-  const handleChangeSelectedDestinations = name => event => {
-    setSelectedDestinations({
-      ...selectedDestinations,
-      [name]: event.target.checked
-    });
-  };
+  }, [roundTrips, stations, times, prices.maxPrice]);
 
   const [selectedEvent, setSelectedEvent] = useState({
     there: {
@@ -189,17 +246,11 @@ const CalendarPage = ({ roundTrips }) => {
     <Container>
       <SideBarLeft
         style={classes.drawer}
-        originStations={originStations}
-        destinations={destinations}
-        handleChangeSelectedDestinations={handleChangeSelectedDestinations}
-        handleChangeSelectedStations={handleChangeSelectedStations}
-        departureTime={departureTime}
-        setDepartureTime={setDepartureTime}
-        returnDepartureTime={returnArrivalTime}
-        setReturnDepartureTime={setReturnArrivalTime}
-        setMaxTravelTime={setMaxTravelTime}
-        setMaxPrice={setMaxPrice}
-        maxAndMinRoundTripPrice={maxAndMinRoundTripPrice}
+        stations={stations}
+        stationsDispatcher={stationsDispatcher}
+        timesDispatcher={timesDispatcher}
+        pricesDispatcher={pricesDispatcher}
+        prices={prices}
       />
       <Box>
         <Calendar events={events} onSelectEvent={onSelectEvent} />

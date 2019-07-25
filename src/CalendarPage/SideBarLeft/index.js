@@ -4,48 +4,63 @@ import CheckBoxes from "./Checkboxes";
 
 const SideBarLeft = ({
   style,
-  destinations,
-  handleChangeSelectedDestinations,
-  originStations,
-  handleChangeSelectedStations,
-  departureTime,
-  setDepartureTime,
-  returnDepartureTime,
-  setReturnDepartureTime,
-  setMaxTravelTime,
-  setMaxPrice,
-  maxAndMinRoundTripPrice
+  stationsDispatcher,
+  stations,
+  timesDispatcher,
+  pricesDispatcher,
+  prices
 }) => {
+  const handleChangeSelectedOriginStations = name => event => {
+    stationsDispatcher({
+      type: "SET_SELECTED_ORIGIN_STATIONS",
+      value: {
+        [name]: event.target.checked
+      }
+    });
+  };
+
+  const handleChangeSelectedDestinations = name => event => {
+    stationsDispatcher({
+      type: "SET_SELECTED_DESTINATIONS_STATIONS",
+      value: {
+        [name]: event.target.checked
+      }
+    });
+  };
+
   return (
     <Drawer variant="permanent" anchor="left" className={style}>
       Destinations
       <CheckBoxes
-        stations={destinations}
+        stations={stations.selectedDestinationsStations}
         handleChangeSelectedStations={handleChangeSelectedDestinations}
       />
       Origins
       <CheckBoxes
-        stations={originStations}
-        handleChangeSelectedStations={handleChangeSelectedStations}
+        stations={stations.selectedOriginStations}
+        handleChangeSelectedStations={handleChangeSelectedOriginStations}
       />
       Departure Time: <br />
       <Slider
-        value={departureTime}
-        defaultValue={0}
+        defaultValue={[0, 48]}
         valueLabelDisplay="auto"
         marks
         min={0}
         max={48}
-        onChange={(event, value) => setDepartureTime(value)}
+        onChange={(event, value) =>
+          timesDispatcher({ type: "SET_THERE_DEPARTURE_TIME", value })
+        }
       />
       Return Departure Time: <br />
       <Slider
-        value={returnDepartureTime}
+        defaultValue={[0, 48]}
         valueLabelDisplay="auto"
         marks
         min={0}
         max={48}
-        onChange={(event, value) => setReturnDepartureTime(value)}
+        onChange={(event, value) =>
+          timesDispatcher({ type: "SET_BACK_ARRIVAL_TIME", value })
+        }
       />
       Maximum travel time:
       <Slider
@@ -54,16 +69,20 @@ const SideBarLeft = ({
         marks
         min={0}
         max={24}
-        onChange={(event, value) => setMaxTravelTime(value)}
+        onChange={(event, value) =>
+          timesDispatcher({ type: "SET_MAX_TRAVEL_TIME", value })
+        }
       />
       Maximum prize:
       <Slider
         defaultValue={50}
         valueLabelDisplay="auto"
-        min={maxAndMinRoundTripPrice.min}
-        max={maxAndMinRoundTripPrice.max}
+        min={prices.lowestAndHighestRoundTripPrice.lowest}
+        max={prices.lowestAndHighestRoundTripPrice.highest}
         marks
-        onChange={(event, value) => setMaxPrice(value)}
+        onChange={(event, value) =>
+          pricesDispatcher({ type: "SET_MAX_PRICE", value })
+        }
       />
     </Drawer>
   );

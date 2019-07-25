@@ -1,35 +1,25 @@
 import moment from "moment";
 
-const getCheckedDestinations = (
-  selectedDestinations,
-  journeys
-) => {
-  const checkedDestinations = Object.entries(
-    selectedDestinations
-  )
+const getCheckedDestinations = (selectedDestinations, journeys) => {
+  const checkedDestinations = Object.entries(selectedDestinations)
     .filter(([key, value]) => {
       return value;
     })
     .map(([key, value]) => key);
 
-  const checkedJourneys = journeys.reduce(
-    (checkedJourneys, journey) => {
-      const destinationStation = journey.there.destination;
-      const returnDestinationStation = journey.back.origin;
+  const checkedJourneys = journeys.reduce((checkedJourneys, journey) => {
+    const destinationStation = journey.there.destination.name;
+    const returnDestinationStation = journey.back.origin.name;
 
-      if (
-        checkedDestinations.includes(destinationStation) &&
-        checkedDestinations.includes(
-          returnDestinationStation
-        )
-      ) {
-        return [...checkedJourneys, journey];
-      } else {
-        return checkedJourneys;
-      }
-    },
-    []
-  );
+    if (
+      checkedDestinations.includes(destinationStation) &&
+      checkedDestinations.includes(returnDestinationStation)
+    ) {
+      return [...checkedJourneys, journey];
+    } else {
+      return checkedJourneys;
+    }
+  }, []);
 
   return checkedJourneys;
 };
@@ -40,22 +30,19 @@ const getCheckedJourneys = (selectedStations, journeys) => {
       return value;
     })
     .map(([key, value]) => key);
-  const checkedJourneys = journeys.reduce(
-    (checkedJourneys, journey, index) => {
-      const originStation = journey.there.origin;
-      const returnOriginStation = journey.back.destination;
+  const checkedJourneys = journeys.reduce((checkedJourneys, journey, index) => {
+    const originStation = journey.there.origin.name;
+    const returnOriginStation = journey.back.destination.name;
 
-      if (
-        checkedStations.includes(originStation) &&
-        checkedStations.includes(returnOriginStation)
-      ) {
-        return [...checkedJourneys, journey];
-      } else {
-        return checkedJourneys;
-      }
-    },
-    []
-  );
+    if (
+      checkedStations.includes(originStation) &&
+      checkedStations.includes(returnOriginStation)
+    ) {
+      return [...checkedJourneys, journey];
+    } else {
+      return checkedJourneys;
+    }
+  }, []);
 
   return checkedJourneys;
 };
@@ -72,9 +59,7 @@ const getJourneysWithDepartureBefore = (
 ) => {
   const journeysWithDepartureBefore = checkedJourneys.reduce(
     (journeysWithDepartureBefore, journey) => {
-      const journeyDeparture = moment(
-        journey.there.departure
-      );
+      const journeyDeparture = moment(journey.there.departure);
 
       const journeyDepartureHour = journeyDeparture.hour();
       const journeyDepartureHoursAfterFriday =
@@ -84,24 +69,16 @@ const getJourneysWithDepartureBefore = (
 
       const journeyArrival = moment(journey.there.arrival);
 
-      const journeyBackDeparture = moment(
-        journey.back.departure
-      );
-      const journeyBackArrival = moment(
-        journey.back.arrival
-      );
+      const journeyBackDeparture = moment(journey.back.departure);
+      const journeyBackArrival = moment(journey.back.arrival);
 
       const journeyBackArrivalHour = journeyBackArrival.hour();
       const journeyBackArrivalHoursAfterSunday =
         journeyBackArrival.isoWeekday() === 7
           ? journeyBackArrivalHour
-          : journeyBackArrival.isoWeekday() * 24 +
-            journeyBackArrivalHour;
+          : journeyBackArrival.isoWeekday() * 24 + journeyBackArrivalHour;
 
-      const travelTimeThere = journeyArrival.diff(
-        journeyDeparture,
-        "hours"
-      );
+      const travelTimeThere = journeyArrival.diff(journeyDeparture, "hours");
 
       const travelTimeBack = journeyBackArrival.diff(
         journeyBackDeparture,
@@ -109,14 +86,8 @@ const getJourneysWithDepartureBefore = (
       );
 
       if (
-        isTimeBetween(
-          departureTime,
-          journeyDepartureHoursAfterFriday
-        ) &&
-        isTimeBetween(
-          returnArrivalTime,
-          journeyBackArrivalHoursAfterSunday
-        ) &&
+        isTimeBetween(departureTime, journeyDepartureHoursAfterFriday) &&
+        isTimeBetween(returnArrivalTime, journeyBackArrivalHoursAfterSunday) &&
         travelTimeThere < maxTravelTime &&
         travelTimeBack < maxTravelTime
       ) {
@@ -130,34 +101,26 @@ const getJourneysWithDepartureBefore = (
   return journeysWithDepartureBefore;
 };
 
-const applyFilters = ({
-  selectedStations,
-  selectedDestinations,
-  roundTrips,
-  departureTime,
-  returnArrivalTime,
-  maxTravelTime,
-  maxPrice
-}) => {
+const applyFilters = ({ stations, roundTrips, times, maxPrice }) => {
   const checkedJourneys = getCheckedJourneys(
-    selectedStations,
+    stations.selectedOriginStations,
     roundTrips
   );
 
   const checkedDestinations = getCheckedDestinations(
-    selectedDestinations,
+    stations.selectedDestinationsStations,
     checkedJourneys
   );
 
   const journeysWithMaxPrice = checkedDestinations.filter(
-    journey => maxPrice > journey.roundTripPrice
+    journey => maxPrice > journey.price
   );
 
   const journeysWithDepartureBefore = getJourneysWithDepartureBefore(
     journeysWithMaxPrice,
-    departureTime,
-    returnArrivalTime,
-    maxTravelTime
+    times.thereDepartureTime,
+    times.backArrivalTime,
+    times.maxTravelTime
   );
 
   return journeysWithDepartureBefore;
