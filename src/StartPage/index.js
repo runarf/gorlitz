@@ -1,107 +1,27 @@
 import React from "react";
-//import ChoosePage from "../ChoosePage";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import { withRouter } from "react-router-dom";
-import {
-  Box,
-  Button,
-  Checkbox,
-  ExpansionPanel,
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-  FormControlLabel
-} from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
-import regionsByCountry from "./regionsCloseToBerlin";
-import axios from "axios";
+import { Box, Button } from "@material-ui/core";
 
-const FormikCheckbox = ({ field, form, disabled }) => {
-  const isDisabled =
-    disabled !== undefined ? disabled : form.isSubmitting;
+import Countries from "./Countries/";
 
-  return <Checkbox disabled={isDisabled} {...field} />;
-};
-
-const FrontPage = ({
-  history,
-  roundTrips,
-  setRoundTrips
-}) => {
+const StartPage = ({ history, handleSetRoundTrips }) => {
+  const handleFormSubmit = (values, { setSubmitting }) => {
+    Object.entries(values).forEach(async ([key, value]) => {
+      if (value) {
+        await handleSetRoundTrips(key);
+      }
+    });
+    console.log(JSON.stringify(values, null, 2));
+    history.push("/calendar");
+  };
   return (
     <>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Formik
-          onSubmit={(values, { setSubmitting }) => {
-            Object.entries(values).forEach(
-              ([key, value]) => {
-                if (value) {
-                  axios
-                    .get(
-                      `https://flixi.herokuapp.com/${key}`
-                    )
-                    .then(rt => {
-                      debugger;
-                      const latestRoundTrips = [
-                        ...roundTrips,
-                        ...rt.data
-                      ];
-                      setRoundTrips(latestRoundTrips);
-                    })
-                    .catch(err => console.log(err));
-                }
-              }
-            );
-            console.log(JSON.stringify(values, null, 2));
-            history.push("/calendar");
-          }}
-        >
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Formik onSubmit={handleFormSubmit}>
           {({ isSubmitting }) => (
             <Form>
-              <Box display="flex" flexWrap="wrap">
-                {Object.entries(regionsByCountry).map(
-                  ([country, regions], countryIndex) => (
-                    <Box key={countryIndex}>
-                      <ExpansionPanel>
-                        <ExpansionPanelSummary
-                          expandIcon={<ExpandMore />}
-                        >
-                          {country}
-                        </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
-                          <Box
-                            display="flex"
-                            flexWrap="wrap"
-                          >
-                            {regions.map(
-                              (region, regionIndex) => (
-                                <Box key={regionIndex}>
-                                  <Field name={region.id}>
-                                    {({ field, form }) => (
-                                      <FormControlLabel
-                                        control={
-                                          <FormikCheckbox
-                                            field={field}
-                                            form={form}
-                                          />
-                                        }
-                                        label={region.name}
-                                      />
-                                    )}
-                                  </Field>
-                                </Box>
-                              )
-                            )}
-                          </Box>
-                        </ExpansionPanelDetails>
-                      </ExpansionPanel>
-                    </Box>
-                  )
-                )}
-              </Box>
+              <Countries />
               <Box display="flex" justifyContent="center">
                 <Button
                   variant="contained"
@@ -120,4 +40,4 @@ const FrontPage = ({
   );
 };
 
-export default withRouter(FrontPage);
+export default withRouter(StartPage);

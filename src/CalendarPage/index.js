@@ -2,19 +2,17 @@ import React, { useState, useEffect } from "react";
 import applyFilters from "./filters";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
-import convertJourneyToEvent from "./ConvertJourneyToEvent";
+import convertJourneyToEvent from "./convertJourneyToEvent";
 
-import {
-  Box,
-  Container,
-  makeStyles
-} from "@material-ui/core";
+import { Box, Container, makeStyles } from "@material-ui/core";
 
 import Calendar from "./Calendar";
 import SideBarLeft from "./SideBarLeft/";
 import SideBarRight from "./SideBarRight/";
+import { Formik, Form } from "formik";
 
 momentDurationFormatSetup(moment);
+
 const useStyles = makeStyles(themes => ({
   drawer: {
     maxWidth: 10,
@@ -22,34 +20,55 @@ const useStyles = makeStyles(themes => ({
   }
 }));
 
-const getDestinations = roundTrips => {
-  const destinations = roundTrips.reduce(
-    (stations, roundTrip) => {
-      const station = roundTrip.there.destination;
-      if (stations.includes(station)) {
-        return stations;
-      } else {
-        return [...stations, station];
-      }
-    },
-    []
-  );
-  return destinations;
+const getDestinationStations = roundTrips => {
+  const destinationStations = roundTrips.reduce((stations, roundTrip) => {
+    const station = roundTrip.there.destination.name;
+    if (stations.includes(station)) {
+      return stations;
+    } else {
+      return [...stations, station];
+    }
+  }, []);
+  return destinationStations;
 };
 
-const getOriginStations = journeys => {
-  const originStations = journeys.reduce(
-    (stations, journey) => {
-      const station = journey.there.origin;
-      if (stations.includes(station)) {
-        return stations;
+const getOriginStations = roundTrips => {
+  const originStations = roundTrips.reduce((stations, journey) => {
+    const station = journey.there.origin.name;
+    if (stations.includes(station)) {
+      return stations;
+    } else {
+      return [...stations, station];
+    }
+  }, []);
+  return originStations;
+};
+
+const getMaxAndMinRoundTripPrice = roundTrips => {
+  const mostExpensiveRoundTripPrice = roundTrips.reduce(
+    (maxAndMinRoundTripPrice, roundTrip) => {
+      const price = roundTrip.price;
+      if (maxAndMinRoundTripPrice.min === 0) {
+        maxAndMinRoundTripPrice.min = price;
+      }
+      if (price > maxAndMinRoundTripPrice.max) {
+        return {
+          ...maxAndMinRoundTripPrice,
+          max: price
+        };
+      } else if (maxAndMinRoundTripPrice.min > price) {
+        return { ...maxAndMinRoundTripPrice, min: price };
       } else {
-        return [...stations, station];
+        return maxAndMinRoundTripPrice;
       }
     },
-    []
+    {
+      min: 0,
+      max: 0
+    }
   );
-  return originStations;
+
+  return mostExpensiveRoundTripPrice;
 };
 
 const CalendarPage = ({ roundTrips }) => {
@@ -58,38 +77,28 @@ const CalendarPage = ({ roundTrips }) => {
   const [destinations, setDestinations] = useState([]);
   const [events, setEvents] = useState([]);
   const [maxTravelTime, setMaxTravelTime] = useState(24);
-  const [displaydJourneys, setDisplaydJourneys] = useState(
-    []
-  );
-  const [selectedStations, setSelectedStations] = useState(
-    {}
-  );
-  const [
-    selectedDestinations,
-    setSelectedDestinations
-  ] = useState({});
-  const [departureTime, setDepartureTime] = useState([
-    0,
-    48
-  ]);
+  const [displaydJourneys, setDisplaydJourneys] = useState([]);
+  const [selectedStations, setSelectedStations] = useState({});
+  const [selectedDestinations, setSelectedDestinations] = useState({});
+  const [departureTime, setDepartureTime] = useState([0, 48]);
+  const [returnArrivalTime, setReturnArrivalTime] = useState([0, 48]);
+  const [maxPrice, setMaxPrice] = useState(50);
+
+  const [maxAndMinRoundTripPrice, setMaxAndMinRoundTripPrice] = useState(0);
 
   useEffect(() => {
     const originStations = getOriginStations(roundTrips);
     setOriginStations(originStations);
 
-    const destinations = getDestinations(roundTrips);
+    const destinations = getDestinationStations(roundTrips);
     setDestinations(destinations);
+
+    const maxAndMinRoundTripPrice = getMaxAndMinRoundTripPrice(roundTrips);
+    setMaxAndMinRoundTripPrice(maxAndMinRoundTripPrice);
   }, [roundTrips]);
 
-  const [
-    returnArrivalTime,
-    setReturnArrivalTime
-  ] = useState([0, 48]);
-
-  const [maxPrice, setMaxPrice] = useState(50);
-
   useEffect(() => {
-    const journeysWithDepartureBefore = applyFilters({
+    const journeysMatchingFilter = applyFilters({
       selectedStations,
       selectedDestinations,
       roundTrips,
@@ -99,10 +108,8 @@ const CalendarPage = ({ roundTrips }) => {
       maxPrice
     });
 
-    setDisplaydJourneys(journeysWithDepartureBefore);
-    const events = convertJourneyToEvent(
-      journeysWithDepartureBefore
-    );
+    setDisplaydJourneys(journeysMatchingFilter);
+    const events = convertJourneyToEvent(journeysMatchingFilter);
 
     setEvents(events);
   }, [
@@ -131,8 +138,8 @@ const CalendarPage = ({ roundTrips }) => {
 
   const [selectedEvent, setSelectedEvent] = useState({
     there: {
-      origin: "Berlin SXF",
-      destination: "Görlitz",
+      origin: { id: "481", name: "Berlin Südkreuz" },
+      destination: { id: "4468", name: "Görlitz" },
       departure: moment("2019-07-19T04:35:00+02:00"),
       arrival: moment("2019-07-19T10:50:00+02:00"),
       price: 19.98,
@@ -140,8 +147,8 @@ const CalendarPage = ({ roundTrips }) => {
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=19.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
     },
     back: {
-      origin: "Görlitz",
-      destination: "Berlin Südkreuz",
+      destination: { id: "481", name: "Berlin Südkreuz" },
+      origin: { id: "4468", name: "Görlitz" },
       departure: moment("2019-07-21T19:00:00+02:00"),
       arrival: moment("2019-07-22T00:35:00+02:00"),
       price: 15.98,
@@ -177,35 +184,44 @@ const CalendarPage = ({ roundTrips }) => {
 
   return (
     <Container>
-      <SideBarLeft
-        style={classes.drawer}
-        originStations={originStations}
-        destinations={destinations}
-        handleChangeSelectedDestinations={
-          handleChangeSelectedDestinations
-        }
-        handleChangeSelectedStations={
-          handleChangeSelectedStations
-        }
-        departureTime={departureTime}
-        setDepartureTime={setDepartureTime}
-        returnDepartureTime={returnArrivalTime}
-        setReturnDepartureTime={setReturnArrivalTime}
-        setMaxTravelTime={setMaxTravelTime}
-        setMaxPrice={setMaxPrice}
-      />
+      {({ values }) => (
+        <Form>
+          <SideBarLeft
+            values={values}
+            style={classes.drawer}
+            originStations={originStations}
+            destinations={destinations}
+            handleChangeSelectedDestinations={handleChangeSelectedDestinations}
+            handleChangeSelectedStations={handleChangeSelectedStations}
+            departureTime={departureTime}
+            setDepartureTime={setDepartureTime}
+            returnDepartureTime={returnArrivalTime}
+            setReturnDepartureTime={setReturnArrivalTime}
+            setMaxTravelTime={setMaxTravelTime}
+            setMaxPrice={setMaxPrice}
+            maxAndMinRoundTripPrice={maxAndMinRoundTripPrice}
+          />
+        </Form>
+      )}
       <Box>
-        <Calendar
-          events={events}
-          onSelectEvent={onSelectEvent}
-        />
+        <Calendar events={events} onSelectEvent={onSelectEvent} />
       </Box>
-      <SideBarRight
-        style={classes.drawer}
-        selectedEvent={selectedEvent}
-      />
+      <SideBarRight style={classes.drawer} selectedEvent={selectedEvent} />
     </Container>
   );
 };
 
-export default CalendarPage;
+const CalendarPageWithFormik = props => {
+  const initialValues = {
+    maxPrice: 50
+  };
+  return (
+    <Formik initialValues={initialValues}>
+      <CalendarPage {...props} />
+    </Formik>
+  );
+};
+
+export default CalendarPageWithFormik;
+
+export { CalendarPage };

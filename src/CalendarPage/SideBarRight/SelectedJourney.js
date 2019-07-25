@@ -7,15 +7,11 @@ const SelectedJourney = ({ selectedEvent }) => {
     return (
       <Card>
         <Typography>
-          {oneWay.origin + " - " + oneWay.destination}
+          {oneWay.origin.name + " - " + oneWay.destination.name}
         </Typography>
         <Typography>{oneWay.price} €</Typography>
-        <Typography>
-          {oneWay.departure.format("dddd HH:mm")}
-        </Typography>
-        <Typography>
-          {oneWay.arrival.format("dddd HH:mm")}
-        </Typography>
+        <Typography>{oneWay.departure.format("dddd HH:mm")}</Typography>
+        <Typography>{oneWay.arrival.format("dddd HH:mm")}</Typography>
 
         <a href={oneWay.url}>
           <ShoppingCart />

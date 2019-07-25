@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Drawer, Slider } from "@material-ui/core";
 import CheckBoxes from "./Checkboxes";
+import { useField } from "formik";
+
+const FormikSlider = ({ name, ...props }) => {
+  const [field, meta] = useField(name);
+
+  useEffect(() => {}, [field]);
+  delete field.onBlur;
+  return (
+    <Slider
+      {...field}
+      {...props}
+      onChange={(event, value) => {
+        event.target.id = field.name;
+        event.target.value = value;
+        field.onChange(event, value);
+      }}
+    />
+  );
+};
 
 const SideBarLeft = ({
+  values,
   style,
   destinations,
   handleChangeSelectedDestinations,
@@ -13,27 +33,20 @@ const SideBarLeft = ({
   returnDepartureTime,
   setReturnDepartureTime,
   setMaxTravelTime,
-  setMaxPrice
+  setMaxPrice,
+  maxAndMinRoundTripPrice
 }) => {
   return (
-    <Drawer
-      variant="permanent"
-      anchor="left"
-      className={style}
-    >
+    <Drawer variant="permanent" anchor="left" className={style}>
       Destinations
       <CheckBoxes
         stations={destinations}
-        handleChangeSelectedStations={
-          handleChangeSelectedDestinations
-        }
+        handleChangeSelectedStations={handleChangeSelectedDestinations}
       />
       Origins
       <CheckBoxes
         stations={originStations}
-        handleChangeSelectedStations={
-          handleChangeSelectedStations
-        }
+        handleChangeSelectedStations={handleChangeSelectedStations}
       />
       Departure Time: <br />
       <Slider
@@ -52,9 +65,7 @@ const SideBarLeft = ({
         marks
         min={0}
         max={48}
-        onChange={(event, value) =>
-          setReturnDepartureTime(value)
-        }
+        onChange={(event, value) => setReturnDepartureTime(value)}
       />
       Maximum travel time:
       <Slider
@@ -66,13 +77,14 @@ const SideBarLeft = ({
         onChange={(event, value) => setMaxTravelTime(value)}
       />
       Maximum prize:
-      <Slider
-        defaultValue={50}
+      {JSON.stringify(values)}
+      <FormikSlider
+        name="maxPrice"
+        defaultValue={24}
         valueLabelDisplay="auto"
-        min={0}
-        max={100}
         marks
-        onChange={(event, value) => setMaxPrice(value)}
+        min={0}
+        max={24}
       />
     </Drawer>
   );
