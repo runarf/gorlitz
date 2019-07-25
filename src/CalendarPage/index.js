@@ -9,6 +9,14 @@ import { Box, Container, makeStyles } from "@material-ui/core";
 import Calendar from "./Calendar";
 import SideBarLeft from "./SideBarLeft/";
 import SideBarRight from "./SideBarRight/";
+import {
+  pricesInitialState,
+  pricesReducer,
+  timesInitialState,
+  timesReducer,
+  stationsReducer,
+  stationsInitialValues
+} from "./reducers/index.js";
 
 momentDurationFormatSetup(moment);
 
@@ -18,6 +26,27 @@ const useStyles = makeStyles(themes => ({
     flexShrink: 0
   }
 }));
+
+const initialEvent = {
+  there: {
+    origin: { id: "481", name: "Berlin Südkreuz" },
+    destination: { id: "4468", name: "Görlitz" },
+    departure: moment("2019-07-19T04:35:00+02:00"),
+    arrival: moment("2019-07-19T10:50:00+02:00"),
+    price: 19.98,
+    url:
+      "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=19.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
+  },
+  back: {
+    destination: { id: "481", name: "Berlin Südkreuz" },
+    origin: { id: "4468", name: "Görlitz" },
+    departure: moment("2019-07-21T19:00:00+02:00"),
+    arrival: moment("2019-07-22T00:35:00+02:00"),
+    price: 15.98,
+    url:
+      "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=481&rideDate=21.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
+  }
+};
 
 const getDestinationStations = roundTrips => {
   const destinationStations = roundTrips.reduce((stations, roundTrip) => {
@@ -74,80 +103,20 @@ const CalendarPage = ({ roundTrips }) => {
   const classes = useStyles();
 
   const [stations, stationsDispatcher] = useReducer(
-    (state, action) => {
-      switch (action.type) {
-        case "SET_SELECTED_ORIGIN_STATIONS":
-          return {
-            ...state,
-            selectedOriginStations: {
-              ...state.selectedOriginStations,
-              ...action.value
-            }
-          };
-        case "SET_SELECTED_DESTINATIONS_STATIONS":
-          return {
-            ...state,
-            selectedDestinationsStations: {
-              ...state.selectedDestinationsStations,
-              ...action.value
-            }
-          };
-        default:
-          return state;
-      }
-    },
-    {
-      selectedOriginStations: {},
-      selectedDestinationsStations: {}
-    }
+    stationsReducer,
+    stationsInitialValues
+  );
+
+  const [times, timesDispatcher] = useReducer(timesReducer, timesInitialState);
+
+  const [prices, pricesDispatcher] = useReducer(
+    pricesReducer,
+    pricesInitialState
   );
 
   const [events, setEvents] = useState([]);
+  const [selectedEvent, setSelectedEvent] = useState(initialEvent);
   const [displaydJourneys, setDisplaydJourneys] = useState([]);
-
-  const [times, timesDispatcher] = useReducer(
-    (state, action) => {
-      switch (action.type) {
-        case "SET_MAX_TRAVEL_TIME":
-          return { ...state, maxTravelTime: action.value };
-        case "SET_BACK_ARRIVAL_TIME":
-          return { ...state, backArrivalTime: action.value };
-        case "SET_THERE_DEPARTURE_TIME":
-          return { ...state, thereDepartureTime: action.value };
-        default:
-          return state;
-      }
-    },
-    {
-      minAndMaxTravelTime: {
-        min: 0,
-        max: 100
-      },
-      maxTravelTime: 24,
-      backArrivalTime: [0, 48],
-      thereDepartureTime: [0, 48]
-    }
-  );
-
-  const [prices, pricesDispatcher] = useReducer(
-    (state, action) => {
-      switch (action.type) {
-        case "SET_MAX_PRICE":
-          return { ...state, maxPrice: action.value };
-        case "SET_LOWEST_AND_HIGHEST_ROUND_TRIP_PRICE":
-          return { ...state, lowestAndHighestRoundTripPrice: action.value };
-        default:
-          return state;
-      }
-    },
-    {
-      maxPrice: 50,
-      lowestAndHighestRoundTripPrice: {
-        lowest: 0,
-        highest: 0
-      }
-    }
-  );
 
   useEffect(() => {
     const originStations = getOriginStations(roundTrips);
@@ -180,8 +149,6 @@ const CalendarPage = ({ roundTrips }) => {
     });
   }, [roundTrips]);
 
-  useEffect(() => {}, [stations.originStations, stations.destinationsStations]);
-
   useEffect(() => {
     const journeysMatchingFilter = applyFilters({
       stations,
@@ -195,27 +162,6 @@ const CalendarPage = ({ roundTrips }) => {
 
     setEvents(events);
   }, [roundTrips, stations, times, prices.maxPrice]);
-
-  const [selectedEvent, setSelectedEvent] = useState({
-    there: {
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
-      departure: moment("2019-07-19T04:35:00+02:00"),
-      arrival: moment("2019-07-19T10:50:00+02:00"),
-      price: 19.98,
-      url:
-        "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=19.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
-    },
-    back: {
-      destination: { id: "481", name: "Berlin Südkreuz" },
-      origin: { id: "4468", name: "Görlitz" },
-      departure: moment("2019-07-21T19:00:00+02:00"),
-      arrival: moment("2019-07-22T00:35:00+02:00"),
-      price: 15.98,
-      url:
-        "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=481&rideDate=21.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
-    }
-  });
 
   const onSelectEvent = event => {
     const selectedJourney = displaydJourneys[event.id];
