@@ -1,5 +1,5 @@
 import React from 'react'
-import { Drawer, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
 
@@ -30,47 +30,42 @@ const SideBarLeft = ({
     }
 
     return (
-        <Drawer
-            variant="permanent"
-            anchor="left"
-            className={style}
+        <Grid
+            container
+            direction="column"
+            justify="center"
+            style={{ height: '100%' }}
         >
-            <Grid
-                container
-                direction="row"
-                justify="center"
-            >
-                <Grid item xs={10}>
-                    <CheckBoxes
-                        title="Destinations"
-                        stations={
-                            stations.selectedDestinationsStations
-                        }
-                        handleChangeSelectedStations={
-                            handleChangeSelectedDestinations
-                        }
-                    />
-                </Grid>
-                <Grid item xs={10}>
-                    <CheckBoxes
-                        title="Origins"
-                        stations={
-                            stations.selectedOriginStations
-                        }
-                        handleChangeSelectedStations={
-                            handleChangeSelectedOriginStations
-                        }
-                    />
-                </Grid>
-                <Grid item xs={10}>
-                    <Sliders
-                        prices={prices}
-                        pricesDispatcher={pricesDispatcher}
-                        timesDispatcher={timesDispatcher}
-                    />
-                </Grid>
+            <Grid item xs>
+                <CheckBoxes
+                    title="Destinations"
+                    stations={
+                        stations.selectedDestinationsStations
+                    }
+                    handleChangeSelectedStations={
+                        handleChangeSelectedDestinations
+                    }
+                />
             </Grid>
-        </Drawer>
+            <Grid item xs>
+                <CheckBoxes
+                    title="Origins"
+                    stations={
+                        stations.selectedOriginStations
+                    }
+                    handleChangeSelectedStations={
+                        handleChangeSelectedOriginStations
+                    }
+                />
+            </Grid>
+            <Grid item xs>
+                <Sliders
+                    prices={prices}
+                    pricesDispatcher={pricesDispatcher}
+                    timesDispatcher={timesDispatcher}
+                />
+            </Grid>
+        </Grid>
     )
 }
 

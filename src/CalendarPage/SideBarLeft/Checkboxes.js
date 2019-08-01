@@ -11,12 +11,16 @@ const CheckBoxes = ({
     title,
 }) => {
     return (
-        <Grid container direction="column">
+        <Grid
+            container
+            direction="column"
+            alignItems="flex-end"
+        >
             {title}
             {Object.entries(stations).length > 0 &&
                 Object.entries(stations).map(
                     ([station, checked], index) => (
-                        <Grid item xs={12}>
+                        <Grid item xs>
                             <FormControlLabel
                                 key={index}
                                 control={

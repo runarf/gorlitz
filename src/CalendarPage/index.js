@@ -8,7 +8,7 @@ import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
 import convertJourneyToEvent from './convertJourneyToEvent'
 
-import { Box, Grid, makeStyles } from '@material-ui/core'
+import { Grid, makeStyles } from '@material-ui/core'
 
 import Calendar from './Calendar'
 import SideBarLeft from './SideBarLeft/'
@@ -23,6 +23,7 @@ import {
 } from './reducers/'
 
 import {
+    initialEvent,
     getMaxAndMinRoundTripPrice,
     getOriginStations,
     getDestinationStations,
@@ -33,36 +34,6 @@ momentDurationFormatSetup(moment)
 const useStyles = makeStyles(themes => ({
     drawer: {},
 }))
-
-const initialEvent = {
-    there: {
-        origin: {
-            id: '481',
-            name: 'Berlin Südkreuz',
-        },
-        destination: {
-            id: '4468',
-            name: 'Görlitz',
-        },
-        departure: moment('2019-07-19T04:35:00+02:00'),
-        arrival: moment('2019-07-19T10:50:00+02:00'),
-        price: 19.98,
-        url:
-            'https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=19.07.2019&currency=EUR&adult=1&children=0&bike_slot=0',
-    },
-    back: {
-        destination: {
-            id: '481',
-            name: 'Berlin Südkreuz',
-        },
-        origin: { id: '4468', name: 'Görlitz' },
-        departure: moment('2019-07-21T19:00:00+02:00'),
-        arrival: moment('2019-07-22T00:35:00+02:00'),
-        price: 15.98,
-        url:
-            'https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=481&rideDate=21.07.2019&currency=EUR&adult=1&children=0&bike_slot=0',
-    },
-}
 
 const CalendarPage = ({ roundTrips }) => {
     const classes = useStyles()
@@ -175,7 +146,7 @@ const CalendarPage = ({ roundTrips }) => {
 
     return (
         <Grid container justify="center" spacing={2}>
-            <Grid item xs={5}>
+            <Grid item xs={2}>
                 <SideBarLeft
                     style={classes.drawer}
                     stations={stations}
@@ -185,7 +156,7 @@ const CalendarPage = ({ roundTrips }) => {
                     prices={prices}
                 />
             </Grid>
-            <Grid item xs={5}>
+            <Grid item xs>
                 <Calendar
                     events={events}
                     onSelectEvent={onSelectEvent}

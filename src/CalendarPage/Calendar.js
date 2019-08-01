@@ -1,23 +1,39 @@
-import React from "react";
-import moment from "moment-timezone";
+import React from 'react'
+import moment from 'moment-timezone'
 import {
-  Calendar,
-  momentLocalizer
-} from "react-big-calendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+    Calendar,
+    momentLocalizer,
+} from 'react-big-calendar'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+import { Grid, makeStyles } from '@material-ui/core'
 
-const localizer = momentLocalizer(moment);
+const useStyles = makeStyles({
+    calli: {
+        height: '100vh',
+        width: '100%',
+    },
+})
 
-const MyCalendar = ({ events, onSelectEvent }) => (
-  <Calendar
-    localizer={localizer}
-    events={events}
-    defaultDate={new Date()}
-    defaultView="month"
-    style={{ height: "100vh" }}
-    onSelectEvent={onSelectEvent}
-    culture="es"
-  />
-);
+const localizer = momentLocalizer(moment)
 
-export default MyCalendar;
+const MyCalendar = ({ events, onSelectEvent }) => {
+    const classes = useStyles()
+    return (
+        <Grid container justify="center">
+            <Grid item xs={12}>
+                <Calendar
+                    className={classes.calli}
+                    localizer={localizer}
+                    events={events}
+                    defaultDate={new Date()}
+                    defaultView="month"
+                    style={{}}
+                    onSelectEvent={onSelectEvent}
+                    culture="es"
+                />
+            </Grid>
+        </Grid>
+    )
+}
+
+export default MyCalendar
