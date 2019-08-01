@@ -142,6 +142,17 @@ const getJourneysWithDepartureBefore = (
     return journeysWithDepartureBefore
 }
 
+const getDirectJourneys = journeys => {
+    const directJourneys = journeys.filter(journey => {
+        const thereDirect = journey.there.isDirect
+        const backDirect = journey.back.isDirect
+
+        return thereDirect && backDirect
+    })
+
+    return directJourneys
+}
+
 const applyFilters = ({
     stations,
     roundTrips,
@@ -158,7 +169,11 @@ const applyFilters = ({
         checkedJourneys
     )
 
-    const journeysWithMaxPrice = checkedDestinations.filter(
+    const directOrIndirectJourneys = times.directOnly
+        ? getDirectJourneys(checkedDestinations)
+        : checkedDestinations
+
+    const journeysWithMaxPrice = directOrIndirectJourneys.filter(
         journey => maxPrice > journey.price
     )
 
@@ -175,7 +190,6 @@ const applyFilters = ({
         }
     )
 
-    debugger
     return journeysSortedByPrice
 }
 

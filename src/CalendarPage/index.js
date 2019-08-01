@@ -151,6 +151,7 @@ const CalendarPage = ({ roundTrips }) => {
                     stations={stations}
                     stationsDispatcher={stationsDispatcher}
                     timesDispatcher={timesDispatcher}
+                    times={times}
                     pricesDispatcher={pricesDispatcher}
                     prices={prices}
                 />

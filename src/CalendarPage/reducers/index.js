@@ -40,12 +40,18 @@ const timesReducer = (state, action) => {
                 ...state,
                 thereDepartureTime: action.value,
             }
+        case 'SET_DIRECT_ONLY_BOOLEAN':
+            return {
+                ...state,
+                directOnly: action.value,
+            }
         default:
             return state
     }
 }
 
 const timesInitialState = {
+    directOnly: false,
     minAndMaxTravelTime: {
         min: 0,
         max: 100,

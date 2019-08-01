@@ -1,5 +1,9 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import {
+    Grid,
+    Checkbox,
+    FormControlLabel,
+} from '@material-ui/core'
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
 
@@ -7,6 +11,7 @@ const SideBarLeft = ({
     style,
     stationsDispatcher,
     stations,
+    times,
     timesDispatcher,
     pricesDispatcher,
     prices,
@@ -56,6 +61,23 @@ const SideBarLeft = ({
                     handleChangeSelectedStations={
                         handleChangeSelectedOriginStations
                     }
+                />
+            </Grid>
+            <Grid item>
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            checked={times.directOnly}
+                            onChange={(event, value) => {
+                                timesDispatcher({
+                                    type:
+                                        'SET_DIRECT_ONLY_BOOLEAN',
+                                    value,
+                                })
+                            }}
+                        />
+                    }
+                    label="Direct only"
                 />
             </Grid>
             <Grid item>
