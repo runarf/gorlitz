@@ -1,21 +1,22 @@
-import React, {
-    //useEffect,
-    useState,
-} from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     BrowserRouter as Router,
     Route,
 } from 'react-router-dom'
 import FrontPage from './StartPage/'
 import CalendarPage from './CalendarPage/'
-//import RoundTrips from './roundTripPrices'
+import RoundTrips from './roundTripPrices'
 import axios from 'axios'
 
 const backendURL = process.env.REACT_APP_BACKEND_URL
 
 const App = () => {
     const [roundTrips, setRoundTrips] = useState([])
-    console.log(process.env)
+
+    useEffect(() => {
+        setRoundTrips(RoundTrips)
+    }, [])
+
     const handleSetRoundTrips = async id => {
         try {
             const response = await axios.get(

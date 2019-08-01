@@ -3,6 +3,7 @@ import {
     Checkbox,
     FormControlLabel,
     Grid,
+    Typography,
 } from '@material-ui/core'
 
 const CheckBoxes = ({
@@ -14,9 +15,11 @@ const CheckBoxes = ({
         <Grid
             container
             direction="column"
-            alignItems="flex-end"
+            alignItems="flex-start"
         >
-            {title}
+            <Grid item xs>
+                <Typography>{title}</Typography>
+            </Grid>
             {Object.entries(stations).length > 0 &&
                 Object.entries(stations).map(
                     ([station, checked], index) => (

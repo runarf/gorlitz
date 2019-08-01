@@ -33,10 +33,10 @@ const SideBarLeft = ({
         <Grid
             container
             direction="column"
-            justify="center"
             style={{ height: '100%' }}
+            justify="space-around"
         >
-            <Grid item xs>
+            <Grid item>
                 <CheckBoxes
                     title="Destinations"
                     stations={
@@ -47,7 +47,7 @@ const SideBarLeft = ({
                     }
                 />
             </Grid>
-            <Grid item xs>
+            <Grid item>
                 <CheckBoxes
                     title="Origins"
                     stations={
@@ -58,7 +58,7 @@ const SideBarLeft = ({
                     }
                 />
             </Grid>
-            <Grid item xs>
+            <Grid item>
                 <Sliders
                     prices={prices}
                     pricesDispatcher={pricesDispatcher}
