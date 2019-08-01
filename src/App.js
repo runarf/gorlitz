@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import FrontPage from './StartPage/'
 import CalendarPage from './CalendarPage/'
-import RoundTrips from './roundTripPrices'
+//import RoundTrips from './roundTripPrices'
 import axios from 'axios'
 
 const backendURL = process.env.REACT_APP_BACKEND_URL
@@ -14,7 +14,7 @@ const App = () => {
     const [roundTrips, setRoundTrips] = useState([])
 
     useEffect(() => {
-        setRoundTrips(RoundTrips)
+        //        setRoundTrips(RoundTrips)
     }, [])
 
     const handleSetRoundTrips = async id => {
