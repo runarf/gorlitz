@@ -1,50 +1,69 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import FrontPage from "./StartPage/";
-import CalendarPage from "./CalendarPage/";
-import RoundTrips from "./roundTripPrices";
-import axios from "axios";
+import React, { useEffect, useState } from 'react'
+import {
+    BrowserRouter as Router,
+    Route,
+} from 'react-router-dom'
+import FrontPage from './StartPage/'
+import CalendarPage from './CalendarPage/'
+import RoundTrips from './roundTripPrices'
+import axios from 'axios'
+
+const backendURL =
+    process.env.NODE_ENV === 'development'
+        ? 'http://localhost:4000/'
+        : 'https://flixi.herokuapp.com/'
 
 const App = () => {
-  const [roundTrips, setRoundTrips] = useState([]);
+    const [roundTrips, setRoundTrips] = useState([])
 
-  useEffect(() => {
-    setRoundTrips(RoundTrips);
-  }, []);
-
-  const handleSetRoundTrips = async id => {
-    try {
-      const response = await axios.get(`http://localhost:4000/${id}`);
-      if (response.data) {
-        setRoundTrips(previousRoundTrips => {
-          debugger;
-          return [...response.data, ...previousRoundTrips];
-        });
-      } else {
-        console.log("No response data received");
-      }
-    } catch (err) {
-      console.log(err);
+    const handleSetRoundTrips = async id => {
+        try {
+            const response = await axios.get(
+                `${backendURL}${id}`
+            )
+            if (response.data) {
+                setRoundTrips(previousRoundTrips => {
+                    debugger
+                    return [
+                        ...response.data,
+                        ...previousRoundTrips,
+                    ]
+                })
+            } else {
+                console.log('No response data received')
+            }
+        } catch (err) {
+            console.log(err)
+        }
     }
-  };
 
-  return (
-    <div className="App" style={{ width: "100%" }}>
-      <Router basename={process.env.PUBLIC_URL}>
-        <Route
-          path="/"
-          exact
-          render={props => (
-            <FrontPage {...props} handleSetRoundTrips={handleSetRoundTrips} />
-          )}
-        />
-        <Route
-          path="/calendar"
-          render={props => <CalendarPage {...props} roundTrips={roundTrips} />}
-        />
-      </Router>
-    </div>
-  );
-};
+    return (
+        <div className="App" style={{ width: '100%' }}>
+            <Router basename={process.env.PUBLIC_URL}>
+                <Route
+                    path="/"
+                    exact
+                    render={props => (
+                        <FrontPage
+                            {...props}
+                            handleSetRoundTrips={
+                                handleSetRoundTrips
+                            }
+                        />
+                    )}
+                />
+                <Route
+                    path="/calendar"
+                    render={props => (
+                        <CalendarPage
+                            {...props}
+                            roundTrips={roundTrips}
+                        />
+                    )}
+                />
+            </Router>
+        </div>
+    )
+}
 
-export default App;
+export default App

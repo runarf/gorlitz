@@ -41,51 +41,46 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
     }, [maxKilometersAwayFromBerlin])
 
     return (
-        <>
-            <Grid
-                container
-                justify="center"
-                alignItems="center"
-            >
-                <Formik onSubmit={handleFormSubmit}>
-                    {({ isSubmitting }) => (
-                        <Form>
-                            <Grid
-                                container
-                                alignItems="center"
-                            >
-                                <KilometersAway
-                                    maxKilometersAwayFromBerlin={
-                                        maxKilometersAwayFromBerlin
-                                    }
-                                    setMaxKilometersAwayFromBerlin={
-                                        setMaxKilometersAwayFromBerlin
-                                    }
-                                />
-                            </Grid>
-                            <Countries
-                                regionsByCountry={
-                                    displaydRegions
+        <Grid
+            container
+            justify="center"
+            alignItems="center"
+        >
+            <Formik onSubmit={handleFormSubmit}>
+                {({ isSubmitting }) => (
+                    <Form>
+                        <Grid container alignItems="center">
+                            <KilometersAway
+                                maxKilometersAwayFromBerlin={
+                                    maxKilometersAwayFromBerlin
+                                }
+                                setMaxKilometersAwayFromBerlin={
+                                    setMaxKilometersAwayFromBerlin
                                 }
                             />
-                            <Box
-                                display="flex"
-                                justifyContent="center"
+                        </Grid>
+                        <Countries
+                            regionsByCountry={
+                                displaydRegions
+                            }
+                        />
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                        >
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                type="submit"
+                                disabled={isSubmitting}
                             >
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                >
-                                    Submit
-                                </Button>
-                            </Box>
-                        </Form>
-                    )}
-                </Formik>
-            </Grid>
-        </>
+                                Submit
+                            </Button>
+                        </Box>
+                    </Form>
+                )}
+            </Formik>
+        </Grid>
     )
 }
 
