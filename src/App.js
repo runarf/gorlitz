@@ -8,14 +8,11 @@ import CalendarPage from './CalendarPage/'
 import RoundTrips from './roundTripPrices'
 import axios from 'axios'
 
-const backendURL =
-    process.env.NODE_ENV === 'development'
-        ? 'http://localhost:4000/'
-        : 'https://flixi.herokuapp.com/'
+const backendURL = process.env.REACT_APP_BACKEND_URL
 
 const App = () => {
     const [roundTrips, setRoundTrips] = useState([])
-
+    console.log(process.env)
     const handleSetRoundTrips = async id => {
         try {
             const response = await axios.get(
