@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Formik, Form } from 'formik'
 import { withRouter } from 'react-router-dom'
-import { Box, Button, Grid } from '@material-ui/core'
+import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
 import Countries from './Countries/'
 import DefaultRegions from './regionsWithConnectionToBerlin'
@@ -49,24 +49,23 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
             <Formik onSubmit={handleFormSubmit}>
                 {({ isSubmitting }) => (
                     <Form>
-                        <Grid container alignItems="center">
-                            <KilometersAway
-                                maxKilometersAwayFromBerlin={
-                                    maxKilometersAwayFromBerlin
-                                }
-                                setMaxKilometersAwayFromBerlin={
-                                    setMaxKilometersAwayFromBerlin
-                                }
-                            />
-                        </Grid>
+                        <KilometersAway
+                            maxKilometersAwayFromBerlin={
+                                maxKilometersAwayFromBerlin
+                            }
+                            setMaxKilometersAwayFromBerlin={
+                                setMaxKilometersAwayFromBerlin
+                            }
+                        />
                         <Countries
                             regionsByCountry={
                                 displaydRegions
                             }
                         />
-                        <Box
-                            display="flex"
-                            justifyContent="center"
+                        <Grid
+                            item
+                            container
+                            justify="center"
                         >
                             <Button
                                 variant="contained"
@@ -76,7 +75,7 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
                             >
                                 Submit
                             </Button>
-                        </Box>
+                        </Grid>
                     </Form>
                 )}
             </Formik>

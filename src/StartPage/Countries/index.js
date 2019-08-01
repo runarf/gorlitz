@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    Box,
+    Grid,
     ExpansionPanel,
     ExpansionPanelDetails,
     ExpansionPanelSummary,
@@ -11,11 +11,11 @@ import CheckBoxes from './Regions'
 
 const Countries = ({ regionsByCountry }) => {
     return (
-        <Box display="flex" flexWrap="wrap">
+        <Grid container item>
             {Object.entries(regionsByCountry).map(
                 ([country, regions], countryIndex) =>
                     regions.length > 1 && (
-                        <Box key={countryIndex}>
+                        <Grid item key={countryIndex}>
                             <ExpansionPanel>
                                 <ExpansionPanelSummary
                                     expandIcon={
@@ -30,10 +30,10 @@ const Countries = ({ regionsByCountry }) => {
                                     />
                                 </ExpansionPanelDetails>
                             </ExpansionPanel>
-                        </Box>
+                        </Grid>
                     )
             )}
-        </Box>
+        </Grid>
     )
 }
 

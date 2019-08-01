@@ -4,6 +4,7 @@ import {
     MenuItem,
     Input,
     Select,
+    Typography,
 } from '@material-ui/core'
 
 const kilometersFromBerlin = [
@@ -24,28 +25,34 @@ const KilometersAway = ({
     setMaxKilometersAwayFromBerlin,
 }) => {
     return (
-        <Grid item xs>
-            Max distance from Berlin
-            <Select
-                value={maxKilometersAwayFromBerlin}
-                onChange={event =>
-                    setMaxKilometersAwayFromBerlin(
-                        event.target.value
-                    )
-                }
-                input={<Input name="km" />}
-            >
-                {kilometersFromBerlin.map(
-                    (kilometer, index) => (
-                        <MenuItem
-                            key={index}
-                            value={kilometer}
-                        >
-                            {kilometer}
-                        </MenuItem>
-                    )
-                )}
-            </Select>
+        <Grid item container justify="center">
+            <Grid item xs={3}>
+                <Typography>
+                    Max distance from Berlin in kilometers
+                </Typography>
+            </Grid>
+            <Grid item xs={3}>
+                <Select
+                    value={maxKilometersAwayFromBerlin}
+                    onChange={event =>
+                        setMaxKilometersAwayFromBerlin(
+                            event.target.value
+                        )
+                    }
+                    input={<Input name="km" />}
+                >
+                    {kilometersFromBerlin.map(
+                        (kilometer, index) => (
+                            <MenuItem
+                                key={index}
+                                value={kilometer}
+                            >
+                                {kilometer}
+                            </MenuItem>
+                        )
+                    )}
+                </Select>
+            </Grid>
         </Grid>
     )
 }
