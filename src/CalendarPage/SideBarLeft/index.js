@@ -82,6 +82,7 @@ const SideBarLeft = ({
             </Grid>
             <Grid item>
                 <Sliders
+                    times={times}
                     prices={prices}
                     pricesDispatcher={pricesDispatcher}
                     timesDispatcher={timesDispatcher}

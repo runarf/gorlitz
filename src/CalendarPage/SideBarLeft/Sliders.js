@@ -1,11 +1,44 @@
 import React from 'react'
-import { Grid, Slider, Typography } from '@material-ui/core'
+import {
+    Grid,
+    Slider,
+    Typography,
+    makeStyles,
+} from '@material-ui/core'
+import moment from 'moment'
+
+const useStyles = makeStyles({
+    valueLabel: {},
+})
 
 const Sliders = ({
+    times,
     timesDispatcher,
     prices,
     pricesDispatcher,
 }) => {
+    const minTravelTime = Math.floor(
+        moment
+            .duration(times.extremumTravelTime.min)
+            .asHours()
+    )
+    const maxTravelTime = Math.ceil(
+        moment
+            .duration(times.extremumTravelTime.max)
+            .asHours()
+    )
+
+    const valueLabelFormat = day => value => {
+        const friday = moment()
+            .isoWeekday(day)
+            .startOf('day')
+            .add(value, 'hours')
+        const display = friday.format('dd HH')
+        return display
+    }
+
+    debugger
+    const classes = useStyles()
     return (
         <Grid
             container
@@ -23,6 +56,9 @@ const Sliders = ({
                         marks
                         min={0}
                         max={48}
+                        valueLabelFormat={valueLabelFormat(
+                            'Friday'
+                        )}
                         onChange={(event, value) =>
                             timesDispatcher({
                                 type:
@@ -46,6 +82,10 @@ const Sliders = ({
                         marks
                         min={0}
                         max={48}
+                        className={classes.valueLabel}
+                        valueLabelFormat={valueLabelFormat(
+                            'Sunday'
+                        )}
                         onChange={(event, value) =>
                             timesDispatcher({
                                 type:
@@ -67,8 +107,8 @@ const Sliders = ({
                         defaultValue={24}
                         valueLabelDisplay="auto"
                         marks
-                        min={0}
-                        max={24}
+                        min={minTravelTime}
+                        max={maxTravelTime}
                         onChange={(event, value) =>
                             timesDispatcher({
                                 type: 'SET_MAX_TRAVEL_TIME',
