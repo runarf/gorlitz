@@ -16,9 +16,9 @@ const convertJourneyToEvent = journeys => {
 
         const event = {
             id: index,
-            title: `${
+            title: `${Math.ceil(
                 journey.price
-            } ${travelTimeThere.format(
+            )} € ${travelTimeThere.format(
                 'HH:mm'
             )} ${travelTimeBack.format('HH:mm')}`,
             start: moment(journey.there.departure).toDate(),

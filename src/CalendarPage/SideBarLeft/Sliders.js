@@ -37,7 +37,6 @@ const Sliders = ({
         return display
     }
 
-    debugger
     const classes = useStyles()
     return (
         <Grid

@@ -96,7 +96,7 @@ const CalendarPage = ({ roundTrips }) => {
         const extremumRoundTripTravelTime = getExtremumRoundTripTravelTime(
             roundTrips
         )
-        debugger
+
         timesDispatcher({
             type: 'SET_EXTREMUM_TRAVEL_TIME',
             value: extremumRoundTripTravelTime,

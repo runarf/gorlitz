@@ -7,6 +7,7 @@ import FrontPage from './StartPage/'
 import CalendarPage from './CalendarPage/'
 import RoundTrips from './roundTripPrices'
 import axios from 'axios'
+import getRoundTrips from './roundTrips/'
 
 const backendURL = process.env.REACT_APP_BACKEND_URL
 
@@ -23,9 +24,15 @@ const App = () => {
                 `${backendURL}${id}`
             )
             if (response.data) {
+                debugger
+                const roundTrips = getRoundTrips(
+                    response.data
+                )
+
+                const newRoundTrips = roundTrips
                 setRoundTrips(previousRoundTrips => {
                     return [
-                        ...response.data,
+                        ...newRoundTrips,
                         ...previousRoundTrips,
                     ]
                 })
