@@ -16,7 +16,6 @@ const FormikCheckbox = ({ field, form, disabled }) => {
 }
 
 const CheckBoxes = ({ regions }) => {
-    //console.log(regions)
     return (
         <Box display="flex" flexWrap="wrap">
             {regions.map((region, regionIndex) => (

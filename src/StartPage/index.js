@@ -5,7 +5,7 @@ import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
 import Countries from './Countries/'
 import DefaultRegions from './regionsWithConnectionToBerlin'
-import getRegionsCloseToBerlin from './regions'
+import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
 const StartPage = ({ history, handleSetRoundTrips }) => {
     const handleFormSubmit = (

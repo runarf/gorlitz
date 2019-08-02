@@ -1,5 +1,5 @@
 export default {
-  "AT": [
+  "Austria": [
     {
       "id": "1715",
       "name": "Amstetten",
@@ -289,7 +289,7 @@ export default {
       }
     }
   ],
-  "BA": [
+  "Bosnia & Herzegovina": [
     {
       "id": "13228",
       "name": "Brod",
@@ -555,7 +555,7 @@ export default {
       }
     }
   ],
-  "BE": [
+  "Belgium": [
     {
       "id": "2468",
       "name": "Antwerp",
@@ -761,7 +761,7 @@ export default {
       }
     }
   ],
-  "BG": [
+  "Bulgaria": [
     {
       "id": "18998",
       "name": "Montana",
@@ -871,7 +871,7 @@ export default {
       }
     }
   ],
-  "BY": [
+  "Belarus": [
     {
       "id": "23218",
       "name": "Brest (BY)",
@@ -897,7 +897,7 @@ export default {
       }
     }
   ],
-  "CH": [
+  "Switzerland": [
     {
       "id": "1504",
       "name": "Basel",
@@ -1115,7 +1115,7 @@ export default {
       }
     }
   ],
-  "CZ": [
+  "Czechia": [
     {
       "id": "16938",
       "name": "Benesov",
@@ -1849,7 +1849,7 @@ export default {
       }
     }
   ],
-  "DE": [
+  "Germany": [
     {
       "id": "243",
       "name": "Aachen",
@@ -6363,7 +6363,7 @@ export default {
       }
     }
   ],
-  "DK": [
+  "Denmark": [
     {
       "id": "11767",
       "name": "Aabenraa",
@@ -6917,7 +6917,7 @@ export default {
       }
     }
   ],
-  "ES": [
+  "Spain": [
     {
       "id": "25301",
       "name": "Alicante",
@@ -7099,7 +7099,7 @@ export default {
       }
     }
   ],
-  "FR": [
+  "France": [
     {
       "id": "8528",
       "name": "Agen",
@@ -8553,7 +8553,7 @@ export default {
       }
     }
   ],
-  "GB": [
+  "United Kingdom": [
     {
       "id": "3848",
       "name": "London",
@@ -8567,7 +8567,7 @@ export default {
       }
     }
   ],
-  "HR": [
+  "Croatia": [
     {
       "id": "27181",
       "name": "Babina Greda",
@@ -9961,7 +9961,7 @@ export default {
       }
     }
   ],
-  "HU": [
+  "Hungary": [
     {
       "id": "18718",
       "name": "Balatonföldvár",
@@ -10035,7 +10035,7 @@ export default {
       }
     }
   ],
-  "IT": [
+  "Italy": [
     {
       "id": "13358",
       "name": "Alba",
@@ -11165,7 +11165,7 @@ export default {
       }
     }
   ],
-  "LU": [
+  "Luxembourg": [
     {
       "id": "172",
       "name": "Luxembourg",
@@ -11179,7 +11179,7 @@ export default {
       }
     }
   ],
-  "NL": [
+  "Netherlands": [
     {
       "id": "7808",
       "name": "Amersfoort",
@@ -11541,7 +11541,7 @@ export default {
       }
     }
   ],
-  "NO": [
+  "Norway": [
     {
       "id": "7268",
       "name": "Moss",
@@ -11603,7 +11603,7 @@ export default {
       }
     }
   ],
-  "PL": [
+  "Poland": [
     {
       "id": "25671",
       "name": "Augustów",
@@ -13489,7 +13489,7 @@ export default {
       }
     }
   ],
-  "PT": [
+  "Portugal": [
     {
       "id": "21898",
       "name": "Evora",
@@ -13515,7 +13515,7 @@ export default {
       }
     }
   ],
-  "RO": [
+  "Romania": [
     {
       "id": "15128",
       "name": "Adjud",
@@ -14681,7 +14681,7 @@ export default {
       }
     }
   ],
-  "RS": [
+  "Serbia": [
     {
       "id": "16768",
       "name": "Belgrade",
@@ -14719,7 +14719,7 @@ export default {
       }
     }
   ],
-  "SE": [
+  "Sweden": [
     {
       "id": "23318",
       "name": "Alfta",
@@ -15585,7 +15585,7 @@ export default {
       }
     }
   ],
-  "SI": [
+  "Slovenia": [
     {
       "id": "8888",
       "name": "Bled",
@@ -15683,7 +15683,7 @@ export default {
       }
     }
   ],
-  "SK": [
+  "Slovakia": [
     {
       "id": "12058",
       "name": "Banská Bystrica",
@@ -16213,7 +16213,7 @@ export default {
       }
     }
   ],
-  "UA": [
+  "Ukraine": [
     {
       "id": "15898",
       "name": "Kyiv / Kiev",
