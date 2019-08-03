@@ -22,22 +22,25 @@ const CheckBoxes = ({
             </Grid>
             {Object.entries(stations).length > 0 &&
                 Object.entries(stations).map(
-                    ([station, checked], index) => (
-                        <Grid item xs>
-                            <FormControlLabel
-                                key={index}
-                                control={
-                                    <Checkbox
-                                        checked={checked}
-                                        onChange={handleChangeSelectedStations(
-                                            station
-                                        )}
-                                    />
-                                }
-                                label={station}
-                            />
-                        </Grid>
-                    )
+                    ([station, checked], index) => {
+                        return (
+                            <Grid key={index} item xs>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            checked={
+                                                checked
+                                            }
+                                            onChange={handleChangeSelectedStations(
+                                                station
+                                            )}
+                                        />
+                                    }
+                                    label={station}
+                                />
+                            </Grid>
+                        )
+                    }
                 )}
         </Grid>
     )

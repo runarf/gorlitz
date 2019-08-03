@@ -4,8 +4,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin: [{ id: "481", name: "Berlin Südkreuz" }],
+      destination: [{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -13,7 +13,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -28,8 +28,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -37,8 +37,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -49,8 +49,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -58,7 +58,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -73,8 +73,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -82,8 +82,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -94,8 +94,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -103,7 +103,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -118,8 +118,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -127,7 +127,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -142,8 +142,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -151,7 +151,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -166,8 +166,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -175,8 +175,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -187,8 +187,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -196,8 +196,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -208,8 +208,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -217,8 +217,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -229,8 +229,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -238,7 +238,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -253,8 +253,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -262,7 +262,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -277,8 +277,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -286,7 +286,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -301,8 +301,8 @@ export default [
     there: {
       departure: "2019-07-26T00:20:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -310,7 +310,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -325,8 +325,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -334,7 +334,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -349,8 +349,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -358,8 +358,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -370,8 +370,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -379,7 +379,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -394,8 +394,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -403,8 +403,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -415,8 +415,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -424,7 +424,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -439,8 +439,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -448,7 +448,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -463,8 +463,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -472,7 +472,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -487,8 +487,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -496,8 +496,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -508,8 +508,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -517,8 +517,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -529,8 +529,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -538,8 +538,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -550,8 +550,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -559,7 +559,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -574,8 +574,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -583,7 +583,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -598,8 +598,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -607,7 +607,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -622,8 +622,8 @@ export default [
     there: {
       departure: "2019-07-26T00:45:00+02:00",
       arrival: "2019-07-26T05:55:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -631,7 +631,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -646,8 +646,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -655,7 +655,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -670,8 +670,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -679,8 +679,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -691,8 +691,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -700,7 +700,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -715,8 +715,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -724,8 +724,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -736,8 +736,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -745,7 +745,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -760,8 +760,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -769,7 +769,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -784,8 +784,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -793,7 +793,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -808,8 +808,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -817,8 +817,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -829,8 +829,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -838,8 +838,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -850,8 +850,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -859,8 +859,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -871,8 +871,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -880,7 +880,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -895,8 +895,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -904,7 +904,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -919,8 +919,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -928,7 +928,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -943,8 +943,8 @@ export default [
     there: {
       departure: "2019-07-26T18:15:00+02:00",
       arrival: "2019-07-27T00:25:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 23.48,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -952,7 +952,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -971,7 +971,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -979,7 +979,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -998,7 +998,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1006,8 +1006,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1022,7 +1022,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1030,7 +1030,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1049,7 +1049,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1057,8 +1057,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1073,7 +1073,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1081,7 +1081,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1100,7 +1100,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1108,7 +1108,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1127,7 +1127,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1135,7 +1135,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1154,7 +1154,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1162,8 +1162,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1178,7 +1178,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1186,8 +1186,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1202,7 +1202,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1210,8 +1210,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1226,7 +1226,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1234,7 +1234,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1253,7 +1253,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1261,7 +1261,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1280,7 +1280,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1288,7 +1288,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1307,7 +1307,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1315,7 +1315,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1330,8 +1330,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1339,7 +1339,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1354,8 +1354,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1363,8 +1363,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1375,8 +1375,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1384,7 +1384,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1399,8 +1399,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1408,8 +1408,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1420,8 +1420,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1429,7 +1429,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1444,8 +1444,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1453,7 +1453,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1468,8 +1468,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1477,7 +1477,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1492,8 +1492,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1501,8 +1501,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1513,8 +1513,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1522,8 +1522,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1534,8 +1534,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1543,8 +1543,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1555,8 +1555,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1564,7 +1564,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1579,8 +1579,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1588,7 +1588,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1603,8 +1603,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1612,7 +1612,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1627,8 +1627,8 @@ export default [
     there: {
       departure: "2019-07-26T15:25:00+02:00",
       arrival: "2019-07-26T20:30:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1636,7 +1636,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1655,7 +1655,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1663,7 +1663,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1682,7 +1682,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1690,8 +1690,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1706,7 +1706,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1714,7 +1714,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1733,7 +1733,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1741,8 +1741,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1757,7 +1757,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1765,7 +1765,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1784,7 +1784,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1792,7 +1792,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1811,7 +1811,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1819,7 +1819,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -1838,7 +1838,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1846,8 +1846,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1862,7 +1862,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1870,8 +1870,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1886,7 +1886,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1894,8 +1894,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1910,7 +1910,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1918,7 +1918,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1937,7 +1937,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1945,7 +1945,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -1964,7 +1964,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1972,7 +1972,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -1991,7 +1991,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 21.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -1999,7 +1999,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2018,7 +2018,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2026,7 +2026,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2045,7 +2045,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2053,8 +2053,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2069,7 +2069,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2077,7 +2077,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2096,7 +2096,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2104,8 +2104,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2120,7 +2120,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2128,7 +2128,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2147,7 +2147,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2155,7 +2155,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2174,7 +2174,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2182,7 +2182,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2201,7 +2201,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2209,8 +2209,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2225,7 +2225,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2233,8 +2233,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2249,7 +2249,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2257,8 +2257,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2273,7 +2273,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2281,7 +2281,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2300,7 +2300,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2308,7 +2308,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2327,7 +2327,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2335,7 +2335,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2354,7 +2354,7 @@ export default [
         id: "1224",
         name: "Berlin Alexanderplatz"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1224&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2362,7 +2362,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2377,8 +2377,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2386,7 +2386,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2401,8 +2401,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2410,8 +2410,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2422,8 +2422,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2431,7 +2431,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2446,8 +2446,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2455,8 +2455,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2467,8 +2467,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2476,7 +2476,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2491,8 +2491,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2500,7 +2500,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2515,8 +2515,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2524,7 +2524,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2539,8 +2539,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2548,8 +2548,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2560,8 +2560,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2569,8 +2569,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2581,8 +2581,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2590,8 +2590,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2602,8 +2602,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2611,7 +2611,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2626,8 +2626,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2635,7 +2635,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2650,8 +2650,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2659,7 +2659,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2674,8 +2674,8 @@ export default [
     there: {
       departure: "2019-07-26T10:55:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 20.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2683,7 +2683,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2698,8 +2698,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2707,7 +2707,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2722,8 +2722,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2731,8 +2731,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2743,8 +2743,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2752,7 +2752,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2767,8 +2767,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2776,8 +2776,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2788,8 +2788,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2797,7 +2797,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2812,8 +2812,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2821,7 +2821,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2836,8 +2836,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2845,7 +2845,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -2860,8 +2860,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2869,8 +2869,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2881,8 +2881,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2890,8 +2890,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2902,8 +2902,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2911,8 +2911,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2923,8 +2923,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2932,7 +2932,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2947,8 +2947,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2956,7 +2956,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -2971,8 +2971,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -2980,7 +2980,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -2995,8 +2995,8 @@ export default [
     there: {
       departure: "2019-07-26T09:30:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "12468", name: "Berlin TXL, E" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "12468", name: "Berlin TXL, E" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=12468&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3004,7 +3004,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3023,7 +3023,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3031,7 +3031,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3050,7 +3050,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3058,8 +3058,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3074,7 +3074,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3082,7 +3082,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3101,7 +3101,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3109,8 +3109,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3125,7 +3125,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3133,7 +3133,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3152,7 +3152,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3160,7 +3160,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3179,7 +3179,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3187,7 +3187,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3206,7 +3206,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3214,8 +3214,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3230,7 +3230,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3238,8 +3238,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3254,7 +3254,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3262,8 +3262,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3278,7 +3278,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3286,7 +3286,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3305,7 +3305,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3313,7 +3313,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3332,7 +3332,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3340,7 +3340,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3359,7 +3359,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3367,7 +3367,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3382,8 +3382,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3391,7 +3391,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3406,8 +3406,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3415,8 +3415,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3427,8 +3427,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3436,7 +3436,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3451,8 +3451,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3460,8 +3460,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3472,8 +3472,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3481,7 +3481,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3496,8 +3496,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3505,7 +3505,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3520,8 +3520,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3529,7 +3529,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3544,8 +3544,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3553,8 +3553,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3565,8 +3565,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3574,8 +3574,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3586,8 +3586,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3595,8 +3595,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3607,8 +3607,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3616,7 +3616,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3631,8 +3631,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3640,7 +3640,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3655,8 +3655,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3664,7 +3664,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3679,8 +3679,8 @@ export default [
     there: {
       departure: "2019-07-26T10:15:00+02:00",
       arrival: "2019-07-26T15:20:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3688,7 +3688,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3703,8 +3703,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3712,7 +3712,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3727,8 +3727,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3736,8 +3736,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3748,8 +3748,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3757,7 +3757,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3772,8 +3772,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3781,8 +3781,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3793,8 +3793,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3802,7 +3802,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3817,8 +3817,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3826,7 +3826,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3841,8 +3841,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3850,7 +3850,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -3865,8 +3865,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3874,8 +3874,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3886,8 +3886,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3895,8 +3895,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3907,8 +3907,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3916,8 +3916,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3928,8 +3928,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3937,7 +3937,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -3952,8 +3952,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3961,7 +3961,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -3976,8 +3976,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -3985,7 +3985,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4000,8 +4000,8 @@ export default [
     there: {
       departure: "2019-07-26T04:35:00+02:00",
       arrival: "2019-07-26T10:50:00+02:00",
-      origin: { id: "471", name: "Berlin SXF" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "471", name: "Berlin SXF" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 17.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4009,7 +4009,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4024,8 +4024,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4033,7 +4033,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4048,8 +4048,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4057,8 +4057,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4069,8 +4069,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4078,7 +4078,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4093,8 +4093,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4102,8 +4102,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4114,8 +4114,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4123,7 +4123,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4138,8 +4138,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4147,7 +4147,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4162,8 +4162,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4171,7 +4171,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4186,8 +4186,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4195,8 +4195,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4207,8 +4207,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4216,8 +4216,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4228,8 +4228,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4237,8 +4237,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4249,8 +4249,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4258,7 +4258,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4273,8 +4273,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4282,7 +4282,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4297,8 +4297,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4306,7 +4306,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4321,8 +4321,8 @@ export default [
     there: {
       departure: "2019-07-26T15:30:00+02:00",
       arrival: "2019-07-26T19:35:00+02:00",
-      origin: { id: "481", name: "Berlin Südkreuz" },
-      destination: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "481", name: "Berlin Südkreuz" }],
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 13.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=481&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4330,7 +4330,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4349,7 +4349,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4357,7 +4357,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4376,7 +4376,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4384,8 +4384,8 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 23.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4400,7 +4400,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4408,7 +4408,7 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4427,7 +4427,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4435,8 +4435,8 @@ export default [
     back: {
       departure: "2019-07-28T10:05:00+02:00",
       arrival: "2019-07-28T15:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 22.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4451,7 +4451,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4459,7 +4459,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:25:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4478,7 +4478,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4486,7 +4486,7 @@ export default [
     back: {
       departure: "2019-07-28T14:30:00+02:00",
       arrival: "2019-07-28T19:05:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4505,7 +4505,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4513,7 +4513,7 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:50:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1224",
         name: "Berlin Alexanderplatz"
@@ -4532,7 +4532,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4540,8 +4540,8 @@ export default [
     back: {
       departure: "2019-07-28T11:15:00+02:00",
       arrival: "2019-07-28T16:10:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 19.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4556,7 +4556,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4564,8 +4564,8 @@ export default [
     back: {
       departure: "2019-07-28T00:30:00+02:00",
       arrival: "2019-07-28T06:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4580,7 +4580,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4588,8 +4588,8 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:45:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
-      destination: { id: "471", name: "Berlin SXF" },
+      origin:[{ id: "4468", name: "Görlitz" }],
+      destination:[{ id: "471", name: "Berlin SXF" }],
       price: 18.98,
       url:
         "https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=471&rideDate=28.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4604,7 +4604,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4612,7 +4612,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T14:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4631,7 +4631,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4639,7 +4639,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:55:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"
@@ -4658,7 +4658,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4666,7 +4666,7 @@ export default [
     back: {
       departure: "2019-07-28T19:00:00+02:00",
       arrival: "2019-07-29T00:35:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "481",
         name: "Berlin Südkreuz"
@@ -4685,7 +4685,7 @@ export default [
         id: "1",
         name: "Berlin central bus station"
       },
-      destination: { id: "4468", name: "Görlitz" },
+      destination:[{ id: "4468", name: "Görlitz" }],
       price: 11.99,
       url:
         "https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=1&arrivalStation=4468&rideDate=26.07.2019&currency=EUR&adult=1&children=0&bike_slot=0"
@@ -4693,7 +4693,7 @@ export default [
     back: {
       departure: "2019-07-28T10:50:00+02:00",
       arrival: "2019-07-28T15:15:00+02:00",
-      origin: { id: "4468", name: "Görlitz" },
+      origin:[{ id: "4468", name: "Görlitz" }],
       destination: {
         id: "1",
         name: "Berlin central bus station"

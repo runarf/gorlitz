@@ -1,60 +1,42 @@
 import moment from 'moment'
 
-const getCheckedDestinations = (
-    selectedDestinations,
-    journeys
+const getCheckedJourneys = (
+    selectedStations,
+    journeys,
+    isDestinationStations
 ) => {
-    const checkedDestinations = Object.entries(
-        selectedDestinations
-    )
-        .filter(([key, value]) => {
-            return value
-        })
-        .map(([key, value]) => key)
-
-    const checkedJourneys = journeys.reduce(
-        (checkedJourneys, journey) => {
-            const destinationStation =
-                journey.there.destination.name
-            const returnDestinationStation =
-                journey.back.origin.name
-
-            if (
-                checkedDestinations.includes(
-                    destinationStation
-                ) &&
-                checkedDestinations.includes(
-                    returnDestinationStation
-                )
-            ) {
-                return [...checkedJourneys, journey]
-            } else {
-                return checkedJourneys
-            }
+    const checkedStationsNames = Object.entries(
+        selectedStations
+    ).reduce(
+        (
+            checkedStationsNames,
+            [stationName, isChecked]
+        ) => {
+            if (isChecked)
+                return [
+                    ...checkedStationsNames,
+                    stationName,
+                ]
+            else return checkedStationsNames
         },
         []
     )
 
-    return checkedJourneys
-}
-
-const getCheckedJourneys = (selectedStations, journeys) => {
-    const checkedStations = Object.entries(selectedStations)
-        .filter(([key, value]) => {
-            return value
-        })
-        .map(([key, value]) => key)
     const checkedJourneys = journeys.reduce(
-        (checkedJourneys, journey, index) => {
-            const originStation = journey.there.origin.name
-            const returnOriginStation =
-                journey.back.destination.name
+        (checkedJourneys, journey) => {
+            const stationName = isDestinationStations
+                ? journey.there.destination.name
+                : journey.there.origin.name
+
+            const returnStation = isDestinationStations
+                ? journey.back.origin.name
+                : journey.back.destination.name
 
             if (
-                checkedStations.includes(originStation) &&
-                checkedStations.includes(
-                    returnOriginStation
-                )
+                checkedStationsNames.includes(
+                    stationName
+                ) &&
+                checkedStationsNames.includes(returnStation)
             ) {
                 return [...checkedJourneys, journey]
             } else {
@@ -161,12 +143,14 @@ const applyFilters = ({
 }) => {
     const checkedJourneys = getCheckedJourneys(
         stations.selectedOriginStations,
-        roundTrips
+        roundTrips,
+        false
     )
 
-    const checkedDestinations = getCheckedDestinations(
+    const checkedDestinations = getCheckedJourneys(
         stations.selectedDestinationsStations,
-        checkedJourneys
+        checkedJourneys,
+        true
     )
 
     const directOrIndirectJourneys = times.directOnly
