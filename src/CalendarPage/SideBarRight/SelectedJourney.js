@@ -3,6 +3,14 @@ import { Grid, Typography } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
 
 const OneWay = ({ oneWay }) => {
+    debugger
+    const originStations = oneWay.origin.map(origin =>
+        origin.name.replace('Berlin ', '')
+    )
+    const destinationStations = oneWay.destination.map(
+        destination =>
+            destination.name.replace('Berlin ', '')
+    )
     return (
         <Grid item xs={12}>
             <Grid
@@ -14,9 +22,11 @@ const OneWay = ({ oneWay }) => {
             >
                 <Grid item xs={12}>
                     <Typography>
-                        {`${oneWay.origin.name} - ${
-                            oneWay.destination.name
-                        }`}
+                        {`${originStations.join(
+                            ', '
+                        )} - ${destinationStations.join(
+                            ', '
+                        )}`}
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>

@@ -5,7 +5,8 @@ momentDurationFormatSetup(moment)
 const getDestinationStations = roundTrips => {
     const destinationStations = roundTrips.reduce(
         (stations, roundTrip) => {
-            const station = roundTrip.there.destination.name
+            const station =
+                roundTrip.there.destination[0].name
             if (stations.includes(station)) {
                 return stations
             } else {
@@ -19,13 +20,22 @@ const getDestinationStations = roundTrips => {
 
 const getOriginStations = roundTrips => {
     const originStations = roundTrips.reduce(
-        (stations, journey) => {
-            const station = journey.there.origin.name
-            if (stations.includes(station)) {
-                return stations
-            } else {
-                return [...stations, station]
-            }
+        (originStations, journey) => {
+            const newStations = journey.there.origin
+                .filter(station => {
+                    if (
+                        originStations.includes(
+                            station.name
+                        )
+                    ) {
+                        return false
+                    } else {
+                        return true
+                    }
+                })
+                .map(station => station.name)
+
+            return [...originStations, ...newStations]
         },
         []
     )

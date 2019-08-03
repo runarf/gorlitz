@@ -2,7 +2,7 @@ import moment from 'moment'
 
 const getCheckedJourneys = (
     selectedStations,
-    journeys,
+    roundTrips,
     isDestinationStations
 ) => {
     const checkedStationsNames = Object.entries(
@@ -22,31 +22,43 @@ const getCheckedJourneys = (
         []
     )
 
-    const checkedJourneys = journeys.reduce(
-        (checkedJourneys, journey) => {
-            const stationName = isDestinationStations
-                ? journey.there.destination.name
-                : journey.there.origin.name
+    const checkedRoundTrips = roundTrips.reduce(
+        (checkedRoundTrips, roundTrip) => {
+            const stations = isDestinationStations
+                ? roundTrip.there.destination
+                : roundTrip.there.origin
 
-            const returnStation = isDestinationStations
-                ? journey.back.origin.name
-                : journey.back.destination.name
+            const returnStations = isDestinationStations
+                ? roundTrip.back.origin
+                : roundTrip.back.destination
+
+            const aStationsIsChecked = stations.find(
+                station =>
+                    checkedStationsNames.includes(
+                        station.name
+                    )
+            )
+
+            const aReturnStationIsChecked = returnStations.find(
+                returnStation =>
+                    checkedStationsNames.includes(
+                        returnStation.name
+                    )
+            )
 
             if (
-                checkedStationsNames.includes(
-                    stationName
-                ) &&
-                checkedStationsNames.includes(returnStation)
+                aStationsIsChecked &&
+                aReturnStationIsChecked
             ) {
-                return [...checkedJourneys, journey]
+                return [...checkedRoundTrips, roundTrip]
             } else {
-                return checkedJourneys
+                return checkedRoundTrips
             }
         },
         []
     )
 
-    return checkedJourneys
+    return checkedRoundTrips
 }
 
 const isTimeBetween = ([min, max], time) => {
