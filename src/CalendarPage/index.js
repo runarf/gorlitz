@@ -23,7 +23,7 @@ import {
 } from './reducers/'
 
 import {
-    //    initialEvent,
+    initialEvent,
     getExtremumRoundTripTravelTime,
     getMaxAndMinRoundTripPrice,
     getOriginStations,
@@ -55,8 +55,10 @@ const CalendarPage = ({ roundTrips }) => {
     )
 
     const [events, setEvents] = useState([])
-    const [selectedEvent, setSelectedEvent] = useState({})
-    //        initialEvent
+    const [selectedEvent, setSelectedEvent] = useState({
+        //...initialEvent,
+    })
+
     const [
         displaydJourneys,
         setDisplaydJourneys,

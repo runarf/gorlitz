@@ -1,15 +1,19 @@
 import React from 'react'
 import { Grid, Typography } from '@material-ui/core'
-import { ShoppingCart } from '@material-ui/icons'
+import Stations from './Stations'
+import Emoji from 'a11y-react-emoji'
 
 const OneWay = ({ oneWay }) => {
-    debugger
     const originStations = oneWay.origin.map(origin =>
-        origin.name.replace('Berlin ', '')
+        origin.name
+            .replace('Berlin ', '')
+            .replace('central bus station', 'ZOB')
     )
     const destinationStations = oneWay.destination.map(
         destination =>
-            destination.name.replace('Berlin ', '')
+            destination.name
+                .replace('Berlin ', '')
+                .replace('central bus station', 'ZOB')
     )
     return (
         <Grid item xs={12}>
@@ -21,17 +25,17 @@ const OneWay = ({ oneWay }) => {
                 alignContent="center"
             >
                 <Grid item xs={12}>
-                    <Typography>
-                        {`${originStations.join(
-                            ', '
-                        )} - ${destinationStations.join(
-                            ', '
-                        )}`}
-                    </Typography>
+                    <Stations
+                        originStations={originStations}
+                        destinationStations={
+                            destinationStations
+                        }
+                    />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography>
-                        {oneWay.price} €
+                        {oneWay.price}{' '}
+                        <Emoji symbol="💶" label="Euro" />
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>
@@ -51,7 +55,10 @@ const OneWay = ({ oneWay }) => {
 
                 <Grid item xs={12}>
                     <a href={oneWay.url}>
-                        <ShoppingCart />
+                        <Emoji
+                            symbol="🛒"
+                            label="Shopping cart"
+                        />
                     </a>
                 </Grid>
             </Grid>

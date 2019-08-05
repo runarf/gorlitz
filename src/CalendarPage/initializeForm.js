@@ -120,31 +120,39 @@ const getExtremumRoundTripTravelTime = roundTrips => {
 
 const initialEvent = {
     there: {
-        origin: {
-            id: '481',
-            name: 'Berlin Südkreuz',
-        },
-        destination: {
-            id: '4468',
-            name: 'Görlitz',
-        },
-        departure: moment('2019-07-19T04:35:00+02:00'),
-        arrival: moment('2019-07-19T10:50:00+02:00'),
-        price: 19.98,
+        origin: [
+            { name: 'Berlin Alexanderplatz', id: '1224' },
+            { name: 'Berlin Alt-Tegel', id: '3288' },
+            { name: 'Berlin central bus station', id: '1' },
+            { name: 'Berlin SXF', id: '471' },
+        ],
+        destination: [
+            { id: '1494', name: 'Prague ÚAN Florenc' },
+        ],
+        departure: moment('2019-08-09T00:10:00.000Z'),
+        arrival: moment('2019-08-09T05:40:00.000Z'),
+        price: 18.9,
         url:
-            'https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=3408&departureStation=471&arrivalStation=4468&rideDate=19.07.2019&currency=EUR&adult=1&children=0&bike_slot=0',
+            'https://shop.global.flixbus.com/s?departureCity=88&arrivalCity=1374&departureStation=3288&arrivalStation=1494&rideDate=09.08.2019&currency=EUR&adult=1&children=0&bike_slot=0',
     },
     back: {
-        destination: {
-            id: '481',
-            name: 'Berlin Südkreuz',
-        },
-        origin: { id: '4468', name: 'Görlitz' },
-        departure: moment('2019-07-21T19:00:00+02:00'),
-        arrival: moment('2019-07-22T00:35:00+02:00'),
-        price: 15.98,
+        origin: [
+            {
+                id: '6988',
+                name: 'Prague Main Railway Station',
+            },
+        ],
+        destination: [
+            { name: 'Berlin central bus station', id: '1' },
+            { name: 'Berlin central bus station', id: '1' },
+            { name: 'Berlin Südkreuz', id: '481' },
+            { name: 'Berlin Südkreuz', id: '481' },
+        ],
+        departure: moment('2019-08-12T12:15:00.000Z'),
+        arrival: moment('2019-08-12T17:05:00.000Z'),
+        price: 18.9,
         url:
-            'https://shop.global.flixbus.com/s?departureCity=3408&arrivalCity=88&departureStation=4468&arrivalStation=481&rideDate=21.07.2019&currency=EUR&adult=1&children=0&bike_slot=0',
+            'https://shop.global.flixbus.com/s?departureCity=1374&arrivalCity=88&departureStation=6988&arrivalStation=1&rideDate=12.08.2019&currency=EUR&adult=1&children=0&bike_slot=0',
     },
 }
 

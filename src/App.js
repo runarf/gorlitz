@@ -6,7 +6,7 @@ import {
 import FrontPage from './StartPage/'
 import CalendarPage from './CalendarPage/'
 //import RoundTrips from './roundTripPrices'
-// import thereNback from './thereNbackToPrague.json'
+import thereNback from './thereNbackToPrague.json'
 
 import axios from 'axios'
 import getRoundTrips from './roundTrips/'
