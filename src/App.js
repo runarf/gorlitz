@@ -3,11 +3,11 @@ import {
     BrowserRouter as Router,
     Route,
 } from 'react-router-dom'
-import FrontPage from './StartPage/'
-import CalendarPage from './CalendarPage/'
+import FrontPage from './StartPage'
+import CalendarPage from './CalendarPage'
 
 import axios from 'axios'
-import getRoundTrips from './roundTrips/'
+import getRoundTrips from './roundTrips'
 
 const App = () => {
     const backendURL =

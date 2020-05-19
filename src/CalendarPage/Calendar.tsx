@@ -27,7 +27,6 @@ const MyCalendar = ({ events, onSelectEvent }) => {
                     events={events}
                     defaultDate={new Date()}
                     defaultView="month"
-                    style={{}}
                     onSelectEvent={onSelectEvent}
                     culture="es"
                 />

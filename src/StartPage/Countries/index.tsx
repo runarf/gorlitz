@@ -14,7 +14,7 @@ const Countries = ({ regionsByCountry }) => {
         <Grid container item>
             {Object.entries(regionsByCountry).map(
                 ([country, regions], countryIndex) =>
-                    regions.length > 1 && (
+                    (regions as any).length > 1 && (
                         <Grid item key={countryIndex}>
                             <ExpansionPanel>
                                 <ExpansionPanelSummary

@@ -33,14 +33,14 @@ const getCheckedJourneys = (
                 : roundTrip.back.destination
 
             const aStationsIsChecked = stations.find(
-                station =>
+                (station) =>
                     checkedStationsNames.includes(
                         station.name
                     )
             )
 
             const aReturnStationIsChecked = returnStations.find(
-                returnStation =>
+                (returnStation) =>
                     checkedStationsNames.includes(
                         returnStation.name
                     )
@@ -136,8 +136,8 @@ const getJourneysWithDepartureBefore = (
     return journeysWithDepartureBefore
 }
 
-const getDirectJourneys = journeys => {
-    const directJourneys = journeys.filter(journey => {
+const getDirectJourneys = (journeys) => {
+    const directJourneys = journeys.filter((journey) => {
         const thereDirect = journey.there.isDirect
         const backDirect = journey.back.isDirect
 
@@ -170,7 +170,7 @@ const applyFilters = ({
         : checkedDestinations
 
     const journeysWithMaxPrice = directOrIndirectJourneys.filter(
-        journey => maxPrice > journey.price
+        (journey) => maxPrice > journey.price
     )
 
     const journeysWithDepartureBefore = getJourneysWithDepartureBefore(

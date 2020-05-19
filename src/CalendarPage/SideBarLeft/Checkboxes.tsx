@@ -29,7 +29,7 @@ const CheckBoxes = ({
                                     control={
                                         <Checkbox
                                             checked={
-                                                checked
+                                                !!checked
                                             }
                                             onChange={handleChangeSelectedStations(
                                                 station

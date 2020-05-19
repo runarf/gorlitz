@@ -3,7 +3,7 @@ import { Formik, Form } from 'formik'
 import { withRouter } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
-import Countries from './Countries/'
+import Countries from './Countries'
 import DefaultRegions from './regionsWithConnectionToBerlin'
 import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
@@ -23,9 +23,9 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
         history.push('/calendar')
     }
 
-    const [displaydRegions, setDisplaydRegions] = useState(
-        DefaultRegions
-    )
+    const [displaydRegions, setDisplaydRegions] = useState<
+        any
+    >(DefaultRegions)
 
     const [
         maxKilometersAwayFromBerlin,
@@ -46,7 +46,10 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
             justify="center"
             alignItems="center"
         >
-            <Formik onSubmit={handleFormSubmit}>
+            <Formik
+                onSubmit={handleFormSubmit}
+                initialValues={{}}
+            >
                 {({ isSubmitting }) => (
                     <Form>
                         <KilometersAway
