@@ -27,6 +27,7 @@ const CheckBoxes = ({ regions }) => {
                                     <FormikCheckbox
                                         field={field}
                                         form={form}
+                                        disabled={false}
                                     />
                                 }
                                 label={region.name}

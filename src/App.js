@@ -5,8 +5,6 @@ import {
 } from 'react-router-dom'
 import FrontPage from './StartPage/'
 import CalendarPage from './CalendarPage/'
-//import RoundTrips from './roundTripPrices'
-import thereNback from './thereNbackToPrague.json'
 
 import axios from 'axios'
 import getRoundTrips from './roundTrips/'
@@ -28,7 +26,7 @@ const App = () => {
         // ])
     }, [])
 
-    const handleSetRoundTrips = async id => {
+    const handleSetRoundTrips = async (id) => {
         try {
             const response = await axios.get(
                 `${backendURL}${id}`
@@ -39,7 +37,7 @@ const App = () => {
                 )
 
                 const newRoundTrips = roundTrips
-                setRoundTrips(previousRoundTrips => {
+                setRoundTrips((previousRoundTrips) => {
                     return [
                         ...newRoundTrips,
                         ...previousRoundTrips,
@@ -59,7 +57,7 @@ const App = () => {
                 <Route
                     path="/"
                     exact
-                    render={props => (
+                    render={(props) => (
                         <FrontPage
                             {...props}
                             handleSetRoundTrips={
@@ -70,7 +68,7 @@ const App = () => {
                 />
                 <Route
                     path="/calendar"
-                    render={props => (
+                    render={(props) => (
                         <CalendarPage
                             {...props}
                             roundTrips={roundTrips}

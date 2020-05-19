@@ -23,7 +23,6 @@ import {
 } from './reducers/'
 
 import {
-    initialEvent,
     getExtremumRoundTripTravelTime,
     getMaxAndMinRoundTripPrice,
     getOriginStations,
@@ -32,7 +31,7 @@ import {
 
 momentDurationFormatSetup(moment)
 
-const useStyles = makeStyles(themes => ({
+const useStyles = makeStyles((themes) => ({
     drawer: {},
 }))
 
@@ -130,7 +129,7 @@ const CalendarPage = ({ roundTrips }) => {
         setEvents(events)
     }, [roundTrips, stations, times, prices.maxPrice])
 
-    const onSelectEvent = event => {
+    const onSelectEvent = (event) => {
         const selectedJourney = displaydJourneys[event.id]
         const there = selectedJourney.there
         const back = selectedJourney.back
