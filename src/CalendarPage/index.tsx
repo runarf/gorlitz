@@ -11,8 +11,8 @@ import convertJourneyToEvent from './convertJourneyToEvent'
 import { Grid, makeStyles } from '@material-ui/core'
 
 import Calendar from './Calendar'
-import SideBarLeft from './SideBarLeft/'
-import SideBarRight from './SideBarRight/'
+import SideBarLeft from './SideBarLeft'
+import SideBarRight from './SideBarRight'
 import {
     pricesInitialState,
     pricesReducer,
@@ -20,7 +20,7 @@ import {
     timesReducer,
     stationsReducer,
     stationsInitialValues,
-} from './reducers/'
+} from './reducers'
 
 import {
     getExtremumRoundTripTravelTime,
@@ -130,7 +130,9 @@ const CalendarPage = ({ roundTrips }) => {
     }, [roundTrips, stations, times, prices.maxPrice])
 
     const onSelectEvent = (event) => {
-        const selectedJourney = displaydJourneys[event.id]
+        const selectedJourney = displaydJourneys[
+            event.id
+        ] as any
         const there = selectedJourney.there
         const back = selectedJourney.back
         const information = {
