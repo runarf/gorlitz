@@ -13,7 +13,7 @@
         "a11y-react-emoji": "^1.0.2",
         "axios": "^0.19.0",
         "flix": "^5.0.1",
-        "formik": "^1.5",
+        "formik": "^2.1.4",
         "formik-material-ui": "^0.0.20",
         "gh-pages": "^2.0.1",
         "lodash": "^4.17.14",
@@ -23,9 +23,10 @@
         "react": "^16.8.6",
         "react-big-calendar": "0.22.0",
         "react-dom": "^16.8.6",
+        "react-router": "^5.2.0",
         "react-router-dom": "^5.0.1",
         "react-scripts": "3.4.1",
-        "typescript": "^3.9.2"
+        "typescript": "^3.9.3"
     },
     "scripts": {
         "start": "react-scripts start",
