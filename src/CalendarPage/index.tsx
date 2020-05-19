@@ -29,7 +29,7 @@ import {
     getOriginStations,
     getDestinationStations,
 } from './initializeForm'
-import { RoundTripWithPrice } from '../roundTrips'
+import { RoundTripWithPrice } from '../TripInterfaces'
 
 momentDurationFormatSetup(moment)
 

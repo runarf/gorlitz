@@ -1,10 +1,9 @@
 import moment, { Moment } from 'moment'
-
-export interface RoundTripWithPrice {
-    price: number
-    there: Trip
-    back: Trip
-}
+import {
+    Trip,
+    RoundTripWithPrice,
+    RawTrips,
+} from '../TripInterfaces'
 
 const getRoundTripsOverWeekend = (
     roundTrips: any[],
@@ -30,31 +29,6 @@ const getRoundTripsOverWeekend = (
         back: journeyBack,
     }
     return [...roundTrips, roundTrip]
-}
-
-interface Trip {
-    departure: string
-    arrival: string
-    origin: [
-        {
-            name: string
-            id: string
-        }
-    ]
-    destination: [
-        {
-            id: string
-            name: string
-        }
-    ]
-    price: number
-    url: string
-    isDirect: boolean
-}
-
-export interface RawTrips {
-    there: Trip[]
-    back: Trip[]
 }
 
 const getRoundTrips: ({

@@ -1,6 +1,6 @@
 import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
-import { RoundTripWithPrice } from '../roundTrips'
+import { RoundTripWithPrice } from '../TripInterfaces'
 momentDurationFormatSetup(moment)
 
 const getDestinationStations = (roundTrips) => {

@@ -7,10 +7,11 @@ import FrontPage from './StartPage'
 import CalendarPage from './CalendarPage'
 
 import axios from 'axios'
-import getRoundTrips, {
+import getRoundTrips from './roundTrips'
+import {
     RoundTripWithPrice,
     RawTrips,
-} from './roundTrips'
+} from './TripInterfaces'
 
 const App = () => {
     const backendURL =
@@ -32,7 +33,7 @@ const App = () => {
         // ])
     }, [])
 
-    const handleSetRoundTrips = async (id) => {
+    const handleSetRoundTrips = async (id: string) => {
         try {
             const response = await axios.get(
                 `${backendURL}${id}`
