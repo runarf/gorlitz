@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Formik, Form } from 'formik'
-import { withRouter } from 'react-router-dom'
+import { withRouter, useHistory } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
 import Countries from './Countries'
 import DefaultRegions from './regionsWithConnectionToBerlin'
 import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
-const StartPage = ({ history, handleSetRoundTrips }) => {
+const StartPage = ({ handleSetRoundTrips }) => {
+    const history = useHistory()
     const handleFormSubmit = (
         values,
         { setSubmitting }
@@ -86,4 +87,4 @@ const StartPage = ({ history, handleSetRoundTrips }) => {
     )
 }
 
-export default withRouter(StartPage)
+export default StartPage
