@@ -7,7 +7,9 @@ import FrontPage from './StartPage'
 import CalendarPage from './CalendarPage'
 
 import axios from 'axios'
-import getRoundTrips from './roundTrips'
+import getRoundTrips, {
+    RoundTripWithPrice,
+} from './roundTrips'
 
 const App = () => {
     const backendURL =
@@ -16,7 +18,9 @@ const App = () => {
         //     :
         'https://flixi.herokuapp.com/'
 
-    const [roundTrips, setRoundTrips] = useState([])
+    const [roundTrips, setRoundTrips] = useState<
+        RoundTripWithPrice[]
+    >([])
 
     useEffect(() => {
         //        setRoundTrips(RoundTrips)

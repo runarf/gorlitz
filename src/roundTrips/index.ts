@@ -1,12 +1,18 @@
-import moment from 'moment'
+import moment, { Moment } from 'moment'
+
+export interface RoundTripWithPrice {
+    price: any
+    there: any
+    back: any
+}
 
 const getRoundTripsOverWeekend = (
     roundTrips,
     journeyThere,
     journeyBack
-) => {
+): RoundTripWithPrice[] => {
     const departureTo = moment(journeyThere.departure)
-    const arrivalBack = moment(journeyBack.arrival)
+    const arrivalBack: Moment = moment(journeyBack.arrival)
 
     const daysBetween = arrivalBack.diff(
         departureTo,
@@ -17,7 +23,7 @@ const getRoundTripsOverWeekend = (
         return roundTrips
     }
 
-    const roundTrip = {
+    const roundTrip: RoundTripWithPrice = {
         price: journeyThere.price + journeyBack.price,
 
         there: journeyThere,
@@ -26,16 +32,21 @@ const getRoundTripsOverWeekend = (
     return [...roundTrips, roundTrip]
 }
 
-const getRoundTrips = ({ there, back }) => {
+const getRoundTrips = ({
+    there,
+    back,
+}): RoundTripWithPrice[] => {
     const roundTrips = there
-        .flatMap(journeyTo => {
+        .flatMap((journeyTo) => {
             return back.reduce(
-                (roundTrips, journeyBack) =>
-                    getRoundTripsOverWeekend(
+                (roundTrips, journeyBack) => {
+                    const roundTripz: RoundTripWithPrice[] = getRoundTripsOverWeekend(
                         roundTrips,
                         journeyTo,
                         journeyBack
-                    ),
+                    )
+                    return roundTripz
+                },
                 []
             )
         })
