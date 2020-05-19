@@ -11,9 +11,10 @@ import getRoundTrips from './roundTrips/'
 
 const App = () => {
     const backendURL =
-        process.env.NODE_ENV !== 'production'
-            ? 'http://localhost:4000/'
-            : 'https://flixi.herokuapp.com/'
+        // process.env.NODE_ENV !== 'production'
+        //     ? 'http://localhost:4000/'
+        //     :
+        'https://flixi.herokuapp.com/'
 
     const [roundTrips, setRoundTrips] = useState([])
 
