@@ -9,6 +9,7 @@ import CalendarPage from './CalendarPage'
 import axios from 'axios'
 import getRoundTrips, {
     RoundTripWithPrice,
+    RawTrips,
 } from './roundTrips'
 
 const App = () => {
@@ -37,8 +38,8 @@ const App = () => {
                 `${backendURL}${id}`
             )
             if (response.data) {
-                const roundTrips = await getRoundTrips(
-                    response.data
+                const roundTrips = getRoundTrips(
+                    response.data as RawTrips
                 )
 
                 const newRoundTrips = roundTrips

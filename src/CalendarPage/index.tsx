@@ -2,6 +2,7 @@ import React, {
     useState,
     useEffect,
     useReducer,
+    FC,
 } from 'react'
 import applyFilters from './filters'
 import moment from 'moment'
@@ -28,6 +29,7 @@ import {
     getOriginStations,
     getDestinationStations,
 } from './initializeForm'
+import { RoundTripWithPrice } from '../roundTrips'
 
 momentDurationFormatSetup(moment)
 
@@ -35,7 +37,9 @@ const useStyles = makeStyles((themes) => ({
     drawer: {},
 }))
 
-const CalendarPage = ({ roundTrips }) => {
+const CalendarPage: FC<{
+    roundTrips: RoundTripWithPrice[]
+}> = ({ roundTrips }) => {
     const classes = useStyles()
 
     const [stations, stationsDispatcher] = useReducer(

@@ -1,8 +1,9 @@
 import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
+import { RoundTripWithPrice } from '../roundTrips'
 momentDurationFormatSetup(moment)
 
-const getDestinationStations = roundTrips => {
+const getDestinationStations = (roundTrips) => {
     const destinationStations = roundTrips.reduce(
         (stations, roundTrip) => {
             const station =
@@ -18,11 +19,13 @@ const getDestinationStations = roundTrips => {
     return destinationStations
 }
 
-const getOriginStations = roundTrips => {
-    const originStations = roundTrips.reduce(
+const getOriginStations = (
+    roundTrips: RoundTripWithPrice[]
+) => {
+    const originStations = roundTrips.reduce<any[]>(
         (originStations, journey) => {
             const newStations = journey.there.origin
-                .filter(station => {
+                .filter((station) => {
                     if (
                         originStations.includes(
                             station.name
@@ -33,7 +36,7 @@ const getOriginStations = roundTrips => {
                         return true
                     }
                 })
-                .map(station => station.name)
+                .map((station) => station.name)
 
             return [...originStations, ...newStations]
         },
@@ -42,7 +45,7 @@ const getOriginStations = roundTrips => {
     return originStations
 }
 
-const getMaxAndMinRoundTripPrice = roundTrips => {
+const getMaxAndMinRoundTripPrice = (roundTrips) => {
     const mostExpensiveRoundTripPrice = roundTrips.reduce(
         (maxAndMinRoundTripPrice, roundTrip) => {
             const price = roundTrip.price
@@ -74,7 +77,7 @@ const getMaxAndMinRoundTripPrice = roundTrips => {
     return mostExpensiveRoundTripPrice
 }
 
-const getExtremumRoundTripTravelTime = roundTrips => {
+const getExtremumRoundTripTravelTime = (roundTrips) => {
     const extremumRoundTripTravelTime = roundTrips.reduce(
         (extremumRoundTripTravelTime, roundTrip) => {
             const travelTimeThere = moment.duration(
