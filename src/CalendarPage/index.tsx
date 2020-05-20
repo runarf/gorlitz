@@ -29,7 +29,7 @@ import {
     getOriginStations,
     getDestinationStations,
 } from './initializeForm'
-import { RoundTripWithPrice } from '../TripInterfaces'
+import { ThereAndBackWithPrice } from '../TripInterfaces'
 
 momentDurationFormatSetup(moment)
 
@@ -101,7 +101,7 @@ export interface SelectedEventInformation {
 }
 
 const CalendarPage: FC<{
-    roundTrips: RoundTripWithPrice[]
+    roundTrips: ThereAndBackWithPrice[]
 }> = ({ roundTrips }) => {
     const classes = useStyles()
 
@@ -128,7 +128,7 @@ const CalendarPage: FC<{
     const [
         displaydJourneys,
         setDisplaydJourneys,
-    ] = useState<RoundTripWithPrice[]>([])
+    ] = useState<ThereAndBackWithPrice[]>([])
 
     useEffect(() => {
         const originStations = getOriginStations(roundTrips)

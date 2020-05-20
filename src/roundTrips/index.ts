@@ -1,15 +1,15 @@
 import moment, { Moment } from 'moment'
 import {
     Trip,
-    RoundTripWithPrice,
-    RawTrips,
+    ThereAndBackWithPrice,
+    ThereAndBackTrips,
 } from '../TripInterfaces'
 
 const getRoundTripsOverWeekend = (
     roundTrips: any[],
     journeyThere: Trip,
     journeyBack: Trip
-): RoundTripWithPrice[] => {
+): ThereAndBackWithPrice[] => {
     const departureTo = moment(journeyThere.departure)
     const arrivalBack: Moment = moment(journeyBack.arrival)
 
@@ -22,7 +22,7 @@ const getRoundTripsOverWeekend = (
         return roundTrips
     }
 
-    const roundTrip: RoundTripWithPrice = {
+    const roundTrip: ThereAndBackWithPrice = {
         price: journeyThere.price + journeyBack.price,
 
         there: journeyThere,
@@ -34,15 +34,15 @@ const getRoundTripsOverWeekend = (
 const getRoundTrips: ({
     there,
     back,
-}: RawTrips) => RoundTripWithPrice[] = ({
+}: ThereAndBackTrips) => ThereAndBackWithPrice[] = ({
     there,
     back,
 }) => {
     const roundTrips = there
         .flatMap((journeyTo) => {
-            return back.reduce<RoundTripWithPrice[]>(
+            return back.reduce<ThereAndBackWithPrice[]>(
                 (roundTrips, journeyBack) => {
-                    const roundTripz: RoundTripWithPrice[] = getRoundTripsOverWeekend(
+                    const roundTripz: ThereAndBackWithPrice[] = getRoundTripsOverWeekend(
                         roundTrips,
                         journeyTo,
                         journeyBack

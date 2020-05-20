@@ -1,4 +1,4 @@
-export interface RoundTripWithPrice {
+export interface ThereAndBackWithPrice {
     price: number
     there: Trip
     back: Trip
@@ -22,7 +22,7 @@ export interface Trip {
     url: string
     isDirect: boolean
 }
-export interface RawTrips {
+export interface ThereAndBackTrips {
     there: Trip[]
     back: Trip[]
 }

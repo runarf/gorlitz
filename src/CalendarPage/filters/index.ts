@@ -4,11 +4,11 @@ import {
     Times,
     SelectedStations,
 } from '..'
-import { RoundTripWithPrice } from '../../TripInterfaces'
+import { ThereAndBackWithPrice } from '../../TripInterfaces'
 
 const getCheckedJourneys = (
     selectedStations: SelectedStations,
-    roundTrips: RoundTripWithPrice[],
+    roundTrips: ThereAndBackWithPrice[],
     isDestinationStations: boolean
 ) => {
     const checkedStationsNames = Object.entries(
@@ -29,7 +29,7 @@ const getCheckedJourneys = (
     )
 
     const checkedRoundTrips = roundTrips.reduce<
-        RoundTripWithPrice[]
+        ThereAndBackWithPrice[]
     >((checkedRoundTrips, roundTrip) => {
         const stations = isDestinationStations
             ? roundTrip.there.destination
@@ -66,13 +66,13 @@ const isTimeBetween = ([min, max], time: number) => {
 }
 
 const getJourneysWithDepartureBefore = (
-    checkedJourneys: RoundTripWithPrice[],
+    checkedJourneys: ThereAndBackWithPrice[],
     departureTime: [number, number],
     returnArrivalTime: [number, number],
     maxTravelTime: number
 ) => {
     const journeysWithDepartureBefore = checkedJourneys.reduce<
-        RoundTripWithPrice[]
+        ThereAndBackWithPrice[]
     >((journeysWithDepartureBefore, journey) => {
         const journeyDeparture = moment(
             journey.there.departure
@@ -131,8 +131,8 @@ const getJourneysWithDepartureBefore = (
 }
 
 const getDirectJourneys = (
-    journeys: RoundTripWithPrice[]
-): RoundTripWithPrice[] => {
+    journeys: ThereAndBackWithPrice[]
+): ThereAndBackWithPrice[] => {
     const directJourneys = journeys.filter((journey) => {
         const thereDirect = journey.there.isDirect
         const backDirect = journey.back.isDirect
@@ -150,23 +150,23 @@ const applyFilters = ({
     maxPrice,
 }: {
     stations: SelectedOriginDestinationStations
-    roundTrips: RoundTripWithPrice[]
+    roundTrips: ThereAndBackWithPrice[]
     times: Times
     maxPrice: number
 }) => {
-    const checkedJourneys: RoundTripWithPrice[] = getCheckedJourneys(
+    const checkedJourneys: ThereAndBackWithPrice[] = getCheckedJourneys(
         stations.selectedOriginStations,
         roundTrips,
         false
     )
 
-    const checkedDestinations: RoundTripWithPrice[] = getCheckedJourneys(
+    const checkedDestinations: ThereAndBackWithPrice[] = getCheckedJourneys(
         stations.selectedDestinationsStations,
         checkedJourneys,
         true
     )
 
-    const directOrIndirectJourneys: RoundTripWithPrice[] = times.directOnly
+    const directOrIndirectJourneys: ThereAndBackWithPrice[] = times.directOnly
         ? getDirectJourneys(checkedDestinations)
         : checkedDestinations
 

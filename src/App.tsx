@@ -9,8 +9,8 @@ import CalendarPage from './CalendarPage'
 import axios from 'axios'
 import getRoundTrips from './roundTrips'
 import {
-    RoundTripWithPrice,
-    RawTrips,
+    ThereAndBackWithPrice,
+    ThereAndBackTrips,
 } from './TripInterfaces'
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
         'https://flixi.herokuapp.com/'
 
     const [roundTrips, setRoundTrips] = useState<
-        RoundTripWithPrice[]
+        ThereAndBackWithPrice[]
     >([])
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const App = () => {
             )
             if (response.data) {
                 const roundTrips = getRoundTrips(
-                    response.data as RawTrips
+                    response.data as ThereAndBackTrips
                 )
 
                 const newRoundTrips = roundTrips

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, FC } from 'react'
 import { Formik, Form } from 'formik'
 import { useHistory } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
@@ -10,7 +10,9 @@ import {
 } from './regionsWithConnectionToBerlin'
 import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
-const StartPage = ({ handleSetRoundTrips }) => {
+const StartPage: FC<{
+    handleSetRoundTrips: (id: string) => Promise<void>
+}> = ({ handleSetRoundTrips }) => {
     const history = useHistory()
     const handleFormSubmit = (
         values,
