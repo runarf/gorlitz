@@ -69,6 +69,13 @@ export interface Prices {
     lowestAndHighestRoundTripPrice: ExtremumPrice
 }
 
+export interface Event {
+    id: any
+    title: string
+    start: any
+    end: any
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {
@@ -89,7 +96,7 @@ const CalendarPage: FC<{
         pricesInitialState
     )
 
-    const [events, setEvents] = useState([])
+    const [events, setEvents] = useState<Event[]>([])
     const [selectedEvent, setSelectedEvent] = useState({
         //...initialEvent,
     })
@@ -97,7 +104,7 @@ const CalendarPage: FC<{
     const [
         displaydJourneys,
         setDisplaydJourneys,
-    ] = useState([])
+    ] = useState<RoundTripWithPrice[]>([])
 
     useEffect(() => {
         const originStations = getOriginStations(roundTrips)
