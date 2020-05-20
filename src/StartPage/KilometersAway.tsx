@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Grid,
     MenuItem,
@@ -20,7 +20,12 @@ const kilometersFromBerlin = [
     1000,
 ]
 
-const KilometersAway = ({
+const KilometersAway: FC<{
+    maxKilometersAwayFromBerlin: number
+    setMaxKilometersAwayFromBerlin: (
+        maxKilometersAwayFromBerlin: number
+    ) => void
+}> = ({
     maxKilometersAwayFromBerlin,
     setMaxKilometersAwayFromBerlin,
 }) => {
@@ -34,7 +39,7 @@ const KilometersAway = ({
             <Grid item xs={3}>
                 <Select
                     value={maxKilometersAwayFromBerlin}
-                    onChange={event =>
+                    onChange={(event: any) =>
                         setMaxKilometersAwayFromBerlin(
                             event.target.value
                         )

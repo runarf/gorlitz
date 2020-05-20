@@ -11,7 +11,7 @@ import {
 import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
 const StartPage: FC<{
-    handleSetRoundTrips: (id: string) => Promise<void>
+    handleSetRoundTrips: (regionId: string) => Promise<void>
 }> = ({ handleSetRoundTrips }) => {
     const history = useHistory()
     const handleFormSubmit = (values: {
@@ -24,13 +24,14 @@ const StartPage: FC<{
                 }
             }
         )
-        console.log(JSON.stringify(values, null, 2))
+
         history.push('/calendar')
     }
 
-    const [displaydRegions, setDisplaydRegions] = useState<
-        RegionsByCountry
-    >(regionsByCountry)
+    const [
+        displaydRegionsByCountry,
+        setDisplaydRegionsByCountry,
+    ] = useState<RegionsByCountry>(regionsByCountry)
 
     const [
         maxKilometersAwayFromBerlin,
@@ -42,7 +43,7 @@ const StartPage: FC<{
             regionsByCountry,
             maxKilometersAwayFromBerlin
         )
-        setDisplaydRegions(regionsCloseToBerlin)
+        setDisplaydRegionsByCountry(regionsCloseToBerlin)
     }, [maxKilometersAwayFromBerlin])
 
     return (
@@ -67,7 +68,7 @@ const StartPage: FC<{
                         />
                         <Countries
                             regionsByCountry={
-                                displaydRegions
+                                displaydRegionsByCountry
                             }
                         />
                         <Grid
