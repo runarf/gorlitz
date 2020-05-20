@@ -52,5 +52,11 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://runarf.github.io/gorlitz"
+    "homepage": "https://runarf.github.io/gorlitz",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
+        "@typescript-eslint/parser": "^2.34.0",
+        "eslint": "^7.0.0",
+        "eslint-plugin-react": "^7.20.0"
+    }
 }
