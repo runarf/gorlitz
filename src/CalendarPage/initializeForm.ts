@@ -3,8 +3,10 @@ import momentDurationFormatSetup from 'moment-duration-format'
 import { RoundTripWithPrice } from '../TripInterfaces'
 momentDurationFormatSetup(moment)
 
-const getDestinationStations = (roundTrips) => {
-    const destinationStations = roundTrips.reduce(
+const getDestinationStations = (
+    roundTrips: RoundTripWithPrice[]
+) => {
+    const destinationStations = roundTrips.reduce<string[]>(
         (stations, roundTrip) => {
             const station =
                 roundTrip.there.destination[0].name
@@ -22,7 +24,7 @@ const getDestinationStations = (roundTrips) => {
 const getOriginStations = (
     roundTrips: RoundTripWithPrice[]
 ) => {
-    const originStations = roundTrips.reduce<any[]>(
+    const originStations = roundTrips.reduce<string[]>(
         (originStations, journey) => {
             const newStations = journey.there.origin
                 .filter((station) => {
@@ -77,7 +79,9 @@ const getMaxAndMinRoundTripPrice = (roundTrips) => {
     return mostExpensiveRoundTripPrice
 }
 
-const getExtremumRoundTripTravelTime = (roundTrips) => {
+const getExtremumRoundTripTravelTime = (
+    roundTrips: RoundTripWithPrice[]
+) => {
     const extremumRoundTripTravelTime = roundTrips.reduce(
         (extremumRoundTripTravelTime, roundTrip) => {
             const travelTimeThere = moment.duration(

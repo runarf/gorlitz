@@ -37,6 +37,10 @@ const useStyles = makeStyles((themes) => ({
     drawer: {},
 }))
 
+export interface SelectedStations {
+    [name: string]: boolean
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {
