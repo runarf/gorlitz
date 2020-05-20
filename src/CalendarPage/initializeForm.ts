@@ -1,6 +1,7 @@
 import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
 import { RoundTripWithPrice } from '../TripInterfaces'
+import { ExtremumTime } from '.'
 momentDurationFormatSetup(moment)
 
 const getDestinationStations = (
@@ -81,8 +82,10 @@ const getMaxAndMinRoundTripPrice = (roundTrips) => {
 
 const getExtremumRoundTripTravelTime = (
     roundTrips: RoundTripWithPrice[]
-) => {
-    const extremumRoundTripTravelTime = roundTrips.reduce(
+): ExtremumTime => {
+    const extremumRoundTripTravelTime = roundTrips.reduce<
+        ExtremumTime
+    >(
         (extremumRoundTripTravelTime, roundTrip) => {
             const travelTimeThere = moment.duration(
                 moment(roundTrip.there.arrival).diff(
@@ -102,16 +105,20 @@ const getExtremumRoundTripTravelTime = (
                     : [travelTimeThere, travelTimeBack]
 
             if (extremumRoundTripTravelTime.min === 0) {
-                extremumRoundTripTravelTime.min = shortest
+                extremumRoundTripTravelTime.min = shortest.milliseconds()
             }
 
-            if (longest > extremumRoundTripTravelTime.max) {
-                extremumRoundTripTravelTime.max = longest
+            if (
+                longest.milliseconds() >
+                extremumRoundTripTravelTime.max
+            ) {
+                extremumRoundTripTravelTime.max = longest.milliseconds()
             }
             if (
-                shortest < extremumRoundTripTravelTime.min
+                shortest.milliseconds() <
+                extremumRoundTripTravelTime.min
             ) {
-                extremumRoundTripTravelTime.min = shortest
+                extremumRoundTripTravelTime.min = shortest.milliseconds()
             }
 
             return extremumRoundTripTravelTime

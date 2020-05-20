@@ -41,6 +41,11 @@ export interface SelectedStations {
     [name: string]: boolean
 }
 
+export interface ExtremumTime {
+    min: number
+    max: number
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {
