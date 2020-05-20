@@ -1,4 +1,9 @@
 import moment from 'moment'
+import {
+    SelectedOriginDestinationStations,
+    Times,
+} from '..'
+import { RoundTripWithPrice } from '../../TripInterfaces'
 
 const getCheckedJourneys = (
     selectedStations,
@@ -152,6 +157,11 @@ const applyFilters = ({
     roundTrips,
     times,
     maxPrice,
+}: {
+    stations: SelectedOriginDestinationStations
+    roundTrips: RoundTripWithPrice[]
+    times: Times
+    maxPrice: any
 }) => {
     const checkedJourneys = getCheckedJourneys(
         stations.selectedOriginStations,

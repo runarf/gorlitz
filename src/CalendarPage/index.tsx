@@ -56,6 +56,19 @@ export interface SelectedOriginDestinationStations {
     selectedDestinationsStations: SelectedStations
 }
 
+export interface Times {
+    directOnly: boolean
+    extremumTravelTime: ExtremumTime
+    maxTravelTime: number
+    backArrivalTime: number[]
+    thereDepartureTime: number[]
+}
+
+export interface Prices {
+    maxPrice: number
+    lowestAndHighestRoundTripPrice: ExtremumPrice
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {

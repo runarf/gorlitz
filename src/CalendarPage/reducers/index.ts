@@ -1,6 +1,8 @@
 import {
     SelectedStations,
     SelectedOriginDestinationStations,
+    Times,
+    Prices,
 } from '..'
 
 const stationsReducer = (
@@ -34,7 +36,7 @@ const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedDestinationsStations: {},
 }
 
-const timesReducer = (state, action) => {
+const timesReducer = (state: Times, action) => {
     switch (action.type) {
         case 'SET_MAX_TRAVEL_TIME':
             return { ...state, maxTravelTime: action.value }
@@ -63,7 +65,7 @@ const timesReducer = (state, action) => {
     }
 }
 
-const timesInitialState = {
+const timesInitialState: Times = {
     directOnly: false,
     extremumTravelTime: {
         min: 0,
@@ -74,7 +76,7 @@ const timesInitialState = {
     thereDepartureTime: [0, 48],
 }
 
-const pricesReducer = (state, action) => {
+const pricesReducer = (state: Prices, action) => {
     switch (action.type) {
         case 'SET_MAX_PRICE':
             return { ...state, maxPrice: action.value }
@@ -89,7 +91,7 @@ const pricesReducer = (state, action) => {
     }
 }
 
-const pricesInitialState = {
+const pricesInitialState: Prices = {
     maxPrice: 50,
     lowestAndHighestRoundTripPrice: {
         lowest: 0,
