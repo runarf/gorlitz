@@ -76,6 +76,30 @@ export interface Event {
     end: any
 }
 
+export interface Information {
+    origin: [
+        {
+            name: string
+            id: string
+        }
+    ]
+    destination: [
+        {
+            id: string
+            name: string
+        }
+    ]
+    departure: moment.Moment
+    arrival: moment.Moment
+    price: number
+    url: string
+}
+
+export interface SelectedEventInformation {
+    there: Information
+    back: Information
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {
@@ -97,9 +121,9 @@ const CalendarPage: FC<{
     )
 
     const [events, setEvents] = useState<Event[]>([])
-    const [selectedEvent, setSelectedEvent] = useState({
-        //...initialEvent,
-    })
+    const [selectedEvent, setSelectedEvent] = useState<
+        SelectedEventInformation | undefined
+    >()
 
     const [
         displaydJourneys,
@@ -172,13 +196,10 @@ const CalendarPage: FC<{
         setEvents(events)
     }, [roundTrips, stations, times, prices.maxPrice])
 
-    const onSelectEvent = (event) => {
-        const selectedJourney = displaydJourneys[
-            event.id
-        ] as any
-        const there = selectedJourney.there
-        const back = selectedJourney.back
-        const information = {
+    const onSelectEvent = (event: Event) => {
+        const selectedJourney = displaydJourneys[event.id]
+        const { there, back } = selectedJourney
+        const information: SelectedEventInformation = {
             there: {
                 origin: there.origin,
                 destination: there.destination,

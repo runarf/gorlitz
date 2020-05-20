@@ -36,7 +36,10 @@ const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedDestinationsStations: {},
 }
 
-const timesReducer = (state: Times, action) => {
+const timesReducer = (
+    state: Times,
+    action: { type: string; value: any }
+) => {
     switch (action.type) {
         case 'SET_MAX_TRAVEL_TIME':
             return { ...state, maxTravelTime: action.value }

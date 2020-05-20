@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Grid, Typography } from '@material-ui/core'
 import Stations from './Stations'
 import Emoji from 'a11y-react-emoji'
+import { SelectedEventInformation, Information } from '..'
 
-const OneWay = ({ oneWay }) => {
-    const originStations = oneWay.origin.map(origin =>
+const OneWay: FC<{ oneWay: Information }> = ({
+    oneWay,
+}) => {
+    const originStations = oneWay.origin.map((origin) =>
         origin.name
             .replace('Berlin ', '')
             .replace('central bus station', 'ZOB')
     )
     const destinationStations = oneWay.destination.map(
-        destination =>
+        (destination) =>
             destination.name
                 .replace('Berlin ', '')
                 .replace('central bus station', 'ZOB')
@@ -66,7 +69,9 @@ const OneWay = ({ oneWay }) => {
     )
 }
 
-const SelectedJourney = ({ selectedEvent }) => {
+const SelectedJourney: FC<{
+    selectedEvent: SelectedEventInformation
+}> = ({ selectedEvent }) => {
     return (
         <Grid
             container
