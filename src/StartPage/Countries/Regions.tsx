@@ -4,17 +4,14 @@ import {
     Checkbox,
     FormControlLabel,
 } from '@material-ui/core'
-import { Field } from 'formik'
+import { useField } from 'formik'
 import { Region } from '../regionsWithConnectionToBerlin'
 
 // TODO: Use formik hooks
-const FormikCheckbox = ({ field, form, disabled }) => {
-    const isDisabled =
-        disabled !== undefined
-            ? disabled
-            : form.isSubmitting
+const FormikCheckbox = ({ name }) => {
+    const [field] = useField(name)
 
-    return <Checkbox disabled={isDisabled} {...field} />
+    return <Checkbox {...field} />
 }
 
 const CheckBoxes: FC<{ regions: Region[] }> = ({
@@ -24,20 +21,14 @@ const CheckBoxes: FC<{ regions: Region[] }> = ({
         <Box display="flex" flexWrap="wrap">
             {regions.map((region, regionIndex) => (
                 <Box key={regionIndex}>
-                    <Field name={region.id}>
-                        {({ field, form }) => (
-                            <FormControlLabel
-                                control={
-                                    <FormikCheckbox
-                                        field={field}
-                                        form={form}
-                                        disabled={false}
-                                    />
-                                }
-                                label={region.name}
+                    <FormControlLabel
+                        control={
+                            <FormikCheckbox
+                                name={region.id}
                             />
-                        )}
-                    </Field>
+                        }
+                        label={region.name}
+                    />
                 </Box>
             ))}
         </Box>

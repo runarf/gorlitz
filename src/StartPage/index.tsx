@@ -14,10 +14,10 @@ const StartPage: FC<{
     handleSetRoundTrips: (id: string) => Promise<void>
 }> = ({ handleSetRoundTrips }) => {
     const history = useHistory()
-    const handleFormSubmit = (
-        values,
-        { setSubmitting }
-    ) => {
+    const handleFormSubmit = (values: {
+        [stationId: string]: boolean
+    }) => {
+        console.log(JSON.stringify(values))
         Object.entries(values).forEach(
             async ([regionId, regionIdBoolean]) => {
                 if (regionIdBoolean) {
