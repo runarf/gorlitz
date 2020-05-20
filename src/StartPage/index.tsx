@@ -17,10 +17,9 @@ const StartPage: FC<{
     const handleFormSubmit = (values: {
         [stationId: string]: boolean
     }) => {
-        console.log(JSON.stringify(values))
         Object.entries(values).forEach(
-            async ([regionId, regionIdBoolean]) => {
-                if (regionIdBoolean) {
+            async ([regionId, regionIsChecked]) => {
+                if (regionIsChecked) {
                     await handleSetRoundTrips(regionId)
                 }
             }

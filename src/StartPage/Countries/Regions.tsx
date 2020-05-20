@@ -8,8 +8,10 @@ import { useField } from 'formik'
 import { Region } from '../regionsWithConnectionToBerlin'
 
 // TODO: Use formik hooks
-const FormikCheckbox = ({ name }) => {
-    const [field] = useField(name)
+const FormikCheckbox: FC<{ regionId: string }> = ({
+    regionId,
+}) => {
+    const [field] = useField(regionId)
 
     return <Checkbox {...field} />
 }
@@ -24,7 +26,7 @@ const CheckBoxes: FC<{ regions: Region[] }> = ({
                     <FormControlLabel
                         control={
                             <FormikCheckbox
-                                name={region.id}
+                                regionId={region.id}
                             />
                         }
                         label={region.name}

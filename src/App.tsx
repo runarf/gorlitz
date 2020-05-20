@@ -33,10 +33,12 @@ const App = () => {
         // ])
     }, [])
 
-    const handleSetRoundTrips = async (id: string) => {
+    const handleSetRoundTrips = async (
+        regionId: string
+    ) => {
         try {
             const response = await axios.get(
-                `${backendURL}${id}`
+                `${backendURL}${regionId}`
             )
             if (response.data) {
                 const roundTrips = getRoundTrips(
