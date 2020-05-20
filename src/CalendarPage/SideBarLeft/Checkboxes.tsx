@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Checkbox,
     FormControlLabel,
     Grid,
     Typography,
+    CircularProgress,
 } from '@material-ui/core'
+import { SelectedStations } from '..'
 
-const CheckBoxes = ({
+const CheckBoxes: FC<{
+    stations: SelectedStations
+    handleChangeSelectedStations
+    title
+}> = ({
     stations,
     handleChangeSelectedStations,
     title,
@@ -20,7 +26,7 @@ const CheckBoxes = ({
             <Grid item xs>
                 <Typography>{title}</Typography>
             </Grid>
-            {Object.entries(stations).length > 0 &&
+            {Object.entries(stations).length > 0 ? (
                 Object.entries(stations).map(
                     ([station, checked], index) => {
                         return (
@@ -41,7 +47,10 @@ const CheckBoxes = ({
                             </Grid>
                         )
                     }
-                )}
+                )
+            ) : (
+                <CircularProgress />
+            )}
         </Grid>
     )
 }

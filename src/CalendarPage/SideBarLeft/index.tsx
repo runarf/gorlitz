@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Grid,
     Checkbox,
@@ -6,8 +6,17 @@ import {
 } from '@material-ui/core'
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
+import { SelectedOriginDestinationStations } from '..'
 
-const SideBarLeft = ({
+const SideBarLeft: FC<{
+    style
+    stationsDispatcher
+    stations: SelectedOriginDestinationStations
+    times
+    timesDispatcher
+    pricesDispatcher
+    prices
+}> = ({
     style,
     stationsDispatcher,
     stations,
@@ -16,7 +25,9 @@ const SideBarLeft = ({
     pricesDispatcher,
     prices,
 }) => {
-    const handleChangeSelectedOriginStations = name => event => {
+    const handleChangeSelectedOriginStations = (name) => (
+        event
+    ) => {
         stationsDispatcher({
             type: 'SET_SELECTED_ORIGIN_STATIONS',
             value: {
@@ -25,7 +36,9 @@ const SideBarLeft = ({
         })
     }
 
-    const handleChangeSelectedDestinations = name => event => {
+    const handleChangeSelectedDestinations = (name) => (
+        event
+    ) => {
         stationsDispatcher({
             type: 'SET_SELECTED_DESTINATIONS_STATIONS',
             value: {
