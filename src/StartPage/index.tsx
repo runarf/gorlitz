@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Formik, Form } from 'formik'
-import { useHistory } from 'react-router-dom'
+import { withRouter, useHistory } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
 import Countries from './Countries'
@@ -12,7 +12,10 @@ import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
 const StartPage = ({ handleSetRoundTrips }) => {
     const history = useHistory()
-    const handleFormSubmit = (values) => {
+    const handleFormSubmit = (
+        values,
+        { setSubmitting }
+    ) => {
         Object.entries(values).forEach(
             async ([regionId, regionIdBoolean]) => {
                 if (regionIdBoolean) {
