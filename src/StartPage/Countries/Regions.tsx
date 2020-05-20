@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Box,
     Checkbox,
     FormControlLabel,
 } from '@material-ui/core'
 import { Field } from 'formik'
+import { Region } from '../regionsWithConnectionToBerlin'
 
+// TODO: Use formik hooks
 const FormikCheckbox = ({ field, form, disabled }) => {
     const isDisabled =
         disabled !== undefined
@@ -15,7 +17,9 @@ const FormikCheckbox = ({ field, form, disabled }) => {
     return <Checkbox disabled={isDisabled} {...field} />
 }
 
-const CheckBoxes = ({ regions }) => {
+const CheckBoxes: FC<{ regions: Region[] }> = ({
+    regions,
+}) => {
     return (
         <Box display="flex" flexWrap="wrap">
             {regions.map((region, regionIndex) => (

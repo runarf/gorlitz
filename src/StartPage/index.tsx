@@ -4,7 +4,10 @@ import { withRouter, useHistory } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
 import KilometersAway from './KilometersAway'
 import Countries from './Countries'
-import DefaultRegions from './regionsWithConnectionToBerlin'
+import {
+    regionsByCountry,
+    RegionsByCountry,
+} from './regionsWithConnectionToBerlin'
 import getRegionsCloseToBerlin from './getRegionsCloseToBerlin'
 
 const StartPage = ({ handleSetRoundTrips }) => {
@@ -25,8 +28,8 @@ const StartPage = ({ handleSetRoundTrips }) => {
     }
 
     const [displaydRegions, setDisplaydRegions] = useState<
-        any
-    >(DefaultRegions)
+        RegionsByCountry
+    >(regionsByCountry)
 
     const [
         maxKilometersAwayFromBerlin,
@@ -35,7 +38,7 @@ const StartPage = ({ handleSetRoundTrips }) => {
 
     useEffect(() => {
         const regionsCloseToBerlin = getRegionsCloseToBerlin(
-            DefaultRegions,
+            regionsByCountry,
             maxKilometersAwayFromBerlin
         )
         setDisplaydRegions(regionsCloseToBerlin)

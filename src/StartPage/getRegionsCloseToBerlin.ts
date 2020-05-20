@@ -1,6 +1,8 @@
+import { RegionsByCountry } from './regionsWithConnectionToBerlin'
+
 const getRegionsCloseToBerlin = (
-    regionsByCountry,
-    radiusInKm
+    regionsByCountry: RegionsByCountry,
+    radiusInKm: number
 ) => {
     const berlinLocation = {
         longitude: 13.404616,
@@ -23,13 +25,13 @@ const getRegionsCloseToBerlin = (
 
     const regionsCloseToBerlinWithDirect = Object.entries(
         regionsByCountry
-    ).reduce(
+    ).reduce<RegionsByCountry>(
         (
             countryWithRegions,
             [country, regionsInCountry]
         ) => {
             const regionsInCountryCloseToBerlin = regionsInCountry.filter(
-                region => {
+                (region) => {
                     const {
                         longitude,
                         latitude,

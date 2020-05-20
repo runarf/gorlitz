@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Grid,
     ExpansionPanel,
@@ -8,13 +8,16 @@ import {
 import { ExpandMore } from '@material-ui/icons'
 //import regionsByCountry from '../regionsCloseToBerlin'
 import CheckBoxes from './Regions'
+import { RegionsByCountry } from '../regionsWithConnectionToBerlin'
 
-const Countries = ({ regionsByCountry }) => {
+const Countries: FC<{
+    regionsByCountry: RegionsByCountry
+}> = ({ regionsByCountry }) => {
     return (
         <Grid container item>
             {Object.entries(regionsByCountry).map(
                 ([country, regions], countryIndex) =>
-                    (regions as any).length > 1 && (
+                    regions.length > 1 && (
                         <Grid item key={countryIndex}>
                             <ExpansionPanel>
                                 <ExpansionPanelSummary
