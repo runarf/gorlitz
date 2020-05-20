@@ -1,10 +1,10 @@
-import { SelectedStations } from '..'
+import {
+    SelectedStations,
+    SelectedOriginDestinationStations,
+} from '..'
 
 const stationsReducer = (
-    state: {
-        selectedOriginStations: SelectedStations
-        selectedDestinationsStations: SelectedStations
-    },
+    state: SelectedOriginDestinationStations,
     action: { type: string; value: SelectedStations }
 ) => {
     switch (action.type) {
@@ -29,10 +29,7 @@ const stationsReducer = (
     }
 }
 
-const stationsInitialValues: {
-    selectedOriginStations: SelectedStations
-    selectedDestinationsStations: SelectedStations
-} = {
+const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedOriginStations: {},
     selectedDestinationsStations: {},
 }

@@ -46,6 +46,16 @@ export interface ExtremumTime {
     max: number
 }
 
+export interface ExtremumPrice {
+    lowest: number
+    highest: number
+}
+
+export interface SelectedOriginDestinationStations {
+    selectedOriginStations: SelectedStations
+    selectedDestinationsStations: SelectedStations
+}
+
 const CalendarPage: FC<{
     roundTrips: RoundTripWithPrice[]
 }> = ({ roundTrips }) => {
