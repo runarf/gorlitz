@@ -7,7 +7,7 @@ const getCheckedJourneys = (
 ) => {
     const checkedStationsNames = Object.entries(
         selectedStations
-    ).reduce(
+    ).reduce<any>(
         (
             checkedStationsNames,
             [stationName, isChecked]
