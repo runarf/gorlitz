@@ -60,8 +60,8 @@ export interface Times {
     directOnly: boolean
     extremumTravelTime: ExtremumTime
     maxTravelTime: number
-    backArrivalTime: number[]
-    thereDepartureTime: number[]
+    backArrivalTime: [number, number]
+    thereDepartureTime: [number, number]
 }
 
 export interface Prices {

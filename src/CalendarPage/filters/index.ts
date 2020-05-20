@@ -61,18 +61,18 @@ const getCheckedJourneys = (
     return checkedRoundTrips
 }
 
-const isTimeBetween = ([min, max], time) => {
+const isTimeBetween = ([min, max], time: number) => {
     return time > min && time < max
 }
 
 const getJourneysWithDepartureBefore = (
     checkedJourneys: RoundTripWithPrice[],
-    departureTime,
-    returnArrivalTime,
-    maxTravelTime
+    departureTime: [number, number],
+    returnArrivalTime: [number, number],
+    maxTravelTime: number
 ) => {
     const journeysWithDepartureBefore = checkedJourneys.reduce<
-        any
+        RoundTripWithPrice[]
     >((journeysWithDepartureBefore, journey) => {
         const journeyDeparture = moment(
             journey.there.departure
