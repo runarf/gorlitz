@@ -5,7 +5,7 @@ import {
     ThereAndBackTrips,
 } from '../TripInterfaces'
 
-const getRoundTripsOverWeekend = (
+export const getRoundTripsOverWeekend = (
     roundTrips: any[],
     journeyThere: Trip,
     journeyBack: Trip
@@ -31,7 +31,7 @@ const getRoundTripsOverWeekend = (
     return [...roundTrips, roundTrip]
 }
 
-const getRoundTrips: ({
+export const getRoundTrips: ({
     there,
     back,
 }: ThereAndBackTrips) => ThereAndBackWithPrice[] = ({
@@ -56,5 +56,3 @@ const getRoundTrips: ({
 
     return roundTrips
 }
-
-export default getRoundTrips
