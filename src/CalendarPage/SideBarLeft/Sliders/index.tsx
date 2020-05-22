@@ -6,6 +6,7 @@ import {
     makeStyles,
 } from '@material-ui/core'
 import moment from 'moment'
+import { DepartureTimeSlider } from './DepartureTimeSlider'
 
 const useStyles = makeStyles({
     valueLabel: {},
@@ -26,44 +27,6 @@ const Sliders = ({
         moment
             .duration(times.extremumTravelTime.max)
             .asHours()
-    )
-
-    const valueLabelFormat = (day) => (value) => {
-        const friday = moment()
-            .isoWeekday(day)
-            .startOf('day')
-            .add(value, 'hours')
-        const display = friday.format('dd HH')
-        return display
-    }
-
-    const DepartureTimeSlider: FC<{
-        timesDispatcher: any
-    }> = ({ timesDispatcher }) => (
-        <Grid item xs={12} container direction="column">
-            <Grid item>
-                <Typography>Departure Time:</Typography>
-            </Grid>
-            <Grid item xs={12}>
-                <Slider
-                    defaultValue={[0, 48]}
-                    valueLabelDisplay="auto"
-                    marks
-                    min={0}
-                    max={48}
-                    valueLabelFormat={valueLabelFormat(
-                        'Friday'
-                    )}
-                    onChange={(event, value) =>
-                        timesDispatcher({
-                            type:
-                                'SET_THERE_DEPARTURE_TIME',
-                            value,
-                        })
-                    }
-                />
-            </Grid>
-        </Grid>
     )
 
     const classes = useStyles()
@@ -158,3 +121,12 @@ const Sliders = ({
 }
 
 export default Sliders
+
+export const valueLabelFormat = (day) => (value) => {
+    const friday = moment()
+        .isoWeekday(day)
+        .startOf('day')
+        .add(value, 'hours')
+    const display = friday.format('dd HH')
+    return display
+}
