@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core'
 import moment from 'moment'
 import { DepartureTimeSlider } from './DepartureTimeSlider'
+import { ReturnDepartureTimeSlider } from './ReturnDepartureTimeSlider'
 
 const useStyles = makeStyles({
     valueLabel: {},
@@ -39,33 +40,9 @@ const Sliders = ({
             <DepartureTimeSlider
                 timesDispatcher={timesDispatcher}
             />
-            <Grid item xs={12} container direction="column">
-                <Grid item>
-                    <Typography>
-                        Return Departure Time:
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Slider
-                        defaultValue={[0, 48]}
-                        valueLabelDisplay="auto"
-                        marks
-                        min={0}
-                        max={48}
-                        className={classes.valueLabel}
-                        valueLabelFormat={valueLabelFormat(
-                            'Sunday'
-                        )}
-                        onChange={(event, value) =>
-                            timesDispatcher({
-                                type:
-                                    'SET_BACK_ARRIVAL_TIME',
-                                value,
-                            })
-                        }
-                    />
-                </Grid>
-            </Grid>
+            <ReturnDepartureTimeSlider
+                timesDispatcher={timesDispatcher}
+            />
             <Grid item xs={12} container direction="column">
                 <Grid item>
                     <Typography>
