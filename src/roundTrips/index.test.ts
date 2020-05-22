@@ -96,10 +96,7 @@ const SUNDAY = moment(
     'ddd-DD-MM-YYYY'
 ).toString()
 
-const TUESDAY = moment(
-    'Tue-23-07-2019',
-    'ddd-DD-MM-YYYY'
-).toString()
+const TUESDAY = moment('Tue-23-07-2019', 'ddd-DD-MM-YYYY')
 
 const TUESDAY_MIDDAY = moment(TUESDAY)
     .add(12, 'hours')

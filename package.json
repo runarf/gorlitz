@@ -32,10 +32,11 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "cross-env CI=true  react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "lint": "eslint src"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -52,5 +53,15 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://runarf.github.io/gorlitz"
+    "homepage": "https://runarf.github.io/gorlitz",
+    "devDependencies": {
+        "cross-env": "^7.0.2",
+        "husky": "^4.2.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint && yarn test",
+            "pre-push": "yarn lint && yarn test"
+        }
+    }
 }
