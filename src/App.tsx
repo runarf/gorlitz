@@ -7,7 +7,7 @@ import FrontPage from './StartPage'
 import CalendarPage from './CalendarPage'
 
 import axios from 'axios'
-import getRoundTrips from './roundTrips'
+import { getRoundTrips } from './roundTrips'
 import {
     ThereAndBackWithPrice,
     ThereAndBackTrips,
