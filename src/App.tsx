@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, FC } from 'react'
 import {
     BrowserRouter as Router,
     Route,
@@ -13,7 +13,7 @@ import {
     ThereAndBackTrips,
 } from './TripInterfaces'
 
-const App = () => {
+export const App: FC<{}> = () => {
     const backendURL =
         // process.env.NODE_ENV !== 'production'
         //     ? 'http://localhost:4000/'
@@ -88,5 +88,3 @@ const App = () => {
         </div>
     )
 }
-
-export default App
