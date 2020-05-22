@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import {
     Grid,
     Slider,
@@ -8,6 +8,7 @@ import {
 import moment from 'moment'
 import { DepartureTimeSlider } from './DepartureTimeSlider'
 import { ReturnDepartureTimeSlider } from './ReturnDepartureTimeSlider'
+import { MaximumTravelTimeSlider } from './MaximumTravelTimeSlider'
 
 const useStyles = makeStyles({
     valueLabel: {},
@@ -19,18 +20,6 @@ const Sliders = ({
     prices,
     pricesDispatcher,
 }) => {
-    const minTravelTime = Math.floor(
-        moment
-            .duration(times.extremumTravelTime.min)
-            .asHours()
-    )
-    const maxTravelTime = Math.ceil(
-        moment
-            .duration(times.extremumTravelTime.max)
-            .asHours()
-    )
-
-    const classes = useStyles()
     return (
         <Grid
             container
@@ -43,28 +32,10 @@ const Sliders = ({
             <ReturnDepartureTimeSlider
                 timesDispatcher={timesDispatcher}
             />
-            <Grid item xs={12} container direction="column">
-                <Grid item>
-                    <Typography>
-                        Maximum travel time:
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Slider
-                        defaultValue={24}
-                        valueLabelDisplay="auto"
-                        marks
-                        min={minTravelTime}
-                        max={maxTravelTime}
-                        onChange={(event, value) =>
-                            timesDispatcher({
-                                type: 'SET_MAX_TRAVEL_TIME',
-                                value,
-                            })
-                        }
-                    />
-                </Grid>
-            </Grid>
+            <MaximumTravelTimeSlider
+                timesDispatcher={timesDispatcher}
+                times={times}
+            />
             <Grid item xs={12} container direction="column">
                 <Grid item>
                     <Typography>Maximum prize:</Typography>
