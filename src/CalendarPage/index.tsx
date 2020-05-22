@@ -165,7 +165,6 @@ const CalendarPage: FC<{
         <Grid container justify="center" spacing={2}>
             <Grid item xs={2}>
                 <SideBarLeft
-                    style={classes.drawer}
                     stations={stations}
                     stationsDispatcher={stationsDispatcher}
                     timesDispatcher={timesDispatcher}

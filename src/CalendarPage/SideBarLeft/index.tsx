@@ -9,7 +9,6 @@ import Sliders from './Sliders'
 import { SelectedOriginDestinationStations } from '../Interfaces'
 
 const SideBarLeft: FC<{
-    style
     stationsDispatcher
     stations: SelectedOriginDestinationStations
     times
@@ -17,7 +16,6 @@ const SideBarLeft: FC<{
     pricesDispatcher
     prices
 }> = ({
-    style,
     stationsDispatcher,
     stations,
     times,

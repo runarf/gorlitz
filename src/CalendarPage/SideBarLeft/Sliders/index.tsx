@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
     Grid,
     Slider,
@@ -28,7 +28,7 @@ const Sliders = ({
             .asHours()
     )
 
-    const valueLabelFormat = day => value => {
+    const valueLabelFormat = (day) => (value) => {
         const friday = moment()
             .isoWeekday(day)
             .startOf('day')
@@ -37,6 +37,35 @@ const Sliders = ({
         return display
     }
 
+    const DepartureTimeSlider: FC<{
+        timesDispatcher: any
+    }> = ({ timesDispatcher }) => (
+        <Grid item xs={12} container direction="column">
+            <Grid item>
+                <Typography>Departure Time:</Typography>
+            </Grid>
+            <Grid item xs={12}>
+                <Slider
+                    defaultValue={[0, 48]}
+                    valueLabelDisplay="auto"
+                    marks
+                    min={0}
+                    max={48}
+                    valueLabelFormat={valueLabelFormat(
+                        'Friday'
+                    )}
+                    onChange={(event, value) =>
+                        timesDispatcher({
+                            type:
+                                'SET_THERE_DEPARTURE_TIME',
+                            value,
+                        })
+                    }
+                />
+            </Grid>
+        </Grid>
+    )
+
     const classes = useStyles()
     return (
         <Grid
@@ -44,30 +73,9 @@ const Sliders = ({
             direction="column"
             alignItems="center"
         >
-            <Grid item xs={12} container direction="column">
-                <Grid item>
-                    <Typography>Departure Time:</Typography>
-                </Grid>
-                <Grid item xs={12}>
-                    <Slider
-                        defaultValue={[0, 48]}
-                        valueLabelDisplay="auto"
-                        marks
-                        min={0}
-                        max={48}
-                        valueLabelFormat={valueLabelFormat(
-                            'Friday'
-                        )}
-                        onChange={(event, value) =>
-                            timesDispatcher({
-                                type:
-                                    'SET_THERE_DEPARTURE_TIME',
-                                value,
-                            })
-                        }
-                    />
-                </Grid>
-            </Grid>
+            <DepartureTimeSlider
+                timesDispatcher={timesDispatcher}
+            />
             <Grid item xs={12} container direction="column">
                 <Grid item>
                     <Typography>
