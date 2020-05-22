@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import SelectedJourney from './SelectedJourney'
-import { SelectedEventInformation } from '..'
+import { SelectedEventInformation } from '../Interfaces'
 
 const SideBarRight: FC<{
     selectedEvent: SelectedEventInformation | undefined

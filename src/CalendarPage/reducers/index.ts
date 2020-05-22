@@ -3,7 +3,7 @@ import {
     SelectedOriginDestinationStations,
     Times,
     Prices,
-} from '..'
+} from '../Interfaces'
 
 const stationsReducer = (
     state: SelectedOriginDestinationStations,

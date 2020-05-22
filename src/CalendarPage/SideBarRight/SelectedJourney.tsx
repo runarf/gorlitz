@@ -2,7 +2,10 @@ import React, { FC } from 'react'
 import { Grid, Typography } from '@material-ui/core'
 import Stations from './Stations'
 import Emoji from 'a11y-react-emoji'
-import { SelectedEventInformation, Information } from '..'
+import {
+    SelectedEventInformation,
+    Information,
+} from '../Interfaces'
 
 const OneWay: FC<{ oneWay: Information }> = ({
     oneWay,

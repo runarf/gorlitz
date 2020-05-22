@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core'
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
-import { SelectedOriginDestinationStations } from '..'
+import { SelectedOriginDestinationStations } from '../Interfaces'
 
 const SideBarLeft: FC<{
     style

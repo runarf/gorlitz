@@ -3,7 +3,7 @@ import {
     SelectedOriginDestinationStations,
     Times,
     SelectedStations,
-} from '..'
+} from '../Interfaces'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 
 const getCheckedJourneys = (

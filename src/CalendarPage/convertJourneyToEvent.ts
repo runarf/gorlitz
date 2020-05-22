@@ -1,5 +1,5 @@
 import moment, { Duration } from 'moment'
-import { Event } from '.'
+import { Event } from './Interfaces'
 
 const convertJourneyToEvent = (journeys) => {
     const events: Event[] = journeys.map(
