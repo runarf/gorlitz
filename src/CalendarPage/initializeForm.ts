@@ -4,7 +4,7 @@ import { ThereAndBackWithPrice } from '../TripInterfaces'
 import { ExtremumTime, ExtremumPrice } from '.'
 momentDurationFormatSetup(moment)
 
-const getDestinationStations = (
+export const getDestinationStations = (
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const destinationStations = roundTrips.reduce<string[]>(
@@ -22,7 +22,7 @@ const getDestinationStations = (
     return destinationStations
 }
 
-const getOriginStations = (
+export const getOriginStations = (
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const originStations = roundTrips.reduce<string[]>(
@@ -48,7 +48,7 @@ const getOriginStations = (
     return originStations
 }
 
-const getMaxAndMinRoundTripPrice = (
+export const getMaxAndMinRoundTripPrice = (
     roundTrips: ThereAndBackWithPrice[]
 ): ExtremumPrice => {
     const mostExpensiveRoundTripPrice = roundTrips.reduce<
@@ -84,7 +84,7 @@ const getMaxAndMinRoundTripPrice = (
     return mostExpensiveRoundTripPrice
 }
 
-const getExtremumRoundTripTravelTime = (
+export const getExtremumRoundTripTravelTime = (
     roundTrips: ThereAndBackWithPrice[]
 ): ExtremumTime => {
     const extremumRoundTripTravelTime = roundTrips.reduce<
@@ -136,7 +136,7 @@ const getExtremumRoundTripTravelTime = (
     return extremumRoundTripTravelTime
 }
 
-const initialEvent = {
+export const initialEvent = {
     there: {
         origin: [
             { name: 'Berlin Alexanderplatz', id: '1224' },
@@ -172,12 +172,4 @@ const initialEvent = {
         url:
             'https://shop.global.flixbus.com/s?departureCity=1374&arrivalCity=88&departureStation=6988&arrivalStation=1&rideDate=12.08.2019&currency=EUR&adult=1&children=0&bike_slot=0',
     },
-}
-
-export {
-    initialEvent,
-    getMaxAndMinRoundTripPrice,
-    getExtremumRoundTripTravelTime,
-    getOriginStations,
-    getDestinationStations,
 }
