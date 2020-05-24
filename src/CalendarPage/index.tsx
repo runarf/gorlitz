@@ -21,6 +21,7 @@ import {
 import {
     timesInitialState,
     timesReducer,
+    setExtremumTravelTime,
 } from './reducers/times'
 import stationsReducer, {
     stationsInitialValues,
@@ -28,10 +29,7 @@ import stationsReducer, {
     setSelectedDestinationStations,
 } from './reducers/stations'
 
-import {
-    getExtremumRoundTripTravelTime,
-    getMaxAndMinRoundTripPrice,
-} from './initializeForm'
+import { getMaxAndMinRoundTripPrice } from './initializeForm'
 import { ThereAndBackWithPrice } from '../TripInterfaces'
 import {
     Event,
@@ -85,14 +83,7 @@ const CalendarPage: FC<{
             roundTrips
         )
 
-        const extremumRoundTripTravelTime = getExtremumRoundTripTravelTime(
-            roundTrips
-        )
-
-        timesDispatcher({
-            type: 'SET_EXTREMUM_TRAVEL_TIME',
-            value: extremumRoundTripTravelTime,
-        })
+        setExtremumTravelTime(timesDispatcher, roundTrips)
 
         const maxAndMinRoundTripPrice = getMaxAndMinRoundTripPrice(
             roundTrips

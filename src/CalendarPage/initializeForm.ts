@@ -40,58 +40,6 @@ export const getMaxAndMinRoundTripPrice = (
     return mostExpensiveRoundTripPrice
 }
 
-export const getExtremumRoundTripTravelTime = (
-    roundTrips: ThereAndBackWithPrice[]
-): ExtremumTime => {
-    const extremumRoundTripTravelTime = roundTrips.reduce<
-        ExtremumTime
-    >(
-        (extremumRoundTripTravelTime, roundTrip) => {
-            const travelTimeThere = moment.duration(
-                moment(roundTrip.there.arrival).diff(
-                    moment(roundTrip.there.departure)
-                )
-            )
-
-            const travelTimeBack = moment.duration(
-                moment(roundTrip.back.arrival).diff(
-                    moment(roundTrip.back.departure)
-                )
-            )
-
-            const [shortest, longest] =
-                travelTimeThere > travelTimeBack
-                    ? [travelTimeBack, travelTimeThere]
-                    : [travelTimeThere, travelTimeBack]
-
-            if (extremumRoundTripTravelTime.min === 0) {
-                extremumRoundTripTravelTime.min = shortest.milliseconds()
-            }
-
-            if (
-                longest.milliseconds() >
-                extremumRoundTripTravelTime.max
-            ) {
-                extremumRoundTripTravelTime.max = longest.milliseconds()
-            }
-            if (
-                shortest.milliseconds() <
-                extremumRoundTripTravelTime.min
-            ) {
-                extremumRoundTripTravelTime.min = shortest.milliseconds()
-            }
-
-            return extremumRoundTripTravelTime
-        },
-        {
-            min: 0,
-            max: 0,
-        }
-    )
-
-    return extremumRoundTripTravelTime
-}
-
 export const initialEvent = {
     there: {
         origin: [

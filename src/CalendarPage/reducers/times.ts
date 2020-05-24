@@ -1,4 +1,18 @@
-import { Times } from '../Interfaces'
+import { Times, ExtremumTime } from '../Interfaces'
+import { Dispatch } from 'react'
+import { ThereAndBackWithPrice } from '../../TripInterfaces'
+import moment from 'moment'
+
+export const timesInitialState: Times = {
+    directOnly: false,
+    extremumTravelTime: {
+        min: 0,
+        max: 0,
+    },
+    maxTravelTime: 24,
+    backArrivalTime: [0, 48],
+    thereDepartureTime: [0, 48],
+}
 
 export const timesReducer = (
     state: Times,
@@ -34,13 +48,74 @@ export const timesReducer = (
             return state
     }
 }
-export const timesInitialState: Times = {
-    directOnly: false,
-    extremumTravelTime: {
-        min: 0,
-        max: 0,
-    },
-    maxTravelTime: 24,
-    backArrivalTime: [0, 48],
-    thereDepartureTime: [0, 48],
+
+export const setMaxTravelTime = (
+    dispatcher: Dispatch<any>,
+    roundTrips: ThereAndBackWithPrice[]
+) => {}
+
+export const setExtremumTravelTime = (
+    dispatcher: Dispatch<any>,
+    roundTrips: ThereAndBackWithPrice[]
+) => {
+    const extremumRoundTripTravelTime = getExtremumRoundTripTravelTime(
+        roundTrips
+    )
+
+    dispatcher({
+        type: 'SET_EXTREMUM_TRAVEL_TIME',
+        value: extremumRoundTripTravelTime,
+    })
+}
+
+const getExtremumRoundTripTravelTime = (
+    roundTrips: ThereAndBackWithPrice[]
+): ExtremumTime => {
+    const extremumRoundTripTravelTime = roundTrips.reduce<
+        ExtremumTime
+    >(
+        (extremumRoundTripTravelTime, roundTrip) => {
+            const travelTimeThere = moment.duration(
+                moment(roundTrip.there.arrival).diff(
+                    moment(roundTrip.there.departure)
+                )
+            )
+
+            const travelTimeBack = moment.duration(
+                moment(roundTrip.back.arrival).diff(
+                    moment(roundTrip.back.departure)
+                )
+            )
+
+            const [shortest, longest] =
+                travelTimeThere > travelTimeBack
+                    ? [travelTimeBack, travelTimeThere]
+                    : [travelTimeThere, travelTimeBack]
+
+            if (extremumRoundTripTravelTime.min === 0) {
+                extremumRoundTripTravelTime.min = shortest.milliseconds()
+            }
+
+            if (
+                longest.milliseconds() >
+                extremumRoundTripTravelTime.max
+            ) {
+                extremumRoundTripTravelTime.max = longest.milliseconds()
+            }
+            if (
+                shortest.milliseconds() <
+                extremumRoundTripTravelTime.min
+            ) {
+                extremumRoundTripTravelTime.min = shortest.milliseconds()
+            }
+
+            return extremumRoundTripTravelTime
+        },
+        {
+            min: 0,
+            max: 0,
+        }
+    )
+
+    return extremumRoundTripTravelTime
 }
