@@ -1,8 +1,11 @@
-import { ExtremumTime } from '../Interfaces'
 import { Dispatch } from 'react'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 import moment from 'moment'
 
+export interface ExtremumTime {
+    min: number
+    max: number
+}
 export interface Times {
     directOnly: boolean
     extremumTravelTime: ExtremumTime

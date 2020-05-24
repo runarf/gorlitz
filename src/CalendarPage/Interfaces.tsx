@@ -1,16 +1,4 @@
 import moment from 'moment'
-export interface SelectedStations {
-    [name: string]: boolean
-}
-export interface ExtremumTime {
-    min: number
-    max: number
-}
-
-export interface SelectedOriginDestinationStations {
-    selectedOriginStations: SelectedStations
-    selectedDestinationsStations: SelectedStations
-}
 
 export interface Event {
     id: any

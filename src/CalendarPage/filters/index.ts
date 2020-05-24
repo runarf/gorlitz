@@ -1,10 +1,10 @@
 import moment from 'moment'
-import {
-    SelectedOriginDestinationStations,
-    SelectedStations,
-} from '../Interfaces'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 import { Times } from '../reducers/times'
+import {
+    SelectedStations,
+    SelectedOriginDestinationStations,
+} from '../reducers/stations'
 
 const getCheckedJourneys = (
     selectedStations: SelectedStations,

@@ -1,9 +1,13 @@
-import {
-    SelectedStations,
-    SelectedOriginDestinationStations,
-} from '../Interfaces'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 import { Dispatch } from 'react'
+
+export interface SelectedStations {
+    [name: string]: boolean
+}
+export interface SelectedOriginDestinationStations {
+    selectedOriginStations: SelectedStations
+    selectedDestinationsStations: SelectedStations
+}
 
 export const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedOriginStations: {},

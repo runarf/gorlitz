@@ -6,7 +6,7 @@ import {
     Typography,
     CircularProgress,
 } from '@material-ui/core'
-import { SelectedStations } from '../Interfaces'
+import { SelectedStations } from '../reducers/stations'
 
 const CheckBoxes: FC<{
     stations: SelectedStations
