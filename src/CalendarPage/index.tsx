@@ -17,9 +17,11 @@ import SideBarRight from './SideBarRight'
 import {
     pricesInitialState,
     pricesReducer,
+} from './reducers'
+import {
     timesInitialState,
     timesReducer,
-} from './reducers'
+} from './reducers/times'
 import stationsReducer, {
     stationsInitialValues,
     setSelectedOriginStations,
