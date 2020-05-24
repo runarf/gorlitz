@@ -4,6 +4,12 @@ import {
 } from '../Interfaces'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 import { Dispatch } from 'react'
+
+export const stationsInitialValues: SelectedOriginDestinationStations = {
+    selectedOriginStations: {},
+    selectedDestinationsStations: {},
+}
+
 const stationsReducer = (
     state: SelectedOriginDestinationStations,
     action: {
@@ -54,6 +60,32 @@ export const setSelectedOriginStations = (
     })
 }
 
+const getOriginStations = (
+    roundTrips: ThereAndBackWithPrice[]
+) => {
+    const originStations = roundTrips.reduce<string[]>(
+        (originStations, journey) => {
+            const newStations = journey.there.origin
+                .filter((station) => {
+                    if (
+                        originStations.includes(
+                            station.name
+                        )
+                    ) {
+                        return false
+                    } else {
+                        return true
+                    }
+                })
+                .map((station) => station.name)
+
+            return [...originStations, ...newStations]
+        },
+        []
+    )
+    return originStations
+}
+
 export const setSelectedDestinationStations = (
     dispatch: Dispatch<any>,
     roundTrips: ThereAndBackWithPrice[]
@@ -90,35 +122,4 @@ const getDestinationStations = (
         []
     )
     return destinationStations
-}
-
-export const stationsInitialValues: SelectedOriginDestinationStations = {
-    selectedOriginStations: {},
-    selectedDestinationsStations: {},
-}
-
-const getOriginStations = (
-    roundTrips: ThereAndBackWithPrice[]
-) => {
-    const originStations = roundTrips.reduce<string[]>(
-        (originStations, journey) => {
-            const newStations = journey.there.origin
-                .filter((station) => {
-                    if (
-                        originStations.includes(
-                            station.name
-                        )
-                    ) {
-                        return false
-                    } else {
-                        return true
-                    }
-                })
-                .map((station) => station.name)
-
-            return [...originStations, ...newStations]
-        },
-        []
-    )
-    return originStations
 }
