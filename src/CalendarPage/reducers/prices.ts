@@ -20,7 +20,7 @@ type SetExtremumPrice = {
     value: ExtremumPrice
 }
 
-type PricesActions = SetMaxPrice | SetExtremumPrice
+export type PricesActions = SetMaxPrice | SetExtremumPrice
 
 const pricesReducer = (
     state: Prices,

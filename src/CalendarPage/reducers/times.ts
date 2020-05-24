@@ -47,7 +47,7 @@ type SetDirectOnlyBoolean = {
     value: boolean
 }
 
-type TimesActions =
+export type TimesActions =
     | SetMaxTravelTime
     | SetBackArrivalTime
     | SetThereDepartureTime
