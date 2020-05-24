@@ -17,7 +17,7 @@ import SideBarRight from './SideBarRight'
 import {
     pricesInitialState,
     pricesReducer,
-} from './reducers'
+} from './reducers/prices'
 import {
     timesInitialState,
     timesReducer,

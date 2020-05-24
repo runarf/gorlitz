@@ -14,7 +14,6 @@ export const pricesReducer = (state: Prices, action) => {
             return state
     }
 }
-
 export const pricesInitialState: Prices = {
     maxPrice: 50,
     lowestAndHighestRoundTripPrice: {

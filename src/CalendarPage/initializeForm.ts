@@ -1,7 +1,7 @@
 import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
 import { ThereAndBackWithPrice } from '../TripInterfaces'
-import { ExtremumTime, ExtremumPrice } from './Interfaces'
+import { ExtremumPrice } from './Interfaces'
 momentDurationFormatSetup(moment)
 
 export const getMaxAndMinRoundTripPrice = (
