@@ -10,7 +10,22 @@ export const pricesInitialState: Prices = {
     },
 }
 
-const pricesReducer = (state: Prices, action) => {
+type SetMaxPrice = {
+    type: 'SET_MAX_PRICE'
+    value: number
+}
+
+type SetExtremumPrice = {
+    type: 'SET_LOWEST_AND_HIGHEST_ROUND_TRIP_PRICE'
+    value: ExtremumPrice
+}
+
+type PricesActions = SetMaxPrice | SetExtremumPrice
+
+const pricesReducer = (
+    state: Prices,
+    action: PricesActions
+): Prices => {
     switch (action.type) {
         case 'SET_MAX_PRICE':
             return { ...state, maxPrice: action.value }
