@@ -6,7 +6,6 @@ import React, {
 } from 'react'
 import applyFilters from './filters'
 import moment from 'moment'
-import momentDurationFormatSetup from 'moment-duration-format'
 import convertJourneyToEvent from './convertJourneyToEvent'
 
 import { Grid, makeStyles } from '@material-ui/core'
@@ -14,9 +13,9 @@ import { Grid, makeStyles } from '@material-ui/core'
 import Calendar from './Calendar'
 import SideBarLeft from './SideBarLeft'
 import SideBarRight from './SideBarRight'
-import {
+import pricesReducer, {
     pricesInitialState,
-    pricesReducer,
+    setExtremumRoundTripPrice,
 } from './reducers/prices'
 import {
     timesInitialState,
@@ -29,14 +28,11 @@ import stationsReducer, {
     setSelectedDestinationStations,
 } from './reducers/stations'
 
-import { getMaxAndMinRoundTripPrice } from './initializeForm'
 import { ThereAndBackWithPrice } from '../TripInterfaces'
 import {
     Event,
     SelectedEventInformation,
 } from './Interfaces'
-
-momentDurationFormatSetup(moment)
 
 const useStyles = makeStyles((themes) => ({
     drawer: {},
@@ -85,14 +81,10 @@ const CalendarPage: FC<{
 
         setExtremumTravelTime(timesDispatcher, roundTrips)
 
-        const maxAndMinRoundTripPrice = getMaxAndMinRoundTripPrice(
+        setExtremumRoundTripPrice(
+            pricesDispatcher,
             roundTrips
         )
-
-        pricesDispatcher({
-            type: 'SET_LOWEST_AND_HIGHEST_ROUND_TRIP_PRICE',
-            value: maxAndMinRoundTripPrice,
-        })
     }, [roundTrips])
 
     useEffect(() => {

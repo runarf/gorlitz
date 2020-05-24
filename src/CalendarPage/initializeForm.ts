@@ -1,44 +1,4 @@
 import moment from 'moment'
-import momentDurationFormatSetup from 'moment-duration-format'
-import { ThereAndBackWithPrice } from '../TripInterfaces'
-import { ExtremumPrice } from './Interfaces'
-momentDurationFormatSetup(moment)
-
-export const getMaxAndMinRoundTripPrice = (
-    roundTrips: ThereAndBackWithPrice[]
-): ExtremumPrice => {
-    const mostExpensiveRoundTripPrice = roundTrips.reduce<
-        ExtremumPrice
-    >(
-        (maxAndMinRoundTripPrice, roundTrip) => {
-            const price = roundTrip.price
-            if (maxAndMinRoundTripPrice.lowest === 0) {
-                maxAndMinRoundTripPrice.lowest = price
-            }
-            if (price > maxAndMinRoundTripPrice.highest) {
-                return {
-                    ...maxAndMinRoundTripPrice,
-                    highest: price,
-                }
-            } else if (
-                maxAndMinRoundTripPrice.lowest > price
-            ) {
-                return {
-                    ...maxAndMinRoundTripPrice,
-                    lowest: price,
-                }
-            } else {
-                return maxAndMinRoundTripPrice
-            }
-        },
-        {
-            lowest: 0,
-            highest: 0,
-        }
-    )
-
-    return mostExpensiveRoundTripPrice
-}
 
 export const initialEvent = {
     there: {
