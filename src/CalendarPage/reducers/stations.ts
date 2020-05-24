@@ -20,7 +20,7 @@ type SetSelectedDestinationStations = {
     stations: SelectedStations
 }
 
-type StationsActions =
+export type StationsActions =
     | SetSelectedDestinationStations
     | SetSelectedOriginStations
 

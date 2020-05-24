@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Dispatch } from 'react'
 import {
     Grid,
     Checkbox,
@@ -7,9 +7,10 @@ import {
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
 import { SelectedOriginDestinationStations } from '../Interfaces'
+import { StationsActions } from '../reducers/stations'
 
 const SideBarLeft: FC<{
-    stationsDispatcher
+    stationsDispatcher: Dispatch<StationsActions>
     stations: SelectedOriginDestinationStations
     times
     timesDispatcher
@@ -28,7 +29,7 @@ const SideBarLeft: FC<{
     ) => {
         stationsDispatcher({
             type: 'SET_SELECTED_ORIGIN_STATIONS',
-            value: {
+            stations: {
                 [name]: event.target.checked,
             },
         })
@@ -39,7 +40,7 @@ const SideBarLeft: FC<{
     ) => {
         stationsDispatcher({
             type: 'SET_SELECTED_DESTINATIONS_STATIONS',
-            value: {
+            stations: {
                 [name]: event.target.checked,
             },
         })
