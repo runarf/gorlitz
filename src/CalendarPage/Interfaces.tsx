@@ -6,19 +6,12 @@ export interface ExtremumTime {
     min: number
     max: number
 }
-export interface ExtremumPrice {
-    lowest: number
-    highest: number
-}
+
 export interface SelectedOriginDestinationStations {
     selectedOriginStations: SelectedStations
     selectedDestinationsStations: SelectedStations
 }
 
-export interface Prices {
-    maxPrice: number
-    lowestAndHighestRoundTripPrice: ExtremumPrice
-}
 export interface Event {
     id: any
     title: string

@@ -6,13 +6,10 @@ import {
 } from '@material-ui/core'
 import CheckBoxes from './Checkboxes'
 import Sliders from './Sliders'
-import {
-    SelectedOriginDestinationStations,
-    Prices,
-} from '../Interfaces'
+import { SelectedOriginDestinationStations } from '../Interfaces'
 import { StationsActions } from '../reducers/stations'
 import { Times, TimesActions } from '../reducers/times'
-import { PricesActions } from '../reducers/prices'
+import { PricesActions, Prices } from '../reducers/prices'
 
 const SideBarLeft: FC<{
     stationsDispatcher: Dispatch<StationsActions>

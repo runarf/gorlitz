@@ -1,6 +1,14 @@
-import { Prices, ExtremumPrice } from '../Interfaces'
 import { Dispatch } from 'react'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
+
+export interface ExtremumPrice {
+    lowest: number
+    highest: number
+}
+export interface Prices {
+    maxPrice: number
+    lowestAndHighestRoundTripPrice: ExtremumPrice
+}
 
 export const pricesInitialState: Prices = {
     maxPrice: 50,
