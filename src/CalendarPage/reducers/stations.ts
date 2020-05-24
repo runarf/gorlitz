@@ -55,18 +55,48 @@ export const setSelectedOriginStations = (
 }
 
 export const setSelectedDestinationStations = (
-    stations: SelectedStations
+    dispatch: Dispatch<any>,
+    roundTrips: ThereAndBackWithPrice[]
 ) => {
-    return {
+    const destinations = getDestinationStations(roundTrips)
+    const stations = destinations.reduce(
+        (stations, station) => {
+            if (stations[station] === undefined) {
+                stations[station] = true
+            }
+            return stations
+        },
+        {}
+    )
+    dispatch({
         type: 'SET_SELECTED_DESTINATIONS_STATIONS',
         stations,
-    }
+    })
+}
+
+const getDestinationStations = (
+    roundTrips: ThereAndBackWithPrice[]
+) => {
+    const destinationStations = roundTrips.reduce<string[]>(
+        (stations, roundTrip) => {
+            const station =
+                roundTrip.there.destination[0].name
+            if (stations.includes(station)) {
+                return stations
+            } else {
+                return [...stations, station]
+            }
+        },
+        []
+    )
+    return destinationStations
 }
 
 export const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedOriginStations: {},
     selectedDestinationsStations: {},
 }
+
 const getOriginStations = (
     roundTrips: ThereAndBackWithPrice[]
 ) => {

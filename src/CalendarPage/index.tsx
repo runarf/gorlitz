@@ -23,6 +23,7 @@ import {
 import stationsReducer, {
     stationsInitialValues,
     setSelectedOriginStations,
+    setSelectedDestinationStations,
 } from './reducers/stations'
 
 import {
@@ -78,21 +79,10 @@ const CalendarPage: FC<{
             roundTrips
         )
 
-        const destinations = getDestinationStations(
+        setSelectedDestinationStations(
+            stationsDispatcher,
             roundTrips
         )
-        stationsDispatcher({
-            type: 'SET_SELECTED_DESTINATIONS_STATIONS',
-            stations: destinations.reduce(
-                (stations, station) => {
-                    if (stations[station] === undefined) {
-                        stations[station] = true
-                    }
-                    return stations
-                },
-                {}
-            ),
-        })
 
         const extremumRoundTripTravelTime = getExtremumRoundTripTravelTime(
             roundTrips

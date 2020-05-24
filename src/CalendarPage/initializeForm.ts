@@ -4,24 +4,6 @@ import { ThereAndBackWithPrice } from '../TripInterfaces'
 import { ExtremumTime, ExtremumPrice } from './Interfaces'
 momentDurationFormatSetup(moment)
 
-export const getDestinationStations = (
-    roundTrips: ThereAndBackWithPrice[]
-) => {
-    const destinationStations = roundTrips.reduce<string[]>(
-        (stations, roundTrip) => {
-            const station =
-                roundTrip.there.destination[0].name
-            if (stations.includes(station)) {
-                return stations
-            } else {
-                return [...stations, station]
-            }
-        },
-        []
-    )
-    return destinationStations
-}
-
 export const getMaxAndMinRoundTripPrice = (
     roundTrips: ThereAndBackWithPrice[]
 ): ExtremumPrice => {
