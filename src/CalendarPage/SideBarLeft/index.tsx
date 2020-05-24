@@ -98,10 +98,9 @@ const SideBarLeft: FC<{
             </Grid>
             <Grid item>
                 <Sliders
-                    times={times}
-                    prices={prices}
+                    timesMachine={[times, timesDispatcher]}
                     pricesDispatcher={pricesDispatcher}
-                    timesDispatcher={timesDispatcher}
+                    prices={prices}
                 />
             </Grid>
         </Grid>

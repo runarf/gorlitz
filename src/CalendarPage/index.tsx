@@ -48,10 +48,11 @@ const CalendarPage: FC<{
         stationsInitialValues
     )
 
-    const [times, timesDispatcher] = useReducer(
+    const timesMachine = useReducer(
         timesReducer,
         timesInitialState
     )
+    const [times, timesDispatcher] = timesMachine
 
     const [prices, pricesDispatcher] = useReducer(
         pricesReducer,

@@ -12,16 +12,11 @@ import {
 } from '../../reducers/prices'
 
 const Sliders: FC<{
-    times: Times
-    timesDispatcher: Dispatch<TimesActions>
+    timesMachine: [Times, Dispatch<TimesActions>]
     prices: Prices
     pricesDispatcher: Dispatch<PricesActions>
-}> = ({
-    times,
-    timesDispatcher,
-    prices,
-    pricesDispatcher,
-}) => {
+}> = ({ timesMachine, prices, pricesDispatcher }) => {
+    const [, timesDispatcher] = timesMachine
     return (
         <Grid
             container
@@ -35,7 +30,7 @@ const Sliders: FC<{
                 timesDispatcher={timesDispatcher}
             />
             <MaximumTravelTimeSlider
-                timesReducer={[times, timesDispatcher]}
+                timesReducer={timesMachine}
             />
             <MaximumPriceSlider
                 pricesDispatcher={pricesDispatcher}
