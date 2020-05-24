@@ -6,7 +6,7 @@ const stationsReducer = (
     state: SelectedOriginDestinationStations,
     action: {
         type: string
-        value: SelectedStations
+        stations: SelectedStations
     }
 ) => {
     switch (action.type) {
@@ -15,7 +15,7 @@ const stationsReducer = (
                 ...state,
                 selectedOriginStations: {
                     ...state.selectedOriginStations,
-                    ...action.value,
+                    ...action.stations,
                 },
             }
         case 'SET_SELECTED_DESTINATIONS_STATIONS':
@@ -23,7 +23,7 @@ const stationsReducer = (
                 ...state,
                 selectedDestinationsStations: {
                     ...state.selectedDestinationsStations,
-                    ...action.value,
+                    ...action.stations,
                 },
             }
         default:
@@ -31,6 +31,25 @@ const stationsReducer = (
     }
 }
 export default stationsReducer
+
+export const setSelectedOriginStations = (
+    stations: SelectedStations
+) => {
+    return {
+        type: 'SET_SELECTED_ORIGIN_STATIONS',
+        stations,
+    }
+}
+
+export const setSelectedDestinationStations = (
+    stations: SelectedStations
+) => {
+    return {
+        type: 'SET_SELECTED_DESTINATIONS_STATIONS',
+        stations,
+    }
+}
+
 export const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedOriginStations: {},
     selectedDestinationsStations: {},

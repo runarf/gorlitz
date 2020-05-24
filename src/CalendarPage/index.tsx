@@ -22,6 +22,7 @@ import {
 } from './reducers'
 import stationsReducer, {
     stationsInitialValues,
+    setSelectedOriginStations,
 } from './reducers/stations'
 
 import {
@@ -74,25 +75,22 @@ const CalendarPage: FC<{
 
     useEffect(() => {
         const originStations = getOriginStations(roundTrips)
-        stationsDispatcher({
-            type: 'SET_SELECTED_ORIGIN_STATIONS',
-            value: originStations.reduce(
-                (stations, station) => {
-                    if (stations[station] === undefined) {
-                        stations[station] = true
-                    }
-                    return stations
-                },
-                {}
-            ),
-        })
+        const actionOrigin = setSelectedOriginStations(
+            originStations.reduce((stations, station) => {
+                if (stations[station] === undefined) {
+                    stations[station] = true
+                }
+                return stations
+            }, {})
+        )
+        stationsDispatcher(actionOrigin)
 
         const destinations = getDestinationStations(
             roundTrips
         )
         stationsDispatcher({
             type: 'SET_SELECTED_DESTINATIONS_STATIONS',
-            value: destinations.reduce(
+            stations: destinations.reduce(
                 (stations, station) => {
                     if (stations[station] === undefined) {
                         stations[station] = true

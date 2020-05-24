@@ -1,6 +1,6 @@
 import { Times, Prices } from '../Interfaces'
 
-const timesReducer = (
+export const timesReducer = (
     state: Times,
     action: { type: string; value: any }
 ) => {
@@ -32,7 +32,7 @@ const timesReducer = (
     }
 }
 
-const timesInitialState: Times = {
+export const timesInitialState: Times = {
     directOnly: false,
     extremumTravelTime: {
         min: 0,
@@ -43,7 +43,7 @@ const timesInitialState: Times = {
     thereDepartureTime: [0, 48],
 }
 
-const pricesReducer = (state: Prices, action) => {
+export const pricesReducer = (state: Prices, action) => {
     switch (action.type) {
         case 'SET_MAX_PRICE':
             return { ...state, maxPrice: action.value }
@@ -58,17 +58,10 @@ const pricesReducer = (state: Prices, action) => {
     }
 }
 
-const pricesInitialState: Prices = {
+export const pricesInitialState: Prices = {
     maxPrice: 50,
     lowestAndHighestRoundTripPrice: {
         lowest: 0,
         highest: 0,
     },
-}
-
-export {
-    pricesInitialState,
-    pricesReducer,
-    timesInitialState,
-    timesReducer,
 }
