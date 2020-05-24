@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/gorlitz/static/js/main.b94170bf.chunk.js",
+    "main.js.map": "/gorlitz/static/js/main.b94170bf.chunk.js.map",
+    "runtime-main.js": "/gorlitz/static/js/runtime-main.57ad260e.js",
+    "runtime-main.js.map": "/gorlitz/static/js/runtime-main.57ad260e.js.map",
+    "static/css/2.48adc591.chunk.css": "/gorlitz/static/css/2.48adc591.chunk.css",
+    "static/js/2.4436b44f.chunk.js": "/gorlitz/static/js/2.4436b44f.chunk.js",
+    "static/js/2.4436b44f.chunk.js.map": "/gorlitz/static/js/2.4436b44f.chunk.js.map",
+    "index.html": "/gorlitz/index.html",
+    "precache-manifest.0794937b0478aabd481a0754f5b4a753.js": "/gorlitz/precache-manifest.0794937b0478aabd481a0754f5b4a753.js",
+    "service-worker.js": "/gorlitz/service-worker.js",
+    "static/css/2.48adc591.chunk.css.map": "/gorlitz/static/css/2.48adc591.chunk.css.map",
+    "static/js/2.4436b44f.chunk.js.LICENSE.txt": "/gorlitz/static/js/2.4436b44f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57ad260e.js",
+    "static/css/2.48adc591.chunk.css",
+    "static/js/2.4436b44f.chunk.js",
+    "static/js/main.b94170bf.chunk.js"
+  ]
+}
