@@ -10,13 +10,24 @@ export const stationsInitialValues: SelectedOriginDestinationStations = {
     selectedDestinationsStations: {},
 }
 
+type SetSelectedOriginStations = {
+    type: 'SET_SELECTED_ORIGIN_STATIONS'
+    stations: SelectedStations
+}
+
+type SetSelectedDestinationStations = {
+    type: 'SET_SELECTED_DESTINATIONS_STATIONS'
+    stations: SelectedStations
+}
+
+type StationsActions =
+    | SetSelectedDestinationStations
+    | SetSelectedOriginStations
+
 const stationsReducer = (
     state: SelectedOriginDestinationStations,
-    action: {
-        type: string
-        stations: SelectedStations
-    }
-) => {
+    action: StationsActions
+): SelectedOriginDestinationStations => {
     switch (action.type) {
         case 'SET_SELECTED_ORIGIN_STATIONS':
             return {
@@ -41,7 +52,7 @@ const stationsReducer = (
 export default stationsReducer
 
 export const setSelectedOriginStations = (
-    dispatch: Dispatch<any>,
+    dispatch: Dispatch<StationsActions>,
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const originStations = getOriginStations(roundTrips)
@@ -87,7 +98,7 @@ const getOriginStations = (
 }
 
 export const setSelectedDestinationStations = (
-    dispatch: Dispatch<any>,
+    dispatch: Dispatch<StationsActions>,
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const destinations = getDestinationStations(roundTrips)

@@ -42,7 +42,7 @@ const pricesReducer = (
 export default pricesReducer
 
 export const setExtremumRoundTripPrice = (
-    dispatcher: Dispatch<any>,
+    dispatcher: Dispatch<PricesActions>,
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const maxAndMinRoundTripPrice = getMaxAndMinRoundTripPrice(
