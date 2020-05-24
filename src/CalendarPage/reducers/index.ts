@@ -1,40 +1,4 @@
-import {
-    SelectedStations,
-    SelectedOriginDestinationStations,
-    Times,
-    Prices,
-} from '../Interfaces'
-
-const stationsReducer = (
-    state: SelectedOriginDestinationStations,
-    action: { type: string; value: SelectedStations }
-) => {
-    switch (action.type) {
-        case 'SET_SELECTED_ORIGIN_STATIONS':
-            return {
-                ...state,
-                selectedOriginStations: {
-                    ...state.selectedOriginStations,
-                    ...action.value,
-                },
-            }
-        case 'SET_SELECTED_DESTINATIONS_STATIONS':
-            return {
-                ...state,
-                selectedDestinationsStations: {
-                    ...state.selectedDestinationsStations,
-                    ...action.value,
-                },
-            }
-        default:
-            return state
-    }
-}
-
-const stationsInitialValues: SelectedOriginDestinationStations = {
-    selectedOriginStations: {},
-    selectedDestinationsStations: {},
-}
+import { Times, Prices } from '../Interfaces'
 
 const timesReducer = (
     state: Times,
@@ -107,6 +71,4 @@ export {
     pricesReducer,
     timesInitialState,
     timesReducer,
-    stationsReducer,
-    stationsInitialValues,
 }

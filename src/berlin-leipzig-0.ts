@@ -1,6 +1,6 @@
 import { ThereAndBackTrips } from './TripInterfaces'
 
-export const berlinToLeipzig: ThereAndBackTrips = {
+export const berlinToLeipzig = {
     there: [
         {
             departure: '2020-06-05T23:15:00+02:00',
@@ -585,4 +585,4 @@ export const berlinToLeipzig: ThereAndBackTrips = {
             isDirect: true,
         },
     ],
-} as ThereAndBackTrips
+}

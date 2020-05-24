@@ -19,9 +19,10 @@ import {
     pricesReducer,
     timesInitialState,
     timesReducer,
-    stationsReducer,
-    stationsInitialValues,
 } from './reducers'
+import stationsReducer, {
+    stationsInitialValues,
+} from './reducers/stations'
 
 import {
     getExtremumRoundTripTravelTime,
