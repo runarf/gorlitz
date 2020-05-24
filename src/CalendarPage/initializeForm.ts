@@ -22,32 +22,6 @@ export const getDestinationStations = (
     return destinationStations
 }
 
-export const getOriginStations = (
-    roundTrips: ThereAndBackWithPrice[]
-) => {
-    const originStations = roundTrips.reduce<string[]>(
-        (originStations, journey) => {
-            const newStations = journey.there.origin
-                .filter((station) => {
-                    if (
-                        originStations.includes(
-                            station.name
-                        )
-                    ) {
-                        return false
-                    } else {
-                        return true
-                    }
-                })
-                .map((station) => station.name)
-
-            return [...originStations, ...newStations]
-        },
-        []
-    )
-    return originStations
-}
-
 export const getMaxAndMinRoundTripPrice = (
     roundTrips: ThereAndBackWithPrice[]
 ): ExtremumPrice => {

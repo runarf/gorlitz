@@ -28,7 +28,6 @@ import stationsReducer, {
 import {
     getExtremumRoundTripTravelTime,
     getMaxAndMinRoundTripPrice,
-    getOriginStations,
     getDestinationStations,
 } from './initializeForm'
 import { ThereAndBackWithPrice } from '../TripInterfaces'
@@ -74,16 +73,10 @@ const CalendarPage: FC<{
     ] = useState<ThereAndBackWithPrice[]>([])
 
     useEffect(() => {
-        const originStations = getOriginStations(roundTrips)
-        const actionOrigin = setSelectedOriginStations(
-            originStations.reduce((stations, station) => {
-                if (stations[station] === undefined) {
-                    stations[station] = true
-                }
-                return stations
-            }, {})
+        setSelectedOriginStations(
+            stationsDispatcher,
+            roundTrips
         )
-        stationsDispatcher(actionOrigin)
 
         const destinations = getDestinationStations(
             roundTrips
