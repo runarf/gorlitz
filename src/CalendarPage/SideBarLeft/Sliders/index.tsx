@@ -1,16 +1,21 @@
-import React, { FC } from 'react'
+import React, { FC, Dispatch } from 'react'
 import { Grid } from '@material-ui/core'
 import moment from 'moment'
 import { DepartureTimeSlider } from './DepartureTimeSlider'
 import { ReturnDepartureTimeSlider } from './ReturnDepartureTimeSlider'
 import { MaximumTravelTimeSlider } from './MaximumTravelTimeSlider'
 import { MaximumPriceSlider } from './MaximumPriceSlider'
+import { Times, TimesActions } from '../../reducers/times'
+import {
+    Prices,
+    PricesActions,
+} from '../../reducers/prices'
 
 const Sliders: FC<{
-    times
-    timesDispatcher
-    prices
-    pricesDispatcher
+    times: Times
+    timesDispatcher: Dispatch<TimesActions>
+    prices: Prices
+    pricesDispatcher: Dispatch<PricesActions>
 }> = ({
     times,
     timesDispatcher,
