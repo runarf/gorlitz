@@ -29,7 +29,6 @@ import stationsReducer, {
 import {
     getExtremumRoundTripTravelTime,
     getMaxAndMinRoundTripPrice,
-    getDestinationStations,
 } from './initializeForm'
 import { ThereAndBackWithPrice } from '../TripInterfaces'
 import {
