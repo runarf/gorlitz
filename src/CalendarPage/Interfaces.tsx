@@ -14,13 +14,7 @@ export interface SelectedOriginDestinationStations {
     selectedOriginStations: SelectedStations
     selectedDestinationsStations: SelectedStations
 }
-export interface Times {
-    directOnly: boolean
-    extremumTravelTime: ExtremumTime
-    maxTravelTime: number
-    backArrivalTime: [number, number]
-    thereDepartureTime: [number, number]
-}
+
 export interface Prices {
     maxPrice: number
     lowestAndHighestRoundTripPrice: ExtremumPrice

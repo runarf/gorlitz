@@ -1,7 +1,15 @@
-import { Times, ExtremumTime } from '../Interfaces'
+import { ExtremumTime } from '../Interfaces'
 import { Dispatch } from 'react'
 import { ThereAndBackWithPrice } from '../../TripInterfaces'
 import moment from 'moment'
+
+export interface Times {
+    directOnly: boolean
+    extremumTravelTime: ExtremumTime
+    maxTravelTime: number
+    backArrivalTime: [number, number]
+    thereDepartureTime: [number, number]
+}
 
 export const timesInitialState: Times = {
     directOnly: false,
@@ -14,13 +22,42 @@ export const timesInitialState: Times = {
     thereDepartureTime: [0, 48],
 }
 
+type SetMaxTravelTime = {
+    type: 'SET_MAX_TRAVEL_TIME'
+    value: number
+}
+
+type SetBackArrivalTime = {
+    type: 'SET_BACK_ARRIVAL_TIME'
+    value: [number, number]
+}
+
+type SetThereDepartureTime = {
+    type: 'SET_THERE_DEPARTURE_TIME'
+    value: [number, number]
+}
+
+type SetExtremumTravelTime = {
+    type: 'SET_EXTREMUM_TRAVEL_TIME'
+    value: ExtremumTime
+}
+
+type SetDirectOnlyBoolean = {
+    type: 'SET_DIRECT_ONLY_BOOLEAN'
+    value: boolean
+}
+
+type TimesActions =
+    | SetMaxTravelTime
+    | SetBackArrivalTime
+    | SetThereDepartureTime
+    | SetExtremumTravelTime
+    | SetDirectOnlyBoolean
+
 export const timesReducer = (
     state: Times,
-    action: {
-        type: string
-        value: any
-    }
-) => {
+    action: TimesActions
+): Times => {
     switch (action.type) {
         case 'SET_MAX_TRAVEL_TIME':
             return { ...state, maxTravelTime: action.value }
@@ -50,12 +87,12 @@ export const timesReducer = (
 }
 
 export const setMaxTravelTime = (
-    dispatcher: Dispatch<any>,
+    dispatcher: Dispatch<TimesActions>,
     roundTrips: ThereAndBackWithPrice[]
 ) => {}
 
 export const setExtremumTravelTime = (
-    dispatcher: Dispatch<any>,
+    dispatcher: Dispatch<TimesActions>,
     roundTrips: ThereAndBackWithPrice[]
 ) => {
     const extremumRoundTripTravelTime = getExtremumRoundTripTravelTime(
