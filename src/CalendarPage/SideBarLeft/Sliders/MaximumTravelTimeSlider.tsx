@@ -1,10 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, Dispatch } from 'react'
 import { Grid, Typography, Slider } from '@material-ui/core'
 import moment from 'moment'
+import { TimesActions, Times } from '../../reducers/times'
 export const MaximumTravelTimeSlider: FC<{
-    timesDispatcher: any
-    times: any
-}> = ({ timesDispatcher, times }) => {
+    timesReducer: [Times, Dispatch<TimesActions>]
+}> = ({ timesReducer }) => {
+    const [times, timesDispatcher] = timesReducer
     const minTravelTime = Math.floor(
         moment
             .duration(times.extremumTravelTime.min)
@@ -29,12 +30,13 @@ export const MaximumTravelTimeSlider: FC<{
                     marks
                     min={minTravelTime}
                     max={maxTravelTime}
-                    onChange={(event, value) =>
+                    onChange={(event, value) => {
+                        const valueAs = value as number
                         timesDispatcher({
                             type: 'SET_MAX_TRAVEL_TIME',
-                            value,
+                            value: valueAs,
                         })
-                    }
+                    }}
                 />
             </Grid>
         </Grid>

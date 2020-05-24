@@ -35,8 +35,7 @@ const Sliders: FC<{
                 timesDispatcher={timesDispatcher}
             />
             <MaximumTravelTimeSlider
-                timesDispatcher={timesDispatcher}
-                times={times}
+                timesReducer={[times, timesDispatcher]}
             />
             <MaximumPriceSlider
                 pricesDispatcher={pricesDispatcher}
