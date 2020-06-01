@@ -17,7 +17,7 @@
         "flix": "^5.0.2",
         "formik": "^2.1.4",
         "formik-material-ui": "^0.0.20",
-        "gh-pages": "^2.0.1",
+        "gh-pages": "^3.0.0",
         "lodash": "^4.17.14",
         "moment": "^2.24.0",
         "moment-duration-format": "^2.3.2",
